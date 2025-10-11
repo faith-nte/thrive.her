@@ -13,7 +13,7 @@ export default function Header3({ scroll, handlePopup, handleMobileMenu  }) {
                         <div className="main-menu-three__wrapper-inner">
                             <div className="main-menu-three__left">
                                 <div className="main-menu-three__logo">
-                                    <Link href="/"><img src="assets/images/resources/logo-1.png" alt=""/></Link>
+                                    <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt="ThriveHer Logo"/></Link>
                                 </div>
                             </div>
                             <div className="main-menu-three__main-menu-box">
@@ -46,7 +46,7 @@ export default function Header3({ scroll, handlePopup, handleMobileMenu  }) {
                             <div className="main-menu-three__wrapper-inner">
                                 <div className="main-menu-three__left">
                                     <div className="main-menu-three__logo">
-                                        <Link href="/"><img src="assets/images/resources/logo-1.png" alt=""/></Link>
+                                        <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
                                     </div>
                                 </div>
                                 <div className="main-menu-three__main-menu-box">

@@ -8,11 +8,8 @@ const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     slidesPerView: 1,
     spaceBetween: 0,
-    autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-    },
-    loop: true,
+    autoplay: false, // Disabled autoplay since we only have one slide
+    loop: false, // Disabled loop since we only have one slide
     // Navigation
     navigation: {
         nextEl: '.h1n',
@@ -26,11 +23,10 @@ const swiperOptions = {
     },
 }
 
-
 export default function Banner() {
     return (
         <>
-        {/* Main Slider Start */}
+        {/* Hero Section Start */}
         <section className="main-slider-three">
             <Swiper {...swiperOptions} className="main-slider-three__carousel owl-carousel owl-theme">
                 <SwiperSlide>
@@ -40,59 +36,14 @@ export default function Banner() {
                         <img src="assets/images/shapes/main-slider-three-shape-2.png" alt=""/>
                     </div>
                     <div className="main-slider-three__img">
-                        <img src="assets/images/resources/main-slider-three-img-1.jpg" alt=""/>
+                        <img src="assets/images/resources/dr-syeda-hero.svg" alt=""/>
                     </div>
                     <div className="container">
                         <div className="main-slider-three__content">
-                            <h2 className="main-slider-three__title">They Need <br/> Your Help <br/> to Live</h2>
-                            <p className="main-slider-three__text">We help companies develop powerful corporate social
-                                responsibility, <br/> grantmaking, and employee engagement strategies. Dicta sunt </p>
+                            <h2 className="main-slider-three__title">Care That Feels Right. <br/> <em style={{color: 'var(--thriveher-rose)'}}>For You!</em></h2>
+                            <p className="main-slider-three__text">Empowering NHS and community partners to deliver faith-aware, <br/> culturally competent care that truly support Muslim and minority women.</p>
                             <div className="main-slider-three__btn-box">
-                                <Link href="about" className="thm-btn main-slider-three__btn">Discover more<span><i
-                                            className="icon-arrow-right"></i></span></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className="item">
-                    <div className="main-slider-three__shape-1"></div>
-                    <div className="main-slider-three__shape-2">
-                        <img src="assets/images/shapes/main-slider-three-shape-2.png" alt=""/>
-                    </div>
-                    <div className="main-slider-three__img">
-                        <img src="assets/images/resources/main-slider-three-img-2.jpg" alt=""/>
-                    </div>
-                    <div className="container">
-                        <div className="main-slider-three__content">
-                            <h2 className="main-slider-three__title">They Need <br/> Your Help <br/> to Live</h2>
-                            <p className="main-slider-three__text">We help companies develop powerful corporate social
-                                responsibility, <br/> grantmaking, and employee engagement strategies. Dicta sunt </p>
-                            <div className="main-slider-three__btn-box">
-                                <Link href="about" className="thm-btn main-slider-three__btn">Discover more<span><i
-                                            className="icon-arrow-right"></i></span></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                <div className="item">
-                    <div className="main-slider-three__shape-1"></div>
-                    <div className="main-slider-three__shape-2">
-                        <img src="assets/images/shapes/main-slider-three-shape-2.png" alt=""/>
-                    </div>
-                    <div className="main-slider-three__img">
-                        <img src="assets/images/resources/main-slider-three-img-3.jpg" alt=""/>
-                    </div>
-                    <div className="container">
-                        <div className="main-slider-three__content">
-                            <h2 className="main-slider-three__title">They Need <br/> Your Help <br/> to Live</h2>
-                            <p className="main-slider-three__text">We help companies develop powerful corporate social
-                                responsibility, <br/> grantmaking, and employee engagement strategies. Dicta sunt </p>
-                            <div className="main-slider-three__btn-box">
-                                <Link href="about" className="thm-btn main-slider-three__btn">Discover more<span><i
+                                <Link href="about" className="thm-btn main-slider-three__btn">Join US<span><i
                                             className="icon-arrow-right"></i></span></Link>
                             </div>
                         </div>
@@ -101,11 +52,7 @@ export default function Banner() {
                 </SwiperSlide>
             </Swiper>
         </section>
-        {/*Main Slider Start */}
-
-        
-        
-            
+        {/* Hero Section End */}
         </>
     )
 }

@@ -53,10 +53,8 @@ export default function Banner() {
                     </div>
                     <div className="container">
                         <div className="main-slider-two__content">
-                            <h2 className="main-slider-two__title">Help Leading <br/> better Life</h2>
-                            <p className="main-slider-two__text">We help companies develop powerful corporate social
-                                responsibility, grantmaking, <br/> and employee engagement strategies. Dicta sunt
-                                explicabo. Nemo</p>
+                            <h2 className="main-slider-two__title">Where Medicine <br/> Meets Meaning</h2>
+                            <p className="main-slider-two__text">Empowering Muslim and minority women with faith-aware, <br/> evidence-based care</p>
                             <div className="main-slider-two__btn-box">
                                 <Link href="about" className="thm-btn main-slider-two__btn">Discover more<span><i
                                             className="icon-arrow-right"></i></span></Link>
@@ -86,10 +84,8 @@ export default function Banner() {
                     </div>
                     <div className="container">
                         <div className="main-slider-two__content">
-                            <h2 className="main-slider-two__title">Help Leading <br/> better Life</h2>
-                            <p className="main-slider-two__text">We help companies develop powerful corporate social
-                                responsibility, grantmaking, <br/> and employee engagement strategies. Dicta sunt
-                                explicabo. Nemo</p>
+                            <h2 className="main-slider-two__title">Where Medicine <br/> Meets Meaning</h2>
+                            <p className="main-slider-two__text">Empowering Muslim and minority women with faith-aware, <br/> evidence-based care</p>
                             <div className="main-slider-two__btn-box">
                                 <Link href="about" className="thm-btn main-slider-two__btn">Discover more<span><i
                                             className="icon-arrow-right"></i></span></Link>
@@ -119,10 +115,8 @@ export default function Banner() {
                     </div>
                     <div className="container">
                         <div className="main-slider-two__content">
-                            <h2 className="main-slider-two__title">Help Leading <br/> better Life</h2>
-                            <p className="main-slider-two__text">We help companies develop powerful corporate social
-                                responsibility, grantmaking, <br/> and employee engagement strategies. Dicta sunt
-                                explicabo. Nemo</p>
+                            <h2 className="main-slider-two__title">Where Medicine <br/> Meets Meaning</h2>
+                            <p className="main-slider-two__text">Empowering Muslim and minority women with faith-aware, <br/> evidence-based care</p>
                             <div className="main-slider-two__btn-box">
                                 <Link href="about" className="thm-btn main-slider-two__btn">Discover more<span><i
                                             className="icon-arrow-right"></i></span></Link>

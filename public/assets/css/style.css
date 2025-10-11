@@ -82,6 +82,7 @@
   /* Legacy mappings for backward compatibility */
   --anity-base: var(--thriveher-rose);
   --anity-black: var(--thriveher-navy);
+  --anity-black-rgb: 33, 39, 63; /* RGB values for navy #21273F */
   --anity-primary: var(--thriveher-gold);
   --anity-extra: var(--thriveher-sage);
   --anity-extra-two: var(--thriveher-cream);
@@ -5987,14 +5988,15 @@ Component Examples:
 /* Links */
 a, .link {
   color: var(--color-link);
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s, text-decoration 0.2s;
 }
 
 a:hover, .link:hover,
 a:focus, .link:focus {
   color: var(--color-link-hover);
+  text-decoration: underline;
 }
 
 /* Dividers */
@@ -6073,6 +6075,56 @@ a:focus, .link:focus {
 .main-slider-two a:not(.thm-btn):hover,
 .site-footer-two a:not(.thm-btn):hover {
   color: var(--thriveher-gold) !important;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE - Hero Image Visibility
+   ============================================================ */
+
+/* Ensure hero image displays on mobile devices */
+@media only screen and (max-width: 767px) {
+  .main-slider-three__img {
+    display: block !important;
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 auto 30px !important;
+    max-width: 280px !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .main-slider-three__img img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .main-slider-three__content {
+    text-align: center !important;
+  }
+
+  .main-slider-three__title {
+    font-size: 36px !important;
+  }
+
+  .main-slider-three__text {
+    font-size: 16px !important;
+  }
+}
+
+/* Tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-slider-three__img {
+    display: block !important;
+    opacity: 1 !important;
+    right: 50px !important;
+    max-width: 350px !important;
+  }
+
+  .main-slider-three__title {
+    font-size: 50px !important;
+  }
 }
 
 /* The End */
