@@ -370,7 +370,7 @@
     height: 60px;
     width: 100%;
     background-color: transparent;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--color-border);
     padding-left: 20px;
     padding-right: 30px;
     outline: none;
@@ -387,7 +387,7 @@
     height: 376px;
     width: 100%;
     background-color: transparent;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--color-border);
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 30px;
@@ -476,7 +476,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 22px;
     margin-bottom: 26px;
 }
@@ -653,7 +653,7 @@
     display: flex;
     align-items: center;
     gap: 21px;
-    border-right: 1px solid #DDDDDD;
+    border-right: 1px solid var(--color-border);
     padding-right: 34px;
 }
 
@@ -721,7 +721,7 @@
 .volunteer-details__background__content {
     padding-top: 41px;
     padding-bottom: 28px;
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid var(--color-border);
 }
 
 .volunteer-details__background__content:last-child {

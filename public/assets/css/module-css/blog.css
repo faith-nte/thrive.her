@@ -17,7 +17,7 @@
     position: relative;
     display: block;
     background-color: var(--anity-white);
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--color-border);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: var(--anity-bdr-radius);
     padding: 20px 20px 40px;
@@ -154,7 +154,7 @@
     position: relative;
     display: block;
     background-color: var(--anity-white);
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--color-border);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: var(--anity-bdr-radius);
     margin-bottom: 30px;
@@ -316,7 +316,7 @@
     position: relative;
     display: block;
     background-color: var(--anity-white);
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--color-border);
     box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
     border-radius: var(--anity-bdr-radius);
     padding: 20px 20px 40px;
@@ -611,8 +611,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     padding: 20px 0 20px;
 }
 
@@ -883,7 +883,7 @@
 }
 
 .comment-form.checked-box input[type="checkbox"]:checked+label span {
-    border-color: #4D4E50;
+    border-color: var(--thriveher-navy);
     ;
 }
 
@@ -925,7 +925,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 34px;
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 11px;
 }
 
@@ -1316,7 +1316,7 @@
     font-size: 24px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--color-border);
     font-family: var(--anity-font-two);
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;

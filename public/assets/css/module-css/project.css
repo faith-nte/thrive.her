@@ -31,7 +31,7 @@
 .project-details__info-title-box {
     position: relative;
     display: block;
-    background-color: #F84D42;
+    background-color: var(--thriveher-gold);
     text-align: center;
     padding: 11px 10px 8px;
 }
@@ -46,7 +46,7 @@
 .project-details__info-and-social {
     position: relative;
     display: flex;
-    border: 1px solid #E3E3E3;
+    border: 1px solid var(--color-border);
     background-color: var(--anity-white);
     border-top: 0;
     align-items: center;
@@ -213,8 +213,8 @@
     position: relative;
     display: block;
     text-align: center;
-    border-top: 1px solid #E3E3E3;
-    border-bottom: 1px solid #E3E3E3;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     margin-top: 30px;
 }
 
@@ -257,7 +257,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #F4F4F4;
+    background-color: var(--thriveher-cream);
     border-radius: 50%;
     font-size: 14px;
     -webkit-transition: all 500ms ease;
@@ -342,7 +342,7 @@
     position: relative;
     width: 100%;
     height: 5px;
-    background: #DDDDDD;
+    background: var(--color-border);
     border-radius: 0px;
 }
 
@@ -399,7 +399,7 @@
     margin-top: 20px;
     padding-bottom: 50px;
     margin-bottom: 40px;
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .cause-details__donation-amout-list span {
@@ -425,7 +425,7 @@
 .cause-details__pament-box {
     position: relative;
     display: block;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 51px;
     margin-bottom: 41px;
 }
@@ -461,7 +461,7 @@
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--color-border);
     display: block;
     position: relative;
     transition: all 200ms linear;
@@ -477,7 +477,7 @@
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #dddddd;
+    background-color: var(--color-border);
     display: block;
     position: absolute;
     left: 50%;
@@ -544,7 +544,7 @@
 .cause-details__donate-and-btn {
     position: relative;
     display: block;
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 50px;
     margin-bottom: 40px;
 }

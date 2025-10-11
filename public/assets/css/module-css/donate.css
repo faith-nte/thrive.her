@@ -547,7 +547,7 @@
 .donation-one__donate-box .donate-amount .amount-btn {
     color: var(--anity-gray);
     padding: 19px 30px 19px;
-    background-color: #232425;
+    background-color: var(--thriveher-navy);
     transition: all 0.4s ease-in-out;
     border: none;
     font-size: 18px;
@@ -570,7 +570,7 @@
 .donation-one__donate-box .donate-now input {
     width: 100%;
     padding: 13px 20px 13px;
-    background-color: #232425;
+    background-color: var(--thriveher-navy);
     color: var(--anity-gray);
     max-width: 200px;
     width: 100%;
@@ -587,12 +587,12 @@
 }
 
 .donation-one__right--style2 .donation-one__content-box {
-    background-image: -ms-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: -moz-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: -o-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #ff5528), color-stop(100, #ffa415));
-    background-image: -webkit-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: linear-gradient(to right, #ff5528 0%, #ffa415 100%);
+    background-image: -ms-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: -moz-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: -o-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, var(--thriveher-gold)), color-stop(100, var(--thriveher-gold)));
+    background-image: -webkit-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: linear-gradient(to right, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
 }
 
 .donation-one__right--style2 .donation-one__donate-box .donate-amount .amount-btn {
@@ -660,7 +660,7 @@
     height: 26px;
     width: 26px;
     border-radius: 50%;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--color-border);
     display: block;
     position: relative;
     transition: all 200ms linear;
@@ -676,7 +676,7 @@
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    background-color: #dddddd;
+    background-color: var(--color-border);
     display: block;
     position: absolute;
     left: 50%;
@@ -746,7 +746,7 @@
     outline: none;
     font-size: 18px;
     font-weight: 700;
-    color: #dddddd;
+    color: var(--color-border);
     display: block;
     border-radius: var(--anity-bdr-radius);
     font-family: var(--anity-font-two);
@@ -819,7 +819,7 @@
     outline: none;
     font-size: 18px;
     font-weight: 700;
-    color: #dddddd;
+    color: var(--color-border);
     display: block;
     border-radius: var(--anity-bdr-radius);
     font-family: var(--anity-font-two);

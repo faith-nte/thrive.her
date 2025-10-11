@@ -36,7 +36,7 @@
     width: 100%;
     content: "";
     opacity: 0.92;
-    background: rgb(255, 255, 255);
+    background: var(--thriveher-cream);
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9668242296918768) 29%, rgba(255, 255, 255, 0.9528186274509804) 50%, rgba(255, 255, 255, 0) 80%);
     z-index: 1;
 }
@@ -853,7 +853,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #000000;
+    background-color: var(--thriveher-navy);
 }
 
 .main-slider-four .bg1 {
@@ -862,7 +862,7 @@
     left: 50%;
     width: 100px;
     height: 100%;
-    background-color: #000000;
+    background-color: var(--thriveher-navy);
     opacity: 1;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
@@ -1023,7 +1023,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    color: #000000;
+    color: var(--thriveher-navy);
     font-size: 20px;
     line-height: 0px;
     text-align: center;
@@ -1074,7 +1074,7 @@
 # Main Slider Five
 ------------------------------------------------*/
 .main-slider-five {
-    background-color: #000000;
+    background-color: var(--thriveher-navy);
 }
 
 .main-slider-five .image-layer {

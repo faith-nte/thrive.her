@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    background-color: #FFDED5;
+    background-color: var(--thriveher-rose);
     border-radius: var(--anity-bdr-radius);
     padding: 59px 40px 57px;
     margin-bottom: 30px;
@@ -26,11 +26,11 @@
 }
 
 .feature-one__single-2 {
-    background-color: #FFEFD7;
+    background-color: var(--thriveher-cream);
 }
 
 .feature-one__single-3 {
-    background-color: #CEF9E8;
+    background-color: var(--thriveher-sage);
 }
 
 .feature-one__icon {
@@ -94,7 +94,7 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-    background-color: #48B1BC;
+    background-color: var(--thriveher-gold);
     border-radius: var(--anity-bdr-radius);
     gap: 30px;
     padding: 30px 30px 35px;

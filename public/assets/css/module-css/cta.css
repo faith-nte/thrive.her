@@ -64,7 +64,7 @@
     position: relative;
     display: block;
     text-align: center;
-    background-color: #121212;
+    background-color: var(--thriveher-navy);
     border-radius: 37px;
     padding: 146px 0 146px;
     overflow: hidden;
@@ -103,12 +103,12 @@
 .cta-three {
     position: relative;
     display: block;
-    background-image: -ms-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: -moz-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: -o-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #ff5528), color-stop(100, #ffa415));
-    background-image: -webkit-linear-gradient(left, #ff5528 0%, #ffa415 100%);
-    background-image: linear-gradient(to right, #ff5528 0%, #ffa415 100%);
+    background-image: -ms-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: -moz-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: -o-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, var(--thriveher-gold)), color-stop(100, var(--thriveher-gold)));
+    background-image: -webkit-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
+    background-image: linear-gradient(to right, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
     padding: 68px 0px 61px;
 }
 

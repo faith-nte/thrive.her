@@ -34,7 +34,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(0deg, #000000 5%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(0deg, var(--thriveher-navy) 5%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .coming-soon-page__content {
@@ -96,7 +96,7 @@
 .coming-soon-page .timer-box .countdown-timer li span.hours,
 .coming-soon-page .timer-box .countdown-timer li span.minutes,
 .coming-soon-page .timer-box .countdown-timer li span.seconds {
-    color: #ffffff;
+    color: var(--thriveher-cream);
     font-size: 55px;
     line-height: 60px;
     font-weight: 700;
@@ -106,7 +106,7 @@
 .coming-soon-page .timer-box .countdown-timer li span.timeRef {
     position: relative;
     display: block;
-    color: #ffffff;
+    color: var(--thriveher-cream);
     font-size: 18px;
     line-height: 20px;
     font-weight: 700;
@@ -122,7 +122,7 @@
 }
 
 .coming-soon-page__content .inner .text p {
-    color: #ffffff;
+    color: var(--thriveher-cream);
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;

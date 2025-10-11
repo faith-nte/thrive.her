@@ -55,9 +55,9 @@
     bottom: 0px;
     border-radius: 50%;
     border: 1px solid transparent;
-    background: linear-gradient(180deg, #E20935, #16171A) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(180deg, var(--thriveher-rose), var(--thriveher-navy)) border-box;
+    -webkit-mask: linear-gradient(var(--thriveher-cream) 0 0) padding-box,
+        linear-gradient(var(--thriveher-cream) 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     z-index: 1;
