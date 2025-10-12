@@ -22,6 +22,25 @@ export default function Menu() {
                                             <div className="col-lg-2">
                                                 <div className="home-showcase__item">
                                                     <div className="home-showcase__image">
+                                                        <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
+                                                            alt=""/>
+                                                        <div className="home-showcase__buttons">
+                                                            <Link href="index1"
+                                                                className="thm-btn home-showcase__buttons__item">
+                                                                View Page
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                    <h3 className="home-showcase__title">
+                                                        Home Page 01
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            {/*End Home Showcase Item */}
+                                            {/*Start Home Showcase Item */}
+                                            <div className="col-lg-2">
+                                                <div className="home-showcase__item">
+                                                    <div className="home-showcase__image">
                                                         <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
                                                             alt=""/>
                                                         <div className="home-showcase__buttons">

@@ -12,7 +12,7 @@ export default function About() {
                     <div className="col-xl-6 wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                         <div className="about-two__left">
                             <div className="about-two__img">
-                                <img src="assets/images/resources/about-two-img-1.png" alt=""/>
+                                <img src="assets/images/resources/dr-syeda-560x560.svg" alt="Dr Syeda Insha Hussaini"/>
                             </div>
                         </div>
                     </div>

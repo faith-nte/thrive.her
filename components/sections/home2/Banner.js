@@ -47,7 +47,7 @@ export default function Banner() {
                     <div className="main-slider-two__img-box">
                         <div className="main-slider-two__img-box-inner">
                             <div className="main-slider-two__img">
-                                <img src="assets/images/resources/main-slider-two-img-1.jpg" alt=""/>
+                                <img src="assets/images/resources/hero-560x560.svg" alt="Dr Syeda Hussain"/>
                             </div>
                         </div>
                     </div>
