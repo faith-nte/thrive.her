@@ -85,7 +85,55 @@ export default function BannerClient() {
                                     }} />
                                 </div>
                                 <div className="btn-box">
-                                    <a href="donation-details.html" className="thm-btn">Join US<span><i className="icon-arrow-right"></i></span></a>
+                                    <div style={{
+                                        position: 'relative',
+                                        display: 'inline-block',
+                                        marginTop: '2rem'
+                                    }}>
+                                        {/* Double layer button effect */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '4px',
+                                            left: '4px',
+                                            right: '-4px',
+                                            bottom: '-4px',
+                                            backgroundColor: '#21273F',
+                                            borderRadius: '8px',
+                                            zIndex: 1
+                                        }}></div>
+                                        <a 
+                                            href="donation-details.html" 
+                                            className="thm-btn"
+                                            style={{
+                                                position: 'relative',
+                                                zIndex: 2,
+                                                backgroundColor: '#C78E1D',
+                                                color: 'white',
+                                                padding: '0.75rem 2rem',
+                                                borderRadius: '8px',
+                                                textDecoration: 'none',
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: '0.5rem',
+                                                fontWeight: '600',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.5px',
+                                                border: '2px solid #C78E1D',
+                                                transition: 'all 0.3s ease',
+                                                boxShadow: '0 4px 12px rgba(199, 142, 29, 0.3)'
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.target.style.transform = 'translate(-2px, -2px)';
+                                                e.target.style.boxShadow = '0 6px 20px rgba(199, 142, 29, 0.4)';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.target.style.transform = 'translate(0, 0)';
+                                                e.target.style.boxShadow = '0 4px 12px rgba(199, 142, 29, 0.3)';
+                                            }}
+                                        >
+                                            Join US<span><i className="icon-arrow-right"></i></span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

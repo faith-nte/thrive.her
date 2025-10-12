@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Layout from "@/components/layout/Layout"
 import About from "@/components/sections/home1/About"
+import AboutThree from "@/components/sections/home1/AboutThree"
 import Banner from "@/components/sections/home1/Banner"
 import Blog from "@/components/sections/home1/Blog"
 import Brands from "@/components/sections/home1/Brands"
@@ -21,6 +22,7 @@ export default function Home() {
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <Banner />
+                <AboutThree />
                 <Found />
                 <About />
                 <Welcome />

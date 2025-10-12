@@ -14,7 +14,7 @@ export default function Found() {
                     <div className="section-title__tagline-box">
                         <span className="section-title__tagline">Charity Fund</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Together We Can <br/> <span>Make</span> a Difference
+                    <h2 className="section-title__title title-animation" style={{ color: '#21273F' }}>Together We Can <br/> <span style={{ color: '#C78E1D' }}>Make</span> a Difference
                     </h2>
                 </div>
                 <div className="row">

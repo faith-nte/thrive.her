@@ -12,7 +12,7 @@ export default function Footer3() {
                 <div className="container">
                     <div className="site-footer-two__top-inner">
                         <div className="site-footer-two__top-logo">
-                            <Link href="#"><img src="assets/images/resources/logo-footer.svg" alt=""/></Link>
+                            <Link href="#"><img src="assets/images/resources/logo-footer-bright.svg" alt="ThriveHer Logo"/></Link>
                         </div>
                         <div className="row">
                             <div className="col-xl-5 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">

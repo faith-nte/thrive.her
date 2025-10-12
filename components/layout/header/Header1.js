@@ -6,9 +6,9 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
     return (
         <>
             
-        <header className="main-header">
-            <nav className="main-menu">
-                <div className="main-menu__wrapper">
+        <header className="main-header" style={{ backgroundColor: '#21273F' }}>
+            <nav className="main-menu" style={{ backgroundColor: '#21273F' }}>
+                <div className="main-menu__wrapper" style={{ backgroundColor: '#21273F' }}>
                     <div className="container">
                         <div className="main-menu__wrapper-inner">
                             <div className="main-menu__left">
@@ -25,7 +25,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                                     <Link href="#" className="main-menu__search search-toggler icon-search" onClick={handlePopup}></Link>
                                 </div>
                                 <div className="main-menu__btn-box">
-                                    <Link href="donation-details" className="main-menu__btn thm-btn">Donate Now<span><i
+                                    <Link href="donation-details" className="main-menu__btn thm-btn">Partner with US<span><i
                                                 className="icon-arrow-right"></i></span></Link>
                                 </div>
                             </div>
@@ -35,10 +35,10 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
             </nav>
         </header>
 
-        <div className={`stricky-header stricked-menu main-menu ${scroll ? "stricky-fixed" : ""}`}>
-            <div className="sticky-header__content">
-                <nav className="main-menu">
-                    <div className="main-menu__wrapper">
+        <div className={`stricky-header stricked-menu main-menu ${scroll ? "stricky-fixed" : ""}`} style={{ backgroundColor: '#21273F' }}>
+            <div className="sticky-header__content" style={{ backgroundColor: '#21273F' }}>
+                <nav className="main-menu" style={{ backgroundColor: '#21273F' }}>
+                    <div className="main-menu__wrapper" style={{ backgroundColor: '#21273F' }}>
                         <div className="container">
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-menu__left">

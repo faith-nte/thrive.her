@@ -11,7 +11,7 @@ export default function Event() {
                     <div className="section-title__tagline-box">
                         <span className="section-title__tagline">Our Events</span>
                     </div>
-                    <h2 className="section-title__title title-animation">Join Us in the Fight <br/>Against Poverty</h2>
+                    <h2 className="section-title__title title-animation" style={{ color: '#21273F' }}>Join Us in the Fight <br/>Against Poverty</h2>
                 </div>
                 <div className="row">
                     {/**Event One Single Start*/}
