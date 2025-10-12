@@ -90,7 +90,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-menu__left">
                                     <div className="main-menu__logo">
-                                        <Link href="/"><img src="assets/images/resources/logo-2.png" alt=""/></Link>
+                                        <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
                                     </div>
                                     <div className="main-menu__main-menu-box">
                                         <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>

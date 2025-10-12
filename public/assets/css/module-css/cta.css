@@ -172,7 +172,7 @@
 }
 
 .cta-three__content .right-box .btn-box .thm-btn::after {
-    background-color: var(--anity-black);
+    background-color: var(--anity-base);
 }
 
 .cta-three__content .right-box .btn-box .thm-btn:hover span {

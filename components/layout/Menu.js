@@ -124,17 +124,6 @@ export default function Menu() {
                     </ul>
                 </li>
                 <li className="dropdown">
-                    <Link href="#">Shop</Link>
-                    <ul className="shadow-box">
-                        <li><Link href="products">Products</Link></li>
-                        <li><Link href="product-details">Product Details</Link></li>
-                        <li><Link href="cart">Cart</Link></li>
-                        <li><Link href="checkout">Checkout</Link></li>
-                        <li><Link href="wishlist">Wishlist</Link></li>
-                        <li><Link href="account">My Account</Link></li>
-                    </ul>
-                </li>
-                <li className="dropdown">
                     <Link href="#">Blog</Link>
                     <ul className="shadow-box">
                         <li><Link href="blog">Blog</Link></li>
