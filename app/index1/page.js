@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Layout from "@/components/layout/Layout"
 import About from "@/components/sections/home1/About"
 import Banner from "@/components/sections/home1/Banner"
@@ -11,8 +12,9 @@ import Event from "@/components/sections/home1/Event"
 import Found from "@/components/sections/home1/Found"
 import Team from "@/components/sections/home1/Team"
 import Testimonial from "@/components/sections/home1/Testimonial"
-import Welcome from "@/components/sections/home1/Welcome"
 import Who from "@/components/sections/home1/Who"
+
+const Welcome = dynamic(() => import("@/components/sections/home1/Welcome"), { ssr: false })
 
 export default function Home() {
     return (

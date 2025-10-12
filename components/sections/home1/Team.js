@@ -74,7 +74,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img1.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-1.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -99,7 +99,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img2.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-2.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -124,7 +124,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img3.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-3.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -149,7 +149,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img1.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-1.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -174,7 +174,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img2.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-2.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -199,7 +199,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img3.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-3.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -224,7 +224,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img1.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-1.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -249,7 +249,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img2.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-2.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -274,7 +274,7 @@ export default function Team() {
                             <div className="team-one__single">
                                 <div className="team-one__single-img">
                                     <div className="inner">
-                                        <img src="assets/images/team/team-v1-img3.jpg" alt=""/>
+                                        <img src="assets/images/team/team-1-3.jpg" alt=""/>
                                     </div>
                                 </div>
 

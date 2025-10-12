@@ -36,7 +36,7 @@
     width: 100%;
     content: "";
     opacity: 0.7;
-    background-image: linear-gradient(to right, #21273F, #D1A38A);
+    background: #21273F;
     z-index: 1;
 }
 

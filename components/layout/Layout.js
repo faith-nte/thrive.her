@@ -33,18 +33,40 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
     const handleSidebar = () => setSidebar(!isSidebar)
 
     useEffect(() => {
-        const WOW = require('wowjs')
-        window.wow = new WOW.WOW({
-            live: false
-        })
-        window.wow.init()
-
-        document.addEventListener("scroll", () => {
-            const scrollCheck = window.scrollY > 100
-            if (scrollCheck !== scroll) {
-                setScroll(scrollCheck)
+        let mounted = true;
+        // dynamic import to ensure this runs only on client
+        async function loadWow() {
+            if (typeof window === 'undefined') return
+            try {
+                const mod = await import('wowjs')
+                const WOW = mod.WOW || mod.default?.WOW || mod.default || mod
+                if (!mounted) return
+                // attach to window for compatibility with any plugin code
+                // eslint-disable-next-line no-undef
+                // prefer constructor extraction for different module shapes
+                const WowCtor = (WOW && (WOW.WOW || WOW)) || WOW
+                // create instance if constructor exists
+                if (typeof WowCtor === 'function') {
+                    // eslint-disable-next-line no-undef
+                    window.wow = new WowCtor({ live: false })
+                    if (typeof window.wow.init === 'function') window.wow.init()
+                }
+            } catch (e) {
+                // ignore if wowjs isn't available
             }
-        })
+        }
+        loadWow()
+
+        const onScroll = () => {
+            const scrollCheck = typeof window !== 'undefined' && window.scrollY > 100
+            setScroll(prev => (scrollCheck !== prev ? scrollCheck : prev))
+        }
+
+        document.addEventListener('scroll', onScroll)
+        return () => {
+            mounted = false
+            document.removeEventListener('scroll', onScroll)
+        }
     }, [])
     return (
         <>

@@ -68,12 +68,12 @@ export default function About() {
                         </div>
 
                         <div className="col-xl-5 col-lg-6">
-                            <div className="donation-form-one">
+                            <div className="donation-form-one" suppressHydrationWarning>
                                 <div className="inner-title">
                                     <h3>Easy Donation</h3>
                                 </div>
                                 <form id="donation-form-one" name="donation_form-one" className="default-form2" action="#"
-                                    method="post">
+                                    method="post" suppressHydrationWarning>
                                     <div className="form-group">
                                         <div className="input-box">
                                             <input type="text" name="form_name" id="formName" placeholder="Name...."
@@ -87,14 +87,13 @@ export default function About() {
                                         </div>
                                     </div>
                                     <div className="form-group">
-                                        <div className="select-box clearfix">
-                                            <select className="wide">
-                                                <option data-display="Select Sauses">Select Sauses</option>
+                                        <div className="select-box clearfix" suppressHydrationWarning>
+                                            <select className="wide" suppressHydrationWarning>
+                                                <option data-display="Select Causes">Select Causes</option>
                                                 <option value="Charity For Food">Charity For Food</option>
                                                 <option value="Charity For Education">Charity For Education</option>
                                                 <option value="Charity For Water">Charity For Water</option>
-                                                <option value="Charity For Natural Disaster">Charity For Natural
-                                                    Disaster</option>
+                                                <option value="Charity For Natural Disaster">Charity For Natural Disaster</option>
                                             </select>
                                         </div>
                                     </div>

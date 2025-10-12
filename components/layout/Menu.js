@@ -22,7 +22,7 @@ export default function Menu() {
                                             <div className="col-lg-2">
                                                 <div className="home-showcase__item">
                                                     <div className="home-showcase__image">
-                                                        <img src="assets/images/home-showcase/home-showcase-1-1.jpg"
+                                                        <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
                                                             alt=""/>
                                                         <div className="home-showcase__buttons">
                                                             <Link href="index1"
@@ -41,7 +41,7 @@ export default function Menu() {
                                             <div className="col-lg-2">
                                                 <div className="home-showcase__item">
                                                     <div className="home-showcase__image">
-                                                        <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
+                                                        <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
                                                             alt=""/>
                                                         <div className="home-showcase__buttons">
                                                             <Link href="index2"
@@ -60,7 +60,7 @@ export default function Menu() {
                                             <div className="col-lg-2">
                                                 <div className="home-showcase__item">
                                                     <div className="home-showcase__image">
-                                                        <img src="assets/images/home-showcase/home-showcase-1-3.jpg"
+                                                        <img src="assets/images/home-showcase/home-showcase-1-2.jpg"
                                                             alt=""/>
                                                         <div className="home-showcase__buttons">
                                                             <Link href="index3"

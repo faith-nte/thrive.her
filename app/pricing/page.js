@@ -329,7 +329,7 @@ export default function Home() {
                             {/*Start Brand One Single*/}
                             <div className="brand-one__single">
                                 <div className="brand-one__single-inner">
-                                    <Link href="#"><img src="assets/images/brand/brand-v1-img1.png" alt=""/></Link>
+                                    <Link href="#"><img src="assets/images/brand/brand-1-1.png" alt=""/></Link>
                                 </div>
                             </div>
                             {/*End Brand One Single*/}
@@ -338,7 +338,7 @@ export default function Home() {
                             {/*Start Brand One Single*/}
                             <div className="brand-one__single">
                                 <div className="brand-one__single-inner">
-                                    <Link href="#"><img src="assets/images/brand/brand-v1-img2.png" alt=""/></Link>
+                                    <Link href="#"><img src="assets/images/brand/brand-1-2.png" alt=""/></Link>
                                 </div>
                             </div>
                             {/*End Brand One Single*/}
@@ -347,7 +347,7 @@ export default function Home() {
                             {/*Start Brand One Single*/}
                             <div className="brand-one__single">
                                 <div className="brand-one__single-inner">
-                                    <Link href="#"><img src="assets/images/brand/brand-v1-img3.png" alt=""/></Link>
+                                    <Link href="#"><img src="assets/images/brand/brand-1-3.png" alt=""/></Link>
                                 </div>
                             </div>
                             {/*End Brand One Single*/}
@@ -356,7 +356,7 @@ export default function Home() {
                             {/*Start Brand One Single*/}
                             <div className="brand-one__single">
                                 <div className="brand-one__single-inner">
-                                    <Link href="#"><img src="assets/images/brand/brand-v1-img4.png" alt=""/></Link>
+                                    <Link href="#"><img src="assets/images/brand/brand-1-4.png" alt=""/></Link>
                                 </div>
                             </div>
                             {/*End Brand One Single*/}
@@ -365,7 +365,7 @@ export default function Home() {
                             {/*Start Brand One Single*/}
                             <div className="brand-one__single">
                                 <div className="brand-one__single-inner">
-                                    <Link href="#"><img src="assets/images/brand/brand-v1-img5.png" alt=""/></Link>
+                                    <Link href="#"><img src="assets/images/brand/brand-1-5.png" alt=""/></Link>
                                 </div>
                             </div>
                             {/*End Brand One Single*/}
@@ -374,7 +374,7 @@ export default function Home() {
                             {/*Start Brand One Single*/}
                             <div className="brand-one__single">
                                 <div className="brand-one__single-inner">
-                                    <Link href="#"><img src="assets/images/brand/brand-v1-img6.png" alt=""/></Link>
+                                    <Link href="#"><img src="assets/images/brand/brand-1-1.png" alt=""/></Link>
                                 </div>
                             </div>
                             {/*End Brand One Single*/}
