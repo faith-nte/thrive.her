@@ -5726,9 +5726,15 @@ ul {
   }
 
   .main-slider .image-layer__left-gradient {
+      /* Use brand Navy overlay on mobile for contrast over hero image.
+   Falls back to cream if CSS variables are unsupported. */
       background: var(--thriveher-cream);
-      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.896796218487395) 75%,
-              rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(90deg,
+        rgba(var(--anity-black-rgb), 0.72) 0%,
+        rgba(var(--anity-black-rgb), 0.72) 75%,
+        rgba(var(--anity-black-rgb), 0) 90%,
+        rgba(var(--anity-black-rgb), 0) 100%);
+      z-index: 2; /* sit above the image-layer (z-index:1) but below main content (z-index:5) */
   }
 
   .main-slider-content .big-title h2 {
