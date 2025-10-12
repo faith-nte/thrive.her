@@ -17,10 +17,19 @@ export default function BannerClient() {
                 <SwiperSlide style={{ position: 'relative', width: '100%', height: '100%', minHeight: '800px' }}>
                     <div className="image-layer" style={{ backgroundImage: 'url(/assets/images/resources/hero-1920x800.svg)' }} />
                     <div className="image-layer__left-gradient" />
-                    <div className="container">
+                    {/* Dark overlay for better text visibility */}
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        zIndex: 1
+                    }} />
+                    <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                         <div className="main-slider-content">
                             <div className="main-slider-content__inner">
-                                <div className="sub-title"><h4>We help</h4></div>
                                 <div className="big-title">
                                     <h2>
                                         Care that feels right{' '}
@@ -52,8 +61,31 @@ export default function BannerClient() {
                                         }
                                     `}</style>
                                 </div>
+                                <div className="sub-title" style={{
+                                    position: 'relative',
+                                    display: 'inline-block',
+                                    padding: '12px 16px 12px 16px',
+                                    background: 'rgba(33, 39, 63, 0.15)',
+                                    backdropFilter: 'blur(2px)',
+                                    clipPath: 'polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%)',
+                                    borderLeft: '4px solid #C78E1D'
+                                }}>
+                                    <h4>Working with NHS and community partners<br />to improve care for Muslim and minority women.</h4>
+                                    {/* Islamic-inspired decorative element */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '50%',
+                                        right: '8px',
+                                        transform: 'translateY(-50%)',
+                                        width: '12px',
+                                        height: '12px',
+                                        background: '#C78E1D',
+                                        clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+                                        opacity: 0.7
+                                    }} />
+                                </div>
                                 <div className="btn-box">
-                                    <a href="donation-details.html" className="thm-btn">Donate Now<span><i className="icon-arrow-right"></i></span></a>
+                                    <a href="donation-details.html" className="thm-btn">Join US<span><i className="icon-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
