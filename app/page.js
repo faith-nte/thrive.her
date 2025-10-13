@@ -8,18 +8,18 @@ import Cta from "@/components/sections/home1/Cta"
 import Donate from "@/components/sections/home1/Donate"
 import Donation from "@/components/sections/home1/Donation"
 import Event from "@/components/sections/home1/Event"
-import Found from "@/components/sections/home1/Found"
 import Team from "@/components/sections/home1/Team"
 import Testimonial from "@/components/sections/home1/Testimonial"
 import Welcome from "@/components/sections/home1/Welcome"
 import Who from "@/components/sections/home1/Who"
+import SimpleMissionSection from "@/components/SimpleMissionSection"
 
 export default function Home() {
     return (
         <>
             <Layout headerStyle={1} footerStyle={1}>
                 <Banner />
-                <Found />
+                <SimpleMissionSection />
                 <About />
                 <Welcome />
                 <Who />

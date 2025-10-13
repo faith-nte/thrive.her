@@ -1,0 +1,19 @@
+nohup: ignoring input
+
+> start-app-dir@0.1.0 dev
+> next dev
+
+- [33mwarn[39m Port 3000 is in use, trying 3001 instead.
+- [33mwarn[39m Port 3001 is in use, trying 3002 instead.
+- [32mready[39m started server on [::]:3002, url: http://localhost:3002
+- [35mevent[39m compiled client and server successfully in 309 ms (20 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 211 ms (20 modules)
+- [36mwait[39m compiling /middleware (client and server)...
+- [35mevent[39m compiled successfully in 213 ms (53 modules)
+- [36mwait[39m compiling /page (client and server)...
+- [35mevent[39m compiled client and server successfully in 2.8s (609 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 3.6s (611 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 15.4s (2003 modules)

@@ -5,6 +5,7 @@ import 'swiper/css'
 import "swiper/css/pagination"
 import 'swiper/css/free-mode';
 import { dmSans, libreBaskerville } from '@/lib/font'
+import CookieConsent from '@/components/CookieConsent'
 export const metadata = {
     title: 'ThriveHer',
     description: 'Charity & Donation react next Js template',
@@ -31,7 +32,10 @@ export default function RootLayout({ children }) {
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
                 <link rel="manifest" href="/site.webmanifest" />
             </head>
-            <body>{children}</body>
+            <body>
+                {children}
+                <CookieConsent />
+            </body>
         </html>
     )
 }
