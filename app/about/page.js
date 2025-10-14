@@ -47,7 +47,7 @@ export default function Home() {
                         <div className="about-One__right wow fadeInRight" data-wow-delay="300ms">
                             <div className="section-title text-left sec-title-animation animation-style2">
                                 <div className="section-title__tagline-box">
-                                    <span className="section-title__tagline">About Us</span>
+                                    <span className="section-title__tagline">🌿 Thrive.Her Initiatives</span>
                                 </div>
                                 <h2 className="section-title__title title-animation">Unite for a Cause
                                     <br/> Change the World</h2>
@@ -55,35 +55,29 @@ export default function Home() {
                             <div className="about-One__vission-mission">
                                 <div className="about-One__tab-box tabs-box">
                                     <ul className="tab-buttons clearfix list-unstyled">
-                                        <li className={activeIndex == 1 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(1)}><span>Our Mission</span></li>
-                                        <li className={activeIndex == 2 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(2)}><span>Our Vision</span></li>
-                                        <li className={activeIndex == 3 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(3)}><span>Our Goal</span></li>
+                                        <li className={activeIndex == 1 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(1)}><span>Community Health Workshops</span></li>
+                                        <li className={activeIndex == 2 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(2)}><span>Train-the-Trainer Programmes</span></li>
+                                        <li className={activeIndex == 3 ? "tab-btn active-btn" : "tab-btn"} onClick={() => handleOnClick(3)}><span>Strategic Partnership Packages</span></li>
                                     </ul>
                                     <div className="tabs-content">
                                         {/*tab*/}
                                         <div className={activeIndex == 1 ? "tab fadeInUp animated show active-tab" : "tab fadeInUp animated"}>
                                             <div className="tabs-content__inner">
-                                                <p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                                                    aspernaturaut odit aut fugit, sed quia consequuntur. Dicta sunt
-                                                    explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                                <p>Doctor-led sessions for mosques, women's groups and community organisations — opening conversations on women's health, faith and wellbeing.</p>
                                             </div>
                                         </div>
                                         {/*tab*/}
                                         {/*tab*/}
                                         <div className={activeIndex == 2 ? "tab fadeInUp animated show active-tab" : "tab fadeInUp animated"}>
                                             <div className="tabs-content__inner">
-                                                <p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                                                    aspernaturaut odit aut fugit, sed quia consequuntur. Dicta sunt
-                                                    explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                                <p>Specialist programmes that equip healthcare professionals and community champions to deliver culturally aware, faith-sensitive education.</p>
                                             </div>
                                         </div>
                                         {/*tab*/}
                                         {/*tab*/}
                                         <div className={activeIndex == 3 ? "tab fadeInUp animated show active-tab" : "tab fadeInUp animated"}>
                                             <div className="tabs-content__inner">
-                                                <p>Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                                                    aspernaturaut odit aut fugit, sed quia consequuntur. Dicta sunt
-                                                    explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                                                <p>Co-created pilots and toolkits with NHS teams, ICBs and global health systems — embedding inclusion, empathy and measurable health equity into everyday care.</p>
                                             </div>
                                         </div>
                                         {/*tab*/}
@@ -112,6 +106,7 @@ export default function Home() {
         </section>
         {/*About One End */}
 
+        {/*
         {/*Found One Start */}
         <section className="found-one">
             <div className="found-one__bg">
@@ -448,6 +443,7 @@ export default function Home() {
             </div>
         </section>
         {/**Event One End */}
+        */}
         </Layout>
         </>
     )

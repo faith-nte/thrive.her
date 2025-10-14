@@ -5,87 +5,126 @@ import { useEffect, useRef, useState } from 'react'
 const maternalData = [
     {
         ethnicity: 'White women',
-        risk: 1.0,
+        risk: 7.5,
         color: '#A7B093'
     },
     {
         ethnicity: 'Asian women',
-        risk: 1.8,
+        risk: 13.6,
         color: '#8FA081'
     },
     {
         ethnicity: 'Black women',
-        risk: 3.7,
+        risk: 27.9,
         color: '#C78E1D'
     }
 ]
 
-// Enhanced custom tooltip
+// Enhanced custom tooltip with improved visibility
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         const data = payload[0].payload
         return (
             <div style={{
-                background: 'rgba(33, 39, 63, 0.95)',
-                backdropFilter: 'blur(16px)',
-                border: '2px solid #C78E1D',
+                background: 'rgba(33, 39, 63, 0.98)',
+                backdropFilter: 'blur(20px)',
+                border: '3px solid #C78E1D',
                 borderRadius: '16px',
-                padding: '20px 24px',
-                boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 10px 30px rgba(199, 142, 29, 0.15)',
+                padding: '24px 28px',
+                boxShadow: '0 25px 60px rgba(0,0,0,0.4), 0 15px 35px rgba(199, 142, 29, 0.3)',
                 fontSize: '15px',
                 fontFamily: 'inherit',
-                minWidth: '220px',
-                color: '#F9E8CF'
+                minWidth: '240px',
+                color: '#F9E8CF',
+                zIndex: 9999,
+                position: 'relative',
+                transform: 'translateY(-10px)'
             }}>
                 <p style={{ 
                     color: '#C78E1D', 
-                    fontWeight: '700', 
-                    margin: '0 0 12px 0',
-                    fontSize: '16px',
-                    letterSpacing: '0.5px'
+                    fontWeight: '800', 
+                    margin: '0 0 16px 0',
+                    fontSize: '17px',
+                    letterSpacing: '0.5px',
+                    textTransform: 'uppercase',
+                    textAlign: 'center'
                 }}>{label}</p>
                 <div style={{ 
                     display: 'flex', 
                     alignItems: 'center', 
-                    gap: '8px',
-                    marginBottom: '8px'
+                    justifyContent: 'center',
+                    gap: '12px',
+                    marginBottom: '12px',
+                    background: 'rgba(199, 142, 29, 0.1)',
+                    padding: '12px',
+                    borderRadius: '8px'
                 }}>
                     <div style={{
-                        width: '12px',
-                        height: '12px',
+                        width: '16px',
+                        height: '16px',
                         backgroundColor: data.color,
-                        borderRadius: '3px'
+                        borderRadius: '4px',
+                        border: '2px solid #F9E8CF'
                     }} />
                     <span style={{ 
-                        fontWeight: '600',
-                        fontSize: '18px',
-                        color: '#C78E1D'
-                    }}>{data.risk}×</span>
+                        fontWeight: '800',
+                        fontSize: '24px',
+                        color: '#C78E1D',
+                        textShadow: '0 2px 4px rgba(0,0,0,0.3)'
+                    }}>{data.risk}</span>
                     <span style={{ 
-                        fontWeight: '500',
-                        opacity: 0.9
-                    }}>relative risk</span>
+                        fontWeight: '600',
+                        opacity: 1,
+                        color: '#F9E8CF',
+                        fontSize: '16px'
+                    }}>PER 100,000 BIRTHS</span>
                 </div>
-                {data.risk > 1 && (
+                {data.ethnicity === 'Black women' && (
                     <p style={{ 
-                        fontSize: '13px', 
-                        opacity: 0.8, 
-                        margin: '8px 0 0 0',
+                        fontSize: '14px', 
+                        opacity: 0.9, 
+                        margin: '12px 0 0 0',
                         fontStyle: 'italic',
-                        color: '#F9E8CF'
+                        color: '#F9E8CF',
+                        textAlign: 'center',
+                        background: 'rgba(199, 142, 29, 0.15)',
+                        padding: '8px 12px',
+                        borderRadius: '6px',
+                        fontWeight: '500'
                     }}>
-                        {((data.risk - 1) * 100).toFixed(0)}% higher than baseline
+                        Nearly 4× higher than White women
                     </p>
                 )}
-                {data.risk === 1 && (
+                {data.ethnicity === 'Asian women' && (
                     <p style={{ 
-                        fontSize: '13px', 
-                        opacity: 0.8, 
-                        margin: '8px 0 0 0',
+                        fontSize: '14px', 
+                        opacity: 0.9, 
+                        margin: '12px 0 0 0',
                         fontStyle: 'italic',
-                        color: '#F9E8CF'
+                        color: '#F9E8CF',
+                        textAlign: 'center',
+                        background: 'rgba(199, 142, 29, 0.15)',
+                        padding: '8px 12px',
+                        borderRadius: '6px',
+                        fontWeight: '500'
                     }}>
-                        Reference baseline
+                        Nearly 2× higher than White women
+                    </p>
+                )}
+                {data.ethnicity === 'White women' && (
+                    <p style={{ 
+                        fontSize: '14px', 
+                        opacity: 0.9, 
+                        margin: '12px 0 0 0',
+                        fontStyle: 'italic',
+                        color: '#A7B093',
+                        textAlign: 'center',
+                        background: 'rgba(167, 176, 147, 0.15)',
+                        padding: '8px 12px',
+                        borderRadius: '6px',
+                        fontWeight: '500'
+                    }}>
+                        Lowest mortality rate
                     </p>
                 )}
             </div>
@@ -197,7 +236,7 @@ export default function MissionImpactSection() {
                     opacity: isVisible ? 1 : 0,
                     transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
                 }}>
-                    <h1 
+                    <h1
                         id="mission-impact-heading"
                         className="site-footer__newsletter-title"
                         style={{
@@ -206,11 +245,11 @@ export default function MissionImpactSection() {
                             color: '#21273F',
                             marginBottom: '20px',
                             lineHeight: '1.1',
-                            fontFamily: 'var(--anity-font-playfair), "Playfair Display", serif',
+                            fontFamily: 'var(--thriveher-heading)',
                             letterSpacing: '-0.02em'
                         }}
                     >
-                        Numbers Don't Lie
+                        Numbers don't lie...
                     </h1>
                     
                     <p style={{
@@ -224,7 +263,7 @@ export default function MissionImpactSection() {
                         fontStyle: 'italic',
                         fontWeight: '500'
                     }}>
-                        The devastating reality of maternal health disparities
+                        Minority women too often carry the burden of being unseen.
                     </p>
                     
                     <div style={{ 
@@ -244,7 +283,8 @@ export default function MissionImpactSection() {
                             fontWeight: '500',
                             margin: 0
                         }}>
-                            Black women are 4 times more likely to die in pregnancy and childbirth than white women in the UK. These stark disparities demand immediate action.
+                            We see it — and we want to bridge the gap in medicine, faith and culture 
+                            through doctor-led, multilingual programmes.
                         </p>
                     </div>
                 </div>
@@ -278,11 +318,11 @@ export default function MissionImpactSection() {
                             color: '#21273F',
                             marginBottom: '48px',
                             textAlign: 'center',
-                            fontFamily: 'var(--anity-font-playfair), "Playfair Display", serif',
+                            fontFamily: 'var(--thriveher-heading)',
                             position: 'relative',
                             zIndex: 2
                         }}>
-                            Maternal Mortality Risk by Ethnicity
+                            Maternal Mortality Rates by Ethnicity in the UK
                         </h2>
                         
                         <div 
@@ -336,7 +376,7 @@ export default function MissionImpactSection() {
                                             fontFamily: 'inherit'
                                         }}
                                         label={{ 
-                                            value: 'Relative Risk', 
+                                            value: 'Deaths per 100,000 births', 
                                             angle: -90, 
                                             position: 'insideLeft',
                                             style: { 
@@ -347,12 +387,15 @@ export default function MissionImpactSection() {
                                                 fontFamily: 'inherit'
                                             }
                                         }}
-                                        domain={[0, 4]}
-                                        tickCount={5}
+                                        domain={[0, 30]}
+                                        tickCount={6}
                                     />
                                     <Tooltip 
                                         content={<CustomTooltip />}
-                                        cursor={{ fill: 'rgba(199, 142, 29, 0.1)' }}
+                                        cursor={{ fill: 'rgba(199, 142, 29, 0.15)' }}
+                                        wrapperStyle={{ zIndex: 9999 }}
+                                        allowEscapeViewBox={{ x: false, y: true }}
+                                        position={{ y: -20 }}
                                     />
                                     <Bar 
                                         dataKey="risk"
@@ -376,8 +419,8 @@ export default function MissionImpactSection() {
                             height: '1px', 
                             overflow: 'hidden' 
                         }}>
-                            Chart showing maternal death risk by ethnicity: White women have 1 times baseline risk, 
-                            Asian women have 1.8 times higher risk, and Black women have 3.7 times higher risk.
+                            Chart showing maternal mortality rates by ethnicity in the UK: White women have 7.5 deaths per 100,000 births, 
+                            Asian women have 13.6 deaths per 100,000 births, and Black women have 27.9 deaths per 100,000 births.
                         </div>
                     </div>
                 </div>
@@ -421,7 +464,7 @@ export default function MissionImpactSection() {
                                     fontWeight: '700',
                                     color: '#21273F',
                                     marginBottom: '16px',
-                                    fontFamily: 'var(--anity-font-playfair), "Playfair Display", serif'
+                                    fontFamily: 'var(--thriveher-heading)'
                                 }}>
                                     Critical Health Disparities
                                 </h3>
@@ -432,7 +475,13 @@ export default function MissionImpactSection() {
                                     margin: '0',
                                     fontWeight: '500'
                                 }}>
-                                    <strong style={{ color: '#C78E1D', fontWeight: '800', fontSize: '1.1em' }}>Black women</strong> are 3.7x more likely to die in childbirth than white women. <strong style={{ color: '#C78E1D', fontWeight: '800', fontSize: '1.1em' }}>Asian women</strong> face 1.8x higher risk. These disparities persist across socioeconomic levels.
+                                    Women of Black African heritage are <strong style={{ 
+                                        color: '#C78E1D', 
+                                        fontWeight: '800',
+                                        fontSize: '1.1em'
+                                    }}>83% more likely</strong> to 
+                                    experience a near miss in childbirth. These disparities reflect systemic gaps in 
+                                    culturally competent care.
                                 </p>
                             </div>
                         </div>
@@ -470,7 +519,7 @@ export default function MissionImpactSection() {
                                     fontWeight: '700',
                                     color: '#21273F',
                                     marginBottom: '16px',
-                                                                        fontFamily: 'var(--anity-font-playfair), "Playfair Display", serif'
+                                    fontFamily: 'var(--thriveher-heading)'
                                 }}>
                                     Economic Impact
                                 </h3>
@@ -480,7 +529,8 @@ export default function MissionImpactSection() {
                                     fontSize: '0.95rem',
                                     margin: '0'
                                 }}>
-                                    Poor maternal health outcomes cost the NHS <strong style={{ color: '#C78E1D' }}>£1.2 billion annually</strong>. Prevention programs show <strong style={{ color: '#C78E1D' }}>5:1 return on investment</strong>.
+                                    Missed red flags and preventable complications cost the NHS <strong style={{ color: '#C78E1D' }}>billions</strong> each 
+                                    year. Investment in culturally competent care saves lives and resources.
                                 </p>
                             </div>
                         </div>
@@ -501,7 +551,7 @@ export default function MissionImpactSection() {
                         borderRadius: '8px',
                         border: '1px solid rgba(199, 142, 29, 0.2)'
                     }}>
-                        Sources: NHS, MBRRACE-UK, Office for National Statistics
+                        <span style={{ fontWeight: '700', color: '#C78E1D' }}>Sources:</span> MBRRACE-UK, Women & Equalities Committee, CQC, The Guardian
                     </p>
                 </div>
 
@@ -558,7 +608,7 @@ export default function MissionImpactSection() {
                                 color: '#C78E1D',
                                 marginBottom: '32px',
                                 lineHeight: '1.2',
-                                fontFamily: 'var(--anity-font-playfair), "Playfair Display", serif',
+                                fontFamily: 'var(--thriveher-heading)',
                                 position: 'relative',
                                 zIndex: 2,
                                 letterSpacing: '-0.01em'
@@ -573,7 +623,8 @@ export default function MissionImpactSection() {
                             opacity: '0.9',
                             marginBottom: '32px'
                         }}>
-                            To reduce maternal health disparities by empowering communities with knowledge, supporting healthcare professionals with training, and partnering with organizations to create lasting change.
+                            To bridge medicine, faith, and culture through doctor-led, multilingual programmes — 
+                            empowering women and improving outcomes for every community.
                         </p>
                         <div style={{ marginTop: '32px' }}>
                             <div style={{
@@ -591,7 +642,7 @@ export default function MissionImpactSection() {
                                     letterSpacing: '0.05rem',
                                     textTransform: 'uppercase'
                                 }}>
-                                    Empowering Women Through Healthcare
+                                    Empowering Every Woman
                                 </span>
                             </div>
                         </div>
@@ -672,7 +723,7 @@ export default function MissionImpactSection() {
                 }
                 
                 /* Smooth hover effects */
-                .mission-impact-section div[style*="background: rgba(255, 255, 255, 0.9)"]:hover {
+                .mission-impact-section div[style*="background: white"]:hover {
                     transform: translateY(-2px);
                     transition: transform 0.2s ease;
                     box-shadow: 0 12px 40px rgba(33, 39, 63, 0.12) !important;

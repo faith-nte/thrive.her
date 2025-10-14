@@ -1390,7 +1390,7 @@ ul {
   line-height: 30px;
   color: var(--thriveher-cream);
   font-size: 14px;
-  font-family: var(--anity-font, "Rubik", sans-serif);
+  font-family: var(--thriveher-body);
   font-weight: 500;
   height: 46px;
   -webkit-box-align: center;
@@ -1737,7 +1737,7 @@ ul {
   color: var(--anity-white);
   margin-top: 10px;
   text-transform: uppercase;
-  font-family: var(--anity-font);
+  font-family: var(--thriveher-body);
   background-image: -ms-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-rose) 100%);
   background-image: -moz-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-rose) 100%);
   background-image: -o-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-rose) 100%);
@@ -2305,7 +2305,7 @@ ul {
   height: 60px;
   color: var(--anity-gray);
   font-size: 16px;
-  font-family: var(--anity-font);
+  font-family: var(--thriveher-body);
   font-weight: 400;
   font-style: normal;
   padding-left: 20px;
@@ -2360,7 +2360,7 @@ ul {
   height: 60px;
   color: var(--anity-gray);
   font-size: 16px;
-  font-family: var(--anity-font);
+  font-family: var(--thriveher-body);
   font-weight: 400;
   font-style: normal;
   padding: 5px 20px 0px;

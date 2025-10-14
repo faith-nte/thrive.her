@@ -21,9 +21,9 @@ export default function Home() {
                 <Banner />
                 <SimpleMissionSection />
                 <About />
+                <Country />
                 <Welcome />
                 <Who />
-                <Country />
                 <Donate />
                 <Donation />
                 <Event />

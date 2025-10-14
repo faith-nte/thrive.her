@@ -51,16 +51,6 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                                     </div>
                                 </div>
                                 <div className="main-menu__right">
-                                    <div className="main-menu__call">
-                                        <div className="main-menu__call-icon">
-                                            <i className="icon-call"></i>
-                                        </div>
-                                        <div className="main-menu__call-content">
-                                            <p className="main-menu__call-sub-title">Call Anytime</p>
-                                            <h5 className="main-menu__call-number"><Link href="tel:9288006780">+92 ( 8800 ) -
-                                                    6780</Link></h5>
-                                        </div>
-                                    </div>
                                     <div className="main-menu__search-box">
                                         <Link href="#" className="main-menu__search search-toggler icon-search" onClick={handlePopup}></Link>
                                     </div>

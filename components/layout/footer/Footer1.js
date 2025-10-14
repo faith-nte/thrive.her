@@ -1,4 +1,5 @@
 import Link from "next/link"
+import CookieSettings from "@/components/CookieSettings"
 
 export default function Footer1() {
     return (
@@ -41,13 +42,12 @@ export default function Footer1() {
                                     <div className="footer-widget__about-logo">
                                         <Link href="/"><img src="assets/images/resources/logo-footer-bright.svg" alt="ThriveHer Logo"/></Link>
                                     </div>
-                                    <p className="footer-widget__about-text">category that involves giving financial or to a
-                                        materialt support various causes organizations It allows not </p>
+                                    <p className="footer-widget__about-text">We're based in London but serve women, communities, and organisations worldwide through online education, culturally sensitive programmes, and strategic partnerships.</p>
                                     <div className="site-footer__social">
-                                        <Link href="#"><i className="icon-facebook"></i></Link>
-                                        <Link href="#"><i className="icon-twitter"></i></Link>
-                                        <Link href="#"><i className="icon-instagram"></i></Link>
-                                        <Link href="#"><i className="icon-pintarest"></i></Link>
+                                        <Link href="https://www.facebook.com/share/177a8NJdki/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><i className="icon-facebook"></i></Link>
+                                        <Link href="https://www.instagram.com/thriveher.clinic/" target="_blank" rel="noopener noreferrer"><i className="icon-instagram"></i></Link>
+                                        <Link href="https://www.linkedin.com/company/thriveher-clinic/" target="_blank" rel="noopener noreferrer"><i className="icon-linkedin"></i></Link>
+                                        <Link href="https://www.youtube.com/@ThriveWithDrHussaini" target="_blank" rel="noopener noreferrer"><i className="icon-youtube"></i></Link>
                                     </div>
                                 </div>
                             </div>
@@ -81,19 +81,19 @@ export default function Footer1() {
                                             <div className="icon">
                                                 <span className="icon-call"></span>
                                             </div>
-                                            <p><Link href="tel:0882466422710">+088 (246) 642-27-10</Link></p>
+                                            <p><Link href="tel:+447459110397">+44 7459 110397</Link></p>
                                         </li>
                                         <li>
                                             <div className="icon">
                                                 <span className="icon-envelope"></span>
                                             </div>
-                                            <p><Link href="mailto:example@mail.com">example@mail.com</Link></p>
+                                            <p><Link href="mailto:info@thriveher.clinic">info@thriveher.clinic</Link></p>
                                         </li>
                                         <li>
                                             <div className="icon">
                                                 <span className="icon-pin"></span>
                                             </div>
-                                            <p>455 West Orchard Street<br/> Kings Mountain, NC 280867</p>
+                                            <p>ThriveHer Ltd<br/>Kemp House, 152–160 City Road<br/>London, EC1V 2NX, United Kingdom</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -108,15 +108,15 @@ export default function Footer1() {
                         <div className="col-xl-12">
                             <div className="site-footer__bottom-inner">
                                 <div className="site-footer__copyright">
-                                    <p className="site-footer__copyright-text">Copywright 2024 by <Link href="#">anity</Link>.
+                                    <p className="site-footer__copyright-text">Copyright 2024 by <Link href="#">ThriveHer Ltd</Link>.
                                         All
                                         Rights Reserved.</p>
                                 </div>
                                 <div className="site-footer__bottom-menu-box">
                                     <ul className="list-unstyled site-footer__bottom-menu">
-                                        <li><Link href="about">Privacy Policy</Link></li>
-                                        <li><Link href="about">Terms of Service</Link></li>
-                                        <li><Link href="about">Cookies Settings</Link></li>
+                                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                        <li><Link href="/terms-of-service">Terms of Service</Link></li>
+                                        <li><CookieSettings /></li>
                                     </ul>
                                 </div>
                             </div>

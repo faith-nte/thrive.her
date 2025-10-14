@@ -4,7 +4,7 @@ import 'swiper/css'
 // import "swiper/css/navigation"
 import "swiper/css/pagination"
 import 'swiper/css/free-mode';
-import { dmSans, libreBaskerville } from '@/lib/font'
+import { dmSans, libreBaskerville, playfairDisplay, inter } from '@/lib/font'
 import CookieConsent from '@/components/CookieConsent'
 export const metadata = {
     title: 'ThriveHer',
@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${dmSans.variable} ${libreBaskerville.variable}`}>
+        <html lang="en" className={`${playfairDisplay.variable} ${inter.variable} ${dmSans.variable} ${libreBaskerville.variable}`}>
             <head>
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
