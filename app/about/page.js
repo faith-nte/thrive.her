@@ -443,7 +443,6 @@ export default function Home() {
             </div>
         </section>
         {/**Event One End */}
-        */}
         </Layout>
         </>
     )
