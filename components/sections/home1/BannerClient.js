@@ -101,8 +101,7 @@ export default function BannerClient() {
                                             borderRadius: '8px',
                                             zIndex: 1
                                         }}></div>
-                                        <a 
-                                            href="donation-details.html" 
+                                        <span 
                                             className="thm-btn"
                                             style={{
                                                 position: 'relative',
@@ -120,19 +119,12 @@ export default function BannerClient() {
                                                 letterSpacing: '0.5px',
                                                 border: '2px solid #C78E1D',
                                                 transition: 'all 0.3s ease',
-                                                boxShadow: '0 4px 12px rgba(199, 142, 29, 0.3)'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.target.style.transform = 'translate(-2px, -2px)';
-                                                e.target.style.boxShadow = '0 6px 20px rgba(199, 142, 29, 0.4)';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.target.style.transform = 'translate(0, 0)';
-                                                e.target.style.boxShadow = '0 4px 12px rgba(199, 142, 29, 0.3)';
+                                                boxShadow: '0 4px 12px rgba(199, 142, 29, 0.3)',
+                                                cursor: 'default'
                                             }}
                                         >
                                             Join US<span><i className="icon-arrow-right"></i></span>
-                                        </a>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

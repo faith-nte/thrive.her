@@ -20,7 +20,8 @@ export default function Home() {
             <Layout headerStyle={1} footerStyle={1}>
                 <Banner />
                 <SimpleMissionSection />
-                <About />
+                {/* Content hidden after mission section for client preview */}
+                {/* <About />
                 <Country />
                 <Welcome />
                 <Who />
@@ -31,7 +32,7 @@ export default function Home() {
                 <Team />
                 <Testimonial />
                 <Blog />
-                <Brands />
+                <Brands /> */}
             </Layout>
         </>
     )

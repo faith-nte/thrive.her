@@ -13,20 +13,20 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                         <div className="main-menu__wrapper-inner">
                             <div className="main-menu__left">
                                 <div className="main-menu__logo">
-                                    <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
+                                    <span style={{cursor: 'default'}}><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></span>
                                 </div>
                                 <div className="main-menu__main-menu-box">
-                                    <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                                    <span style={{cursor: 'default'}} className="mobile-nav__toggler"><i className="fa fa-bars"></i></span>
                                     <Menu />
                                 </div>
                             </div>
                             <div className="main-menu__right">
                                 <div className="main-menu__search-box">
-                                    <Link href="#" className="main-menu__search search-toggler icon-search" onClick={handlePopup}></Link>
+                                    <span style={{cursor: 'default'}} className="main-menu__search search-toggler icon-search"></span>
                                 </div>
                                 <div className="main-menu__btn-box">
-                                    <Link href="donation-details" className="main-menu__btn thm-btn">Partner with US<span><i
-                                                className="icon-arrow-right"></i></span></Link>
+                                    <span style={{cursor: 'default'}} className="main-menu__btn thm-btn">Partner with US<span><i
+                                                className="icon-arrow-right"></i></span></span>
                                 </div>
                             </div>
                         </div>
@@ -43,20 +43,20 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-menu__left">
                                     <div className="main-menu__logo">
-                                        <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
+                                        <span style={{cursor: 'default'}}><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></span>
                                     </div>
                                     <div className="main-menu__main-menu-box">
-                                        <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                                        <span style={{cursor: 'default'}} className="mobile-nav__toggler"><i className="fa fa-bars"></i></span>
                                         <Menu />
                                     </div>
                                 </div>
                                 <div className="main-menu__right">
                                     <div className="main-menu__search-box">
-                                        <Link href="#" className="main-menu__search search-toggler icon-search" onClick={handlePopup}></Link>
+                                        <span style={{cursor: 'default'}} className="main-menu__search search-toggler icon-search"></span>
                                     </div>
                                     <div className="main-menu__btn-box">
-                                        <Link href="donation-details" className="main-menu__btn thm-btn">Donate Now<span><i
-                                                    className="icon-arrow-right"></i></span></Link>
+                                        <span style={{cursor: 'default'}} className="main-menu__btn thm-btn">Partner with Us<span><i
+                                                    className="icon-arrow-right"></i></span></span>
                                     </div>
                                 </div>
                             </div>
