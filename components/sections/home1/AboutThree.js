@@ -97,7 +97,7 @@ export default function AboutThree() {
                                                 boxShadow: '0 4px 12px rgba(199, 142, 29, 0.3)'
                                             }}
                                         >
-                                            READ MORE<span><i className="icon-arrow-right"></i></span>
+                                            READ MORE
                                         </Link>
                                     </div>
                                 </div>

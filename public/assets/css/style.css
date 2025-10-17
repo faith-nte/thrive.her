@@ -230,7 +230,14 @@ ul {
 
 @media (min-width: 1320px) {
   .container {
-    max-width: 1320px;
+    max-width: 1600px;
+  }
+}
+
+/* Override Bootstrap's container classes for wider layout to match OneWelbeck */
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1600px !important;
   }
 }
 
@@ -1307,7 +1314,7 @@ ul {
 
 .mobile-nav__content {
   width: 300px;
-  background-color: var(--anity-black);
+  background-color: #21273F;
   z-index: 10;
   position: relative;
   height: 100%;

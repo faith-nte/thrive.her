@@ -1,4 +1,4 @@
-// File: /workspaces/thrive.her/app/layout.js
+// File: /home/faithnte/Downloads/fenn digital/client/Dr Syeda/website/thrive.her/app/layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

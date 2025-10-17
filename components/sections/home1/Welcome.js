@@ -189,7 +189,7 @@ export default function About() {
                                     <div className="btn-box">
                                         <button type="submit" className="thm-btn">
                                             Donate Now
-                                            <span><i className="icon-arrow-right"></i></span>
+                                            
                                         </button>
                                     </div>
 

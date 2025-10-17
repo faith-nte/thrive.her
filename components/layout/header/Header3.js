@@ -29,7 +29,7 @@ export default function Header3({ scroll, handlePopup, handleMobileMenu  }) {
                                 </div>
                                 <div className="main-menu-three__btn-box">
                                     <Link href="donation-details" className="main-menu-three__btn thm-btn">Donate
-                                        Now<span><i className="icon-arrow-right"></i></span></Link>
+                                        Now</Link>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ export default function Header3({ scroll, handlePopup, handleMobileMenu  }) {
                                     </div>
                                     <div className="main-menu-three__btn-box">
                                         <Link href="donation-details" className="main-menu-three__btn thm-btn">Donate
-                                            Now<span><i className="icon-arrow-right"></i></span></Link>
+                                            Now</Link>
                                     </div>
                                 </div>
                             </div>

@@ -20,7 +20,7 @@ export default function Footer2() {
                                         materialt<br/> support various causes organizations It allows not </p>
                                     <div className="footer-widget-two__btn-box">
                                         <Link href="donation-details" className="footer-widget-two__btn thm-btn">Donate
-                                            Now<span><i className="icon-arrow-right"></i></span></Link>
+                                            Now</Link>
                                     </div>
                                 </div>
                             </div>

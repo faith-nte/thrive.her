@@ -18,7 +18,7 @@ export default function Funfact() {
                                     </span><br/>The Needy One</h2>
                                 <div className="counter-one__needy-btn-box">
                                     <Link href="donation-details" className="counter-one__needy-btn thm-btn">Donate
-                                        Now<span><i className="icon-arrow-right"></i></span></Link>
+                                        Now</Link>
                                 </div>
                             </div>
                         </div>
