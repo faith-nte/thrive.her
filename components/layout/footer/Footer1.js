@@ -1,131 +1,92 @@
+'use client';
 import Link from "next/link"
+import styles from '@/styles/Footer.module.css'
 
 export default function Footer1() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <>
-           
-           <footer className="site-footer">
-            <div className="site-footer__newsletter">
-                <div className="container">
+           <footer className={styles['site-footer']}>
+            <div className="container">
+                <div className={styles['footer-content']}>
                     <div className="row">
-                        <div className="col-xl-12">
-                            <div className="site-footer__newsletter-inner">
-                                <div className="site-footer__newsletter-left">
-                                    <div className="site-footer__newsletter-title-box">
-                                        <h3 className="site-footer__newsletter-title">Subscribe Our Newsletters</h3>
-                                    </div>
-                                </div>
-                                <div className="site-footer__newsletter-right">
-                                    <div className="site-footer__newsletter-content">
-                                        <form className="site-footer__newsletter-form">
-                                            <div className="site-footer__newsletter-input">
-                                                <input type="text" placeholder="Enter Your Email"/>
-                                            </div>
-                                            <button type="submit"
-                                                className="thm-btn site-footer__newsletter-btn">Subscribe<span><i
-                                                        className="icon-arrow-right"></i></span></button>
-                                        </form>
-                                    </div>
+                        {/* Main Footer Links */}
+                        <div className="col-lg-3 col-md-6">
+                            <div className={styles['footer-widget']}>
+                                <h4 className={styles['footer-widget__title']}>For Patients</h4>
+                                <ul className={styles['footer-widget__list']}>
+                                    <li><Link href="/about">About Us</Link></li>
+                                    <li><Link href="/treatments">Our Treatments</Link></li>
+                                    <li><Link href="/book-online">Book Online</Link></li>
+                                    <li><Link href="/blog">Blog & Resources</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className={styles['footer-widget']}>
+                                <h4 className={styles['footer-widget__title']}>Our Services</h4>
+                                <ul className={styles['footer-widget__list']}>
+                                    <li><Link href="/services/gynecology">Gynecology</Link></li>
+                                    <li><Link href="/services/fertility">Fertility Services</Link></li>
+                                    <li><Link href="/services/womens-health">Women's Health</Link></li>
+                                    <li><Link href="/services/consultations">Consultations</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className={styles['footer-widget']}>
+                                <h4 className={styles['footer-widget__title']}>Contact Us</h4>
+                                <ul className={styles['footer-widget__contact']}>
+                                    <li>
+                                        <i className="icon-pin"></i>
+                                        <p>Suite 6433 Unit 3a<br />34-35 Hatton Garden<br />London EC1N 8DX<br />England</p>
+                                    </li>
+                                    <li>
+                                        <i className="icon-envelope"></i>
+                                        <Link href="mailto:info@thriveher.clinic">info@thriveher.clinic</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 col-md-6">
+                            <div className={styles['footer-widget']}>
+                                <h4 className={styles['footer-widget__title']}>Follow Us</h4>
+                                <div className={styles['footer-widget__social']}>
+                                    <Link href="https://www.facebook.com/share/177a8NJdki/?mibextid=wwXIfr" aria-label="Facebook"><i className="fab fa-facebook"></i></Link>
+                                    <Link href="https://www.instagram.com/thriveher.clinic/" aria-label="Instagram"><i className="fab fa-instagram"></i></Link>
+                                    <Link href="https://www.linkedin.com/company/thriveher-clinic/" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></Link>
+                                    <Link href="https://www.youtube.com/@ThriveWithDrHussaini" aria-label="YouTube"><i className="fab fa-youtube"></i></Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="site-footer__top">
-                <div className="container">
-                    <div className="site-footer__top-inner">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                                <div className="footer-widget__about">
-                                    <div className="footer-widget__about-logo">
-                                        <Link href="/"><img src="assets/images/resources/logo-footer-bright.svg" alt="ThriveHer Logo"/></Link>
-                                    </div>
-                                    <p className="footer-widget__about-text">category that involves giving financial or to a
-                                        materialt support various causes organizations It allows not </p>
-                                    <div className="site-footer__social">
-                                        <Link href="#"><i className="icon-facebook"></i></Link>
-                                        <Link href="#"><i className="icon-twitter"></i></Link>
-                                        <Link href="#"><i className="icon-instagram"></i></Link>
-                                        <Link href="#"><i className="icon-pintarest"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                                <div className="footer-widget__services">
-                                    <h4 className="footer-widget__title">Services</h4>
-                                    <ul className="footer-widget__services-list list-unstyled">
-                                        <li><Link href="about">Incident Responder</Link></li>
-                                        <li><Link href="about">Secure Managed Fund</Link></li>
-                                        <li><Link href="about">Clean Water All</Link></li>
-                                        <li><Link href="about">Give Education</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div className="footer-widget__links">
-                                    <h4 className="footer-widget__title">Links</h4>
-                                    <ul className="footer-widget__services-list list-unstyled">
-                                        <li><Link href="about">Food to individuals</Link></li>
-                                        <li><Link href="about">Temporary housing</Link></li>
-                                        <li><Link href="about">Local shelters</Link></li>
-                                        <li><Link href="about">Natural disasters</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                                <div className="footer-widget__contact">
-                                    <h3 className="footer-widget__title">Contact Info</h3>
-                                    <ul className="footer-widget__contact-list list-unstyled">
-                                        <li>
-                                            <div className="icon">
-                                                <span className="icon-call"></span>
-                                            </div>
-                                            <p><Link href="tel:0882466422710">+088 (246) 642-27-10</Link></p>
-                                        </li>
-                                        <li>
-                                            <div className="icon">
-                                                <span className="icon-envelope"></span>
-                                            </div>
-                                            <p><Link href="mailto:example@mail.com">example@mail.com</Link></p>
-                                        </li>
-                                        <li>
-                                            <div className="icon">
-                                                <span className="icon-pin"></span>
-                                            </div>
-                                            <p>455 West Orchard Street<br/> Kings Mountain, NC 280867</p>
-                                        </li>
-                                    </ul>
-                                </div>
+
+                {/* Footer Bottom */}
+                <div className={styles['footer-bottom']}>
+                    <div className="row align-items-center">
+                        <div className="col-md-6">
+                            <div className={styles['footer-bottom__copyright']}>
+                                <p>&copy; {currentYear} ThriveHer Clinic. All rights reserved.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="site-footer__bottom">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-12">
-                            <div className="site-footer__bottom-inner">
-                                <div className="site-footer__copyright">
-                                    <p className="site-footer__copyright-text">Copywright 2024 by <Link href="#">anity</Link>.
-                                        All
-                                        Rights Reserved.</p>
-                                </div>
-                                <div className="site-footer__bottom-menu-box">
-                                    <ul className="list-unstyled site-footer__bottom-menu">
-                                        <li><Link href="about">Privacy Policy</Link></li>
-                                        <li><Link href="about">Terms of Service</Link></li>
-                                        <li><Link href="about">Cookies Settings</Link></li>
-                                    </ul>
-                                </div>
+                        <div className="col-md-6">
+                            <div className={styles['footer-bottom__links']}>
+                                <ul>
+                                    <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                    <li><Link href="/terms">Terms of Use</Link></li>
+                                    <li><Link href="https://fenn.digital" target="_blank" rel="noopener noreferrer">Designed by Fenn Digital</Link></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-        
         </>
     )
 }

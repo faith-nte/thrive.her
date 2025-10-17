@@ -1,0 +1,245 @@
+.site-footer {
+    background-color: var(--thriveher-navy);
+    color: var(--thriveher-cream);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    padding-bottom: 3rem;
+}
+
+/* Footer Widget */
+.footer-widget {
+    margin-bottom: 2rem;
+}
+
+.footer-widget__title {
+    color: var(--thriveher-rose);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.footer-widget__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget__list li {
+    margin-bottom: 0.625rem;
+}
+
+.footer-widget__list li a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-widget__list li a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Contact Widget */
+.footer-widget__contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget__contact li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.footer-widget__contact li i {
+    color: var(--thriveher-rose);
+    margin-right: 0.625rem;
+    margin-top: 0.25rem;
+}
+
+.footer-widget__contact li p,
+.footer-widget__contact li a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    margin: 0;
+}
+
+.footer-widget__contact li a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Social Media */
+.footer-widget__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-widget__social a {
+    color: var(--thriveher-cream);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-widget__social a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(249, 232, 207, 0.1);
+    padding-top: 1.25rem;
+}
+
+.footer-bottom__copyright {
+    margin-bottom: 0.625rem;
+}
+
+.footer-bottom__copyright p {
+    color: var(--thriveher-cream);
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.footer-bottom__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+}
+
+.footer-bottom__links li a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom__links li a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-bottom__links ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-widget {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.footer-widget {
+    margin-bottom: 2rem;
+}
+
+.footer-widget__title {
+    color: var(--thriveher-gold);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer-widget__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget__list li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-widget__list a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-widget__list a:hover {
+    color: var(--thriveher-rose);
+}
+
+.footer-widget__contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-widget__contact li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.footer-widget__contact i {
+    color: var(--thriveher-gold);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+.footer-widget__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-widget__social a {
+    color: var(--thriveher-cream);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-widget__social a:hover {
+    color: var(--thriveher-rose);
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(249, 232, 207, 0.1);
+}
+
+.footer-bottom__copyright {
+    color: var(--thriveher-cream);
+    opacity: 0.8;
+}
+
+.footer-bottom__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.footer-bottom__links a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom__links a:hover {
+    color: var(--thriveher-gold);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom__links ul {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+    
+    .footer-bottom__links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
