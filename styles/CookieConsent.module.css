@@ -1,0 +1,262 @@
+.cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--thriveher-cream);
+    color: var(--thriveher-navy);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 0.9375rem;
+    width: 100%;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.title {
+    color: var(--thriveher-navy);
+    font-size: 1.125rem;
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+}
+
+.content p {
+    margin: 0 0 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem; /* NHS standard 16px spacing */
+    margin: 0.75rem 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.button {
+    padding: 0.625rem 1.25rem;
+    border-radius: 6px;
+    border: 1.5px solid var(--thriveher-navy);
+    background: transparent;
+    color: var(--thriveher-navy);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+}
+
+.shortText {
+    display: none;
+}
+
+.fullText {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .shortText {
+        display: inline;
+    }
+    
+    .fullText {
+        display: none;
+    }
+}
+
+.button:hover {
+    background-color: var(--thriveher-navy);
+    color: var(--thriveher-cream);
+}
+
+.button.primary {
+    background-color: var(--thriveher-navy);
+    color: var(--thriveher-cream);
+}
+
+.button.primary:hover {
+    background-color: var(--thriveher-rose);
+    border-color: var(--thriveher-rose);
+}
+
+.preferences {
+    margin: 0.75rem 0;
+    border-top: 1px solid rgba(33, 39, 63, 0.1);
+    padding-top: 0.75rem;
+}
+
+.preferenceItem {
+    margin-bottom: 0.75rem;
+}
+
+.preferenceItem label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.preferenceItem input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--thriveher-navy);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.preferenceItem input[type="checkbox"]:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.preferenceItem p {
+    margin: 0 0 0 1.5rem;
+    font-size: 0.8125rem;
+    color: rgba(33, 39, 63, 0.8);
+}
+
+.footer {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(33, 39, 63, 0.1);
+}
+
+.link {
+    color: var(--thriveher-navy);
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .buttonGroup {
+        gap: 0.5rem;
+    }
+
+    .button {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding: 0.875rem;
+    }
+
+    .buttonGroup {
+        gap: 0.375rem;
+    }
+
+    .button {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.625rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 0.875rem;
+    }
+    
+    .buttonGroup {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 0.75rem 0;
+        gap: 1rem; /* NHS standard 16px spacing */
+        width: 100%;
+    }
+    
+    .button {
+        font-size: 0.8125rem;
+        padding: 0.75rem 0.875rem;
+        white-space: nowrap;
+        min-width: 0;
+        flex: 0 1 auto;
+        text-align: center;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-width: 1.5px;
+    }
+    
+    .title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .content p {
+        font-size: 0.8125rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .shortText {
+        display: inline;
+        font-weight: 500;
+    }
+
+    .fullText {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 0.75rem;
+    }
+    
+    .buttonGroup {
+        gap: 1rem;
+        margin: 0.625rem 0;
+    }
+    
+    .button {
+        font-size: 0.75rem;
+        padding: 0.625rem 0.75rem;
+        letter-spacing: 0.02em;
+    }
+
+    .content p {
+        font-size: 0.75rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .title {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .content {
+        padding: 0.75rem 0.625rem;
+    }
+    
+    .buttonGroup {
+        gap: 1rem;
+    }
+    
+    .button {
+        font-size: 0.75rem;
+        padding: 0.625rem 0.625rem;
+    }
+}
