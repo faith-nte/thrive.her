@@ -13,7 +13,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                         <div className="main-menu__wrapper-inner">
                             <div className="main-menu__left">
                                 <div className="main-menu__logo">
-                                    <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
+                                    <Link href="/"><img src="assets/images/resources/logo-header.png" alt="ThriveHer Logo"/></Link>
                                 </div>
                                 <div className="main-menu__main-menu-box">
                                     <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
@@ -25,8 +25,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                                     <Link href="#" className="main-menu__search search-toggler icon-search" onClick={handlePopup}></Link>
                                 </div>
                                 <div className="main-menu__btn-box">
-                                    <Link href="donation-details" className="main-menu__btn thm-btn">Partner with US<span><i
-                                                className="icon-arrow-right"></i></span></Link>
+                                    <Link href="/workshop" className="main-menu__btn thm-btn">Join our workshop</Link>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +42,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-menu__left">
                                     <div className="main-menu__logo">
-                                        <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
+                                        <Link href="/"><img src="assets/images/resources/logo-header.png" alt="ThriveHer Logo"/></Link>
                                     </div>
                                     <div className="main-menu__main-menu-box">
                                         <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
