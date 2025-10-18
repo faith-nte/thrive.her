@@ -1,0 +1,6 @@
+/* Mobile styles for banner */
+@media (max-width: 768px) {
+  .main-slider-four .big-title {
+    padding-top: 4rem !important;
+  }
+}

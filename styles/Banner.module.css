@@ -1,0 +1,9 @@
+.bannerHeadline {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .bannerHeadline {
+        padding-top: 4rem;
+    }
+}

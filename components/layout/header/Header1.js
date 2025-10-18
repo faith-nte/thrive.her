@@ -10,7 +10,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
         style={{
           backgroundColor:
             scroll > 100 ? "rgba(33, 39, 63, 0.85)" : "transparent",
-          transition: "background-color 0.3s ease",
+          transition: "all 0.3s ease",
           position: "fixed",
           width: "100%",
           zIndex: 1000,
@@ -22,6 +22,13 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
             backgroundColor: "transparent",
           }}
         >
+          <style jsx global>{`
+            @media (max-width: 768px) {
+              .main-header {
+                background-color: #21273f !important;
+              }
+            }
+          `}</style>
           <div
             className="main-menu__wrapper"
             style={{
@@ -45,9 +52,9 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                       className="mobile-nav__toggler"
                       onClick={handleMobileMenu}
                       style={{
-                        textShadow:
-                          scroll > 100 ? "none" : "0 0 10px rgba(0,0,0,0.5)",
                         color: "white",
+                        fontSize: "28px",
+                        padding: "8px",
                       }}
                     >
                       <i className="fa fa-bars"></i>

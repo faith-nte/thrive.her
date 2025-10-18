@@ -47,7 +47,8 @@ export default function BannerClient() {
                     "url(assets/images/resources/balanced-view-hero.png)",
                   height: "100%",
                   backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundPosition: "center 0",
+                  backgroundRepeat: "no-repeat",
                 }}
               ></div>
               <div
@@ -64,24 +65,99 @@ export default function BannerClient() {
                 ></div>
                 <div className="container">
                   <div className="content-box" style={{ position: "relative" }}>
+                    <style jsx global>{`
+                      @keyframes pulse {
+                        0% {
+                          box-shadow: 0 0 0 0 rgba(199, 142, 29, 0.4);
+                        }
+                        70% {
+                          box-shadow: 0 0 0 10px rgba(199, 142, 29, 0);
+                        }
+                        100% {
+                          box-shadow: 0 0 0 0 rgba(199, 142, 29, 0);
+                        }
+                      }
+                      @media (max-width: 768px) {
+                        .big-title {
+                          padding-top: 4rem !important;
+                        }
+                        .image-layer {
+                          background-position-y: 25% !important;
+                        }
+                      }
+                    `}</style>
                     <div className="big-title">
                       <h2>
-                        Care that feels right{" "}
-                        <span style={{ fontStyle: "italic" }}>for you</span>
+                        Working with{" "}
+                        <span style={{ fontStyle: "italic" }}>
+                          NHS & Community Partners
+                        </span>
                       </h2>
                     </div>
                     <div className="text-box">
                       <p>
-                        Working with NHS and community partners to improve care
-                        for Muslim and minority women.
+                        Deliver Care That Improves Health Outcomes For Muslim
+                        And Minority Women.
                       </p>
                     </div>
-                    <div className="btn-box">
-                      <Link href="/about" className="thm-btn">
-                        JOIN US
-                        <span>
-                          <i className="icon-arrow-right"></i>
-                        </span>
+                    <div
+                      className="btn-box"
+                      style={{
+                        display: "flex",
+                        gap: "24px",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Link
+                        href="/about"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          backgroundColor: "#c78e1d",
+                          color: "#ffffff",
+                          padding: "32px 24px",
+                          borderRadius: "4px",
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          textDecoration: "none",
+                          transition: "all 0.2s ease",
+                          animation: "pulse 2s infinite",
+                          position: "relative",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = "#b17d17";
+                          e.currentTarget.style.animation = "none";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = "#c78e1d";
+                          e.currentTarget.style.animation = "pulse 2s infinite";
+                        }}
+                      >
+                        PARTNER WITH US
+                      </Link>
+                      <Link
+                        href="/about"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          color: "#ffffff",
+                          textDecoration: "none",
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          lineHeight: "1.5",
+                          gap: "4px",
+                          transition: "color 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = "#f3f4f6";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = "#ffffff";
+                        }}
+                      >
+                        See our trainings
+                        <span aria-hidden="true">→</span>
                       </Link>
                     </div>
                   </div>

@@ -22,7 +22,7 @@
 }
 
 .footer-logo img {
-    max-height: 120px;
+    max-height: 80px;
     width: auto;
     transition: opacity 0.3s ease;
     filter: brightness(1.1);
