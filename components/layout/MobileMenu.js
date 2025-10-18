@@ -27,6 +27,13 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
   return (
     <>
       <div className="mobile-nav__wrapper">
+        <style jsx global>{`
+          @media (max-width: 768px) {
+            .mobile-nav__content {
+              height: 80vh !important;
+            }
+          }
+        `}</style>
         <div
           className="mobile-nav__overlay mobile-nav__toggler"
           onClick={handleMobileMenu}

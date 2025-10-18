@@ -41,7 +41,7 @@ export default function BannerClient() {
             <div className="swiper-slide" style={{ height: "100%" }}>
               <div className="bg1"></div>
               <div
-                className="image-layer"
+                className="image-layer hero-image"
                 style={{
                   backgroundImage:
                     "url(assets/images/resources/balanced-view-hero.png)",
@@ -81,14 +81,14 @@ export default function BannerClient() {
                         .big-title {
                           padding-top: 4rem !important;
                         }
-                        .image-layer {
-                          background-position-y: 25% !important;
+                        .hero-image {
+                          background-position: center top 35% !important;
                         }
                       }
                     `}</style>
                     <div className="big-title">
                       <h2>
-                        Working with{" "}
+                        Helping{" "}
                         <span style={{ fontStyle: "italic" }}>
                           NHS & Community Partners
                         </span>
