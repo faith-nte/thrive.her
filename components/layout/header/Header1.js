@@ -5,11 +5,28 @@ import MobileMenu from "../MobileMenu";
 export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
   return (
     <>
-      <header className="main-header" style={{ backgroundColor: "#21273F" }}>
-        <nav className="main-menu" style={{ backgroundColor: "#21273F" }}>
+      <header
+        className="main-header"
+        style={{
+          backgroundColor:
+            scroll > 100 ? "rgba(33, 39, 63, 0.85)" : "transparent",
+          transition: "background-color 0.3s ease",
+          position: "fixed",
+          width: "100%",
+          zIndex: 1000,
+        }}
+      >
+        <nav
+          className="main-menu"
+          style={{
+            backgroundColor: "transparent",
+          }}
+        >
           <div
             className="main-menu__wrapper"
-            style={{ backgroundColor: "#21273F" }}
+            style={{
+              backgroundColor: "transparent",
+            }}
           >
             <div className="container">
               <div className="main-menu__wrapper-inner">
@@ -27,10 +44,25 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                       href="#"
                       className="mobile-nav__toggler"
                       onClick={handleMobileMenu}
+                      style={{
+                        textShadow:
+                          scroll > 100 ? "none" : "0 0 10px rgba(0,0,0,0.5)",
+                        color: "white",
+                      }}
                     >
                       <i className="fa fa-bars"></i>
                     </Link>
-                    <Menu />
+                    <div
+                      style={{
+                        "& a": {
+                          textShadow:
+                            scroll > 100 ? "none" : "0 0 10px rgba(0,0,0,0.5)",
+                          color: "white",
+                        },
+                      }}
+                    >
+                      <Menu />
+                    </div>
                   </div>
                 </div>
                 <div className="main-menu__right">
@@ -39,9 +71,27 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                       href="#"
                       className="main-menu__search search-toggler icon-search"
                       onClick={handlePopup}
+                      style={{
+                        textShadow:
+                          scroll > 100 ? "none" : "0 0 10px rgba(0,0,0,0.5)",
+                        color: "white",
+                      }}
                     ></Link>
                   </div>
-                  <div className="main-menu__btn-box">
+                  <div
+                    className="main-menu__btn-box"
+                    style={{
+                      "& .thm-btn": {
+                        backgroundColor: "#C78E1D",
+                        color: "white",
+                        transition: "all 0.3s ease",
+                      },
+                      "& .thm-btn:hover": {
+                        backgroundColor: "#21273F",
+                        color: "#C78E1D",
+                      },
+                    }}
+                  >
                     <Link href="/contact" className="main-menu__btn thm-btn">
                       Partner with Us
                     </Link>
