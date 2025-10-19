@@ -136,10 +136,39 @@ a {
 }
 
 a,
-a:hover,
 a:focus,
 a:visited {
   text-decoration: none;
+}
+
+/* Global hover states */
+a:hover,
+button:hover,
+.thm-btn:hover,
+.main-menu .navigation li > a:hover,
+.main-menu .navigation li:hover > a,
+.link:hover,
+.btn:hover,
+.nav-link:hover,
+.dropdown-item:hover {
+  color: var(--thriveher-sage) !important;
+  border-color: var(--thriveher-sage) !important;
+}
+
+/* Specific hover states for elements with backgrounds */
+.thm-btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+[class*="btn-outline-"]:hover {
+  background-color: var(--thriveher-sage) !important;
+  color: var(--thriveher-cream) !important;
+}
+
+/* Social icons and special links hover */
+.social-links a:hover,
+.footer-widget ul li a:hover,
+.main-menu .navigation li ul li a:hover {
+  color: var(--thriveher-sage) !important;
 }
 
 ::-webkit-input-placeholder {

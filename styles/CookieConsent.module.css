@@ -70,8 +70,9 @@
 }
 
 .button:hover {
-    background-color: var(--thriveher-navy);
-    color: var(--thriveher-cream);
+    background-color: var(--thriveher-sage) !important;
+    border-color: var(--thriveher-sage) !important;
+    color: var(--thriveher-cream) !important;
 }
 
 .button.primary {
@@ -80,8 +81,35 @@
 }
 
 .button.primary:hover {
-    background-color: var(--thriveher-rose);
-    border-color: var(--thriveher-rose);
+    background-color: var(--thriveher-sage) !important;
+    border-color: var(--thriveher-sage) !important;
+    color: var(--thriveher-cream) !important;
+}
+
+.floatingCookie {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--thriveher-cream);
+    border: 2px solid var(--thriveher-navy);
+    color: var(--thriveher-navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    z-index: 999;
+}
+
+.floatingCookie:hover {
+    transform: scale(1.05);
+    background-color: var(--thriveher-sage) !important;
+    border-color: var(--thriveher-sage) !important;
+    color: var(--thriveher-cream) !important;
 }
 
 .preferences {
