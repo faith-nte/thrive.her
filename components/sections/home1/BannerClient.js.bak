@@ -1,0 +1,248 @@
+"use client";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
+
+const swiperOptions = {
+  modules: [Autoplay, Pagination, Navigation],
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+};
+
+export default function BannerClient() {
+  const scrollToNextSection = () => {
+    const nextSection = document.querySelector(".found-one");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section className="main-slider-one" id="home">
+      <div className="swiper-container banner-slider">
+        <Swiper
+          {...swiperOptions}
+          className="swiper-wrapper"
+        >
+          <SwiperSlide>
+            <div className="swiper-slide">
+              <div className="image-layer hero-image"
+                style={{
+                  backgroundImage: "url(assets/images/resources/balanced-view-hero.png)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+              
+              {/* Main Content */}
+              <div className="main-slider-one__shape-one float-bob-y">
+                <img src="assets/images/shapes/main-slider-one-shape-1.png" alt="" />
+              </div>
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-7">
+                    <div className="main-slider-one__content">
+                      <div className="section-title">
+                        <div className="section-title__tagline-box">
+                          <span className="section-title__tagline">ThriveHer CLINIC</span>
+                        </div>
+                        <h2 className="main-slider-one__title">
+                          Helping <span style={{ fontStyle: "italic", color: "#C78E1D" }}>NHS & Community Partners</span>
+                        </h2>
+                      </div>
+                      <p className="main-slider-one__text">
+                        Deliver Care That Improves Health Outcomes For Muslim And Minority Women.
+                      </p>
+                      <div className="main-slider-one__btn-box">
+                        <Link href="/contact" className="thm-btn main-slider-one__btn">PARTNER WITH US</Link>
+                        <div className="main-slider-one__video-link">
+                          <Link href="/trainings" className="main-slider-one__video-btn">
+                            <span className="fa fa-arrow-right"></span>
+                            <i className="ripple"></i> 
+                            See our trainings
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+                    
+                      <Link
+                        href="/about"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          backgroundColor: "#c78e1d",
+                          color: "#ffffff",
+                          padding: "32px 24px",
+                          borderRadius: "4px",
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          textDecoration: "none",
+                          transition: "all 0.2s ease",
+                          animation: "pulse 2s infinite",
+                          position: "relative",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = "#b17d17";
+                          e.currentTarget.style.animation = "none";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = "#c78e1d";
+                          e.currentTarget.style.animation = "pulse 2s infinite";
+                        }}
+                      >
+                        PARTNER WITH US
+                      </Link>
+                      <Link
+                        href="/about"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          color: "#ffffff",
+                          textDecoration: "none",
+                          fontSize: "14px",
+                          fontWeight: "600",
+                          lineHeight: "1.5",
+                          gap: "4px",
+                          transition: "color 0.2s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = "#f3f4f6";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = "#ffffff";
+                        }}
+                      >
+                        See our trainings
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <ul className="banner-slider-nav-four">
+        <li className="banner-slider-control-four banner-slider-button-prev">
+          <span>
+            <i className="icon-arrow-right-two" aria-hidden="true"></i>
+          </span>
+        </li>
+        <li className="banner-slider-control-four banner-slider-button-next">
+          <span>
+            <i className="icon-arrow-right-two" aria-hidden="true"></i>
+          </span>
+        </li>
+      </ul>
+
+      <style jsx global>{`
+        @keyframes pullArrow {
+          0% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(12px);
+          }
+          60% {
+            transform: translateY(12px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(199, 142, 29, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(199, 142, 29, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(199, 142, 29, 0);
+          }
+        }
+
+        .scroll-arrow {
+          position: absolute;
+          bottom: 40px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: fit-content;
+          cursor: pointer;
+          z-index: 10;
+          animation: pullArrow 3s ease-in-out infinite;
+          transition: opacity 0.3s ease;
+          background: transparent;
+          border: none;
+          padding: 0;
+          outline: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .scroll-arrow:hover {
+          opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+          .scroll-arrow {
+            bottom: 32px;
+          }
+          .big-title {
+            padding-top: 4rem !important;
+          }
+          .hero-image {
+            background-position: center top 35% !important;
+          }
+        }
+      `}</style>
+
+      <button
+        onClick={scrollToNextSection}
+        className="scroll-arrow"
+        aria-label="Scroll to next section"
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ background: "transparent" }}
+        >
+          <path
+            d="M7 10l5 5 5-5"
+            fill="none"
+            stroke="#c78e1d"
+            strokeWidth="2"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+      </button>
+    </section>
+  );
+}

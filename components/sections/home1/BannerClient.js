@@ -24,7 +24,7 @@ const swiperOptions = {
 
 export default function BannerClient() {
   const scrollToNextSection = () => {
-    const nextSection = document.getElementById("next-section");
+    const nextSection = document.querySelector(".why-this-work-matters");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -153,7 +153,8 @@ export default function BannerClient() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <ul className="banner-slider-nav-four">
+      {/* Navigation arrows hidden per request */}
+      <ul className="banner-slider-nav-four" style={{ display: "none" }}>
         <li className="banner-slider-control-four banner-slider-button-prev">
           <span>
             <i className="icon-arrow-right-two" aria-hidden="true"></i>
@@ -210,17 +211,34 @@ export default function BannerClient() {
           padding: 0;
           outline: none;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
+          gap: 8px;
+        }
+
+        .scroll-text {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 500;
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+          transition: color 0.3s ease;
         }
 
         .scroll-arrow:hover {
-          opacity: 0.8;
+          opacity: 0.9;
+        }
+
+        .scroll-arrow:hover .scroll-text {
+          color: #c78e1d;
         }
 
         @media (max-width: 768px) {
           .scroll-arrow {
             bottom: 32px;
+          }
+          .scroll-text {
+            font-size: 14px;
           }
           .big-title {
             padding-top: 4rem !important;
@@ -234,8 +252,9 @@ export default function BannerClient() {
       <button
         onClick={scrollToNextSection}
         className="scroll-arrow"
-        aria-label="Scroll to next section"
+        aria-label="Scroll to Why This Work Matters section"
       >
+        <div className="scroll-text">See Why This Work Matters</div>
         <svg
           width="40"
           height="40"

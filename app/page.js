@@ -13,12 +13,15 @@ import Team from "@/components/sections/home1/Team";
 import Testimonial from "@/components/sections/home1/Testimonial";
 import Welcome from "@/components/sections/home1/Welcome";
 import Who from "@/components/sections/home1/Who";
+import WhyThisWorkMatters from "@/components/sections/home1/WhyThisWorkMatters";
+import MissionImpactSection from "@/components/MissionImpactSection";
 
 export default function Home() {
   return (
     <>
       <Layout headerStyle={1} footerStyle={1}>
         <Banner />
+        <WhyThisWorkMatters />
         <Found />
         <About />
         <Welcome />
