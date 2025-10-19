@@ -114,18 +114,23 @@ export default function WhyThisWorkMatters() {
             <p style={{ marginBottom: "20px", fontSize: "18px" }}>
               Every woman deserves to be seen, heard, and properly cared for.
             </p>
-            <p style={{ marginBottom: "40px", maxWidth: "800px", margin: "0 auto" }}>
-              Yet minority women continue to face barriers that compromise their healthcare. 
-              Our journey through the data tells a powerful story of inequality—and opportunity.
+            <p
+              style={{
+                marginBottom: "40px",
+                maxWidth: "800px",
+                margin: "0 auto",
+              }}
+            >
+              Yet minority women continue to face barriers that compromise their
+              healthcare. Our journey through the data tells a powerful story of
+              inequality—and opportunity.
             </p>
           </div>
 
           {/* Story Timeline with Zig-Zag Pattern */}
           <div className="story-timeline">
             {/* Step 1: The Problem - Left */}
-            <div
-              className="row align-items-center mb-5"
-            >
+            <div className="row align-items-center mb-5">
               <div className="col-lg-6 order-lg-1 order-2 mt-lg-0 mt-4">
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
@@ -168,16 +173,20 @@ export default function WhyThisWorkMatters() {
                       position: "relative",
                     }}
                   >
-                    <span style={{ position: "relative", zIndex: 1 }}>Maternal Risk Gap</span>
-                    <span style={{ 
-                      position: "absolute",
-                      bottom: "0",
-                      right: "0",
-                      height: "10px",
-                      width: "60%",
-                      background: "rgba(199, 142, 29, 0.15)",
-                      zIndex: 0
-                    }}></span>
+                    <span style={{ position: "relative", zIndex: 1 }}>
+                      Maternal Risk Gap
+                    </span>
+                    <span
+                      style={{
+                        position: "absolute",
+                        bottom: "0",
+                        right: "0",
+                        height: "10px",
+                        width: "60%",
+                        background: "rgba(199, 142, 29, 0.15)",
+                        zIndex: 0,
+                      }}
+                    ></span>
                   </h3>
                   <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
                     Black women are{" "}
@@ -240,12 +249,13 @@ export default function WhyThisWorkMatters() {
               style={{
                 position: "relative",
                 width: "4px",
-                background: "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
+                background:
+                  "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
                 margin: "0 auto",
                 zIndex: 1,
               }}
             >
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.6 }}
@@ -259,18 +269,19 @@ export default function WhyThisWorkMatters() {
                   height: "12px",
                   borderRadius: "50%",
                   backgroundColor: "#C78E1D",
-                  boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)"
+                  boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)",
                 }}
               ></motion.div>
             </motion.div>
 
             {/* Step 2: Key Barriers - Right */}
-            <div
-              className="row align-items-center mb-5 wow fadeInUp"
-              data-wow-delay="200ms"
-            >
+            <div className="row align-items-center mb-5">
               <div className="col-lg-6">
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true, margin: "-100px" }}
                   className="timeline-visual"
                   style={{
                     background: "rgba(249, 232, 207, 0.8)",
@@ -347,10 +358,14 @@ export default function WhyThisWorkMatters() {
                       of health inequality.
                     </p>
                   </div>
-                </div>
+                </motion.div>
               </div>
               <div className="col-lg-6">
-                <div
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: true, margin: "-100px" }}
                   className="timeline-content"
                   style={{
                     position: "relative",
@@ -384,19 +399,23 @@ export default function WhyThisWorkMatters() {
                       color: "#21273F",
                       fontWeight: 600,
                       marginBottom: "15px",
-                      position: "relative", 
+                      position: "relative",
                     }}
                   >
-                    <span style={{ position: "relative", zIndex: 1 }}>Cultural Disconnect</span>
-                    <span style={{ 
-                      position: "absolute",
-                      bottom: "0",
-                      left: "0",
-                      height: "10px",
-                      width: "60%",
-                      background: "rgba(199, 142, 29, 0.15)",
-                      zIndex: 0
-                    }}></span>
+                    <span style={{ position: "relative", zIndex: 1 }}>
+                      Cultural Disconnect
+                    </span>
+                    <span
+                      style={{
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        height: "10px",
+                        width: "60%",
+                        background: "rgba(199, 142, 29, 0.15)",
+                        zIndex: 0,
+                      }}
+                    ></span>
                   </h3>
                   <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
                     Language, cultural, and faith barriers create significant
@@ -413,34 +432,44 @@ export default function WhyThisWorkMatters() {
                       CORE20PLUS5, 2023
                     </span>
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
 
             {/* Connector Line */}
-            <div
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              whileInView={{ height: 60, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, margin: "-100px" }}
               className="timeline-connector"
               style={{
                 position: "relative",
-                height: "60px",
                 width: "4px",
-                background: "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
+                background:
+                  "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
                 margin: "0 auto",
                 zIndex: 1,
               }}
             >
-              <div style={{
-                position: "absolute",
-                bottom: "0",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "12px",
-                height: "12px",
-                borderRadius: "50%",
-                backgroundColor: "#C78E1D",
-                boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)"
-              }}></div>
-            </div>
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.6 }}
+                viewport={{ once: true }}
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  backgroundColor: "#C78E1D",
+                  boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)",
+                }}
+              ></motion.div>
+            </motion.div>
 
             {/* Step 3: Delayed Diagnoses - Left */}
             <div
@@ -485,16 +514,20 @@ export default function WhyThisWorkMatters() {
                       position: "relative",
                     }}
                   >
-                    <span style={{ position: "relative", zIndex: 1 }}>Diagnostic Delays</span>
-                    <span style={{ 
-                      position: "absolute",
-                      bottom: "0",
-                      right: "0",
-                      height: "10px",
-                      width: "60%",
-                      background: "rgba(199, 142, 29, 0.15)",
-                      zIndex: 0
-                    }}></span>
+                    <span style={{ position: "relative", zIndex: 1 }}>
+                      Diagnostic Delays
+                    </span>
+                    <span
+                      style={{
+                        position: "absolute",
+                        bottom: "0",
+                        right: "0",
+                        height: "10px",
+                        width: "60%",
+                        background: "rgba(199, 142, 29, 0.15)",
+                        zIndex: 0,
+                      }}
+                    ></span>
                   </h3>
                   <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
                     Minority women experience significantly delayed diagnoses in
@@ -581,22 +614,25 @@ export default function WhyThisWorkMatters() {
                 position: "relative",
                 height: "60px",
                 width: "4px",
-                background: "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
+                background:
+                  "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
                 margin: "0 auto",
                 zIndex: 1,
               }}
             >
-              <div style={{
-                position: "absolute",
-                bottom: "0",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "12px",
-                height: "12px",
-                borderRadius: "50%",
-                backgroundColor: "#C78E1D",
-                boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)"
-              }}></div>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  backgroundColor: "#C78E1D",
+                  boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)",
+                }}
+              ></div>
             </div>
 
             {/* Step 4: NHS Cost - Right */}
@@ -709,16 +745,20 @@ export default function WhyThisWorkMatters() {
                       position: "relative",
                     }}
                   >
-                    <span style={{ position: "relative", zIndex: 1 }}>The Economic Cost</span>
-                    <span style={{ 
-                      position: "absolute",
-                      bottom: "0",
-                      left: "0",
-                      height: "10px",
-                      width: "60%",
-                      background: "rgba(199, 142, 29, 0.15)",
-                      zIndex: 0
-                    }}></span>
+                    <span style={{ position: "relative", zIndex: 1 }}>
+                      The Economic Cost
+                    </span>
+                    <span
+                      style={{
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        height: "10px",
+                        width: "60%",
+                        background: "rgba(199, 142, 29, 0.15)",
+                        zIndex: 0,
+                      }}
+                    ></span>
                   </h3>
                   <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
                     When cultural and language barriers prevent proper care, the
@@ -750,22 +790,25 @@ export default function WhyThisWorkMatters() {
                 position: "relative",
                 height: "60px",
                 width: "4px",
-                background: "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
+                background:
+                  "linear-gradient(180deg, rgba(229, 186, 109, 0.3) 0%, rgba(199, 142, 29, 0.7) 100%)",
                 margin: "0 auto",
                 zIndex: 1,
               }}
             >
-              <div style={{
-                position: "absolute",
-                bottom: "0",
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "12px",
-                height: "12px",
-                borderRadius: "50%",
-                backgroundColor: "#C78E1D",
-                boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)"
-              }}></div>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  backgroundColor: "#C78E1D",
+                  boxShadow: "0 2px 6px rgba(199, 142, 29, 0.4)",
+                }}
+              ></div>
             </div>
 
             {/* Step 5: Global Impact - Left */}
@@ -811,16 +854,20 @@ export default function WhyThisWorkMatters() {
                       position: "relative",
                     }}
                   >
-                    <span style={{ position: "relative", zIndex: 1 }}>The Global Opportunity</span>
-                    <span style={{ 
-                      position: "absolute",
-                      bottom: "0",
-                      right: "0",
-                      height: "10px",
-                      width: "60%",
-                      background: "rgba(199, 142, 29, 0.15)",
-                      zIndex: 0
-                    }}></span>
+                    <span style={{ position: "relative", zIndex: 1 }}>
+                      The Global Opportunity
+                    </span>
+                    <span
+                      style={{
+                        position: "absolute",
+                        bottom: "0",
+                        right: "0",
+                        height: "10px",
+                        width: "60%",
+                        background: "rgba(199, 142, 29, 0.15)",
+                        zIndex: 0,
+                      }}
+                    ></span>
                   </h3>
                   <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
                     Closing the women's health gap isn't just the right thing to
@@ -918,37 +965,57 @@ export default function WhyThisWorkMatters() {
             {/* Journey's End: Our Mission */}
             <div className="row">
               <div className="col-12 text-center my-4">
-                <div className="journey-end" style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  marginTop: "20px",
-                  marginBottom: "30px"
-                }}>
-                  <div style={{
-                    width: "4px",
-                    height: "40px",
-                    background: "linear-gradient(180deg, rgba(199, 142, 29, 0.7) 0%, rgba(229, 186, 109, 0.3) 100%)",
-                  }}></div>
-                  <div style={{
-                    width: "24px",
-                    height: "24px",
-                    borderRadius: "50%",
-                    backgroundColor: "#C78E1D",
+                <div
+                  className="journey-end"
+                  style={{
                     display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: "0 3px 10px rgba(199, 142, 29, 0.4)",
-                    marginTop: "-6px",
-                    marginBottom: "20px"
-                  }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 12L10 17L19 8" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    marginTop: "20px",
+                    marginBottom: "30px",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "4px",
+                      height: "40px",
+                      background:
+                        "linear-gradient(180deg, rgba(199, 142, 29, 0.7) 0%, rgba(229, 186, 109, 0.3) 100%)",
+                    }}
+                  ></div>
+                  <div
+                    style={{
+                      width: "24px",
+                      height: "24px",
+                      borderRadius: "50%",
+                      backgroundColor: "#C78E1D",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 3px 10px rgba(199, 142, 29, 0.4)",
+                      marginTop: "-6px",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 12L10 17L19 8"
+                        stroke="white"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                 </div>
               </div>
-              
+
               <div
                 className="col-xl-8 col-lg-10 mx-auto wow fadeInUp"
                 data-wow-delay="600ms"
@@ -983,7 +1050,11 @@ export default function WhyThisWorkMatters() {
                   </div>
                   <h3
                     className="mb-4"
-                    style={{ color: "#21273F", fontWeight: 600, fontSize: "28px" }}
+                    style={{
+                      color: "#21273F",
+                      fontWeight: 600,
+                      fontSize: "28px",
+                    }}
                   >
                     Our Mission
                   </h3>
@@ -1016,9 +1087,12 @@ export default function WhyThisWorkMatters() {
                       margin: "0",
                     }}
                   >
-                    <strong style={{ color: "#21273F", fontWeight: "500" }}>Data Sources:</strong> MBRRACE-UK (2023), CORE20PLUS5 (2023), Women's Health
-                    Strategy (2022), NHS England (2022), McKinsey Health Institute
-                    (2023)
+                    <strong style={{ color: "#21273F", fontWeight: "500" }}>
+                      Data Sources:
+                    </strong>{" "}
+                    MBRRACE-UK (2023), CORE20PLUS5 (2023), Women's Health
+                    Strategy (2022), NHS England (2022), McKinsey Health
+                    Institute (2023)
                   </p>
                 </div>
               </div>

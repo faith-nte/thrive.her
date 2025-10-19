@@ -13,7 +13,8 @@ import Team from "@/components/sections/home1/Team";
 import Testimonial from "@/components/sections/home1/Testimonial";
 import Welcome from "@/components/sections/home1/Welcome";
 import Who from "@/components/sections/home1/Who";
-import WhyThisWorkMatters from "@/components/sections/home1/WhyThisWorkMatters";
+import WhyThisWorkMattersHero from "@/components/sections/home1/WhyThisWorkMattersHero";
+import WhyThisWorkMattersInfographic from "@/components/sections/home1/WhyThisWorkMattersInfographic";
 import MissionImpactSection from "@/components/MissionImpactSection";
 
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
     <>
       <Layout headerStyle={1} footerStyle={1}>
         <Banner />
-        <WhyThisWorkMatters />
+        <WhyThisWorkMattersHero />
+        <WhyThisWorkMattersInfographic />
         <Found />
         <About />
         <Welcome />

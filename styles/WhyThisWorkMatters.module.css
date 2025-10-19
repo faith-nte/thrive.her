@@ -1,0 +1,100 @@
+/* WhyThisWorkMatters.module.css */
+.carouselContainer {
+  position: relative;
+}
+
+.carouselItem {
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carouselControls button {
+  background: white;
+  border: 1px solid rgba(199, 142, 29, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  height: 40px;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  z-index: 2;
+}
+
+.carouselControls button:hover {
+  background: rgba(249, 232, 207, 0.8);
+}
+
+.carouselControls button.prev {
+  left: -20px;
+}
+
+.carouselControls button.next {
+  right: -20px;
+}
+
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.carouselIndicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carouselIndicators button.active {
+  background: #C78E1D;
+  opacity: 1;
+}
+
+.carouselIndicators button:not(.active) {
+  background: #E5BA6D;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .carouselControls button {
+    height: 36px;
+    width: 36px;
+    top: calc(50% - 18px);
+  }
+  
+  .carouselControls button.prev {
+    left: -10px;
+  }
+  
+  .carouselControls button.next {
+    right: -10px;
+  }
+}
+
+/* Hero section */
+.heroSection {
+  height: 100vh;
+  min-height: 600px;
+}
+
+@media (max-width: 576px) {
+  .heroSection {
+    min-height: 500px;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .heroButtons a {
+    margin-right: 0 !important;
+  }
+}
