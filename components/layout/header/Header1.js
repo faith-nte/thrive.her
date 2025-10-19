@@ -52,7 +52,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                       className="mobile-nav__toggler"
                       onClick={handleMobileMenu}
                       style={{
-                        color: "white",
+                        color: "#c78e1d",
                         fontSize: "28px",
                         padding: "8px",
                       }}
@@ -94,13 +94,13 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                         transition: "all 0.3s ease",
                       },
                       "& .thm-btn:hover": {
-                        backgroundColor: "#21273F",
+                        backgroundColor: "#D1A38A",
                         color: "#C78E1D",
                       },
                     }}
                   >
                     <Link href="/contact" className="main-menu__btn thm-btn">
-                      Partner with Us
+                      Join Next Training
                     </Link>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                     </div>
                     <div className="main-menu__btn-box">
                       <Link href="/contact" className="main-menu__btn thm-btn">
-                        Partner with Us
+                        Join Next Training
                       </Link>
                     </div>
                   </div>
