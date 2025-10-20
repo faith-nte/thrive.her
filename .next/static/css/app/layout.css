@@ -22682,6 +22682,17 @@ a:focus,
   }
 }
 
+/* Disable all buttons - show-now branch */
+button,
+a.thm-btn,
+.amount-btn,
+input[type="submit"],
+.btn {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
 /* The End */
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[12].use[3]!./node_modules/swiper/swiper.css ***!

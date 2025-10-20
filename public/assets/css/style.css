@@ -6189,4 +6189,15 @@ a:focus,
   }
 }
 
+/* Disable all buttons - show-now branch */
+button,
+a.thm-btn,
+.amount-btn,
+input[type="submit"],
+.btn {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
 /* The End */
