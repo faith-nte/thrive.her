@@ -25,12 +25,7 @@ export default function Home() {
         <WhyThisWorkMattersInfographic />
         <Donation />
         <About />
-        <Event />
-        <Cta />
-        <Team />
         <Testimonial />
-        <Blog />
-        <Brands />
       </Layout>
     </>
   );
