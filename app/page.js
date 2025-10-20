@@ -15,7 +15,6 @@ import Welcome from "@/components/sections/home1/Welcome";
 import Who from "@/components/sections/home1/Who";
 import WhyThisWorkMattersHero from "@/components/sections/home1/WhyThisWorkMattersHero";
 import WhyThisWorkMattersInfographic from "@/components/sections/home1/WhyThisWorkMattersInfographic";
-import MissionImpactSection from "@/components/MissionImpactSection";
 
 export default function Home() {
   return (
@@ -24,12 +23,8 @@ export default function Home() {
         <Banner />
         <WhyThisWorkMattersHero />
         <WhyThisWorkMattersInfographic />
-        <About />
-        <Welcome />
-        <Who />
-        <Country />
-        <Donate />
         <Donation />
+        <About />
         <Event />
         <Cta />
         <Team />

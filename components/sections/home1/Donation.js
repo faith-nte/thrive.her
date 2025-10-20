@@ -1,51 +1,94 @@
-'use client'
-import Link from "next/link"
-import { useState } from "react"
+"use client";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Donation() {
-    const [activeIndex, setActiveIndex] = useState(1)
-    const handleOnClick = (index) => {
-        setActiveIndex(index)
-    }
-    return (
-        <>
-        {/*Donation One Start */}
-        <section className="donation-one">
-            <div className="donation-one__wrapper">
-                <div className="donation-one__left">
-                    <div className="donation-one__left-bg"
-                        style={{ backgroundImage: ' url(assets/images/backgrounds/donation-one-left-bg.jpg)' }} ></div>
+  const [activeIndex, setActiveIndex] = useState(1);
+  const handleOnClick = (index) => {
+    setActiveIndex(index);
+  };
+  return (
+    <>
+      {/*Donation One Start */}
+      <section className="donation-one">
+        <div className="donation-one__wrapper">
+          <div className="donation-one__left">
+            <div
+              className="donation-one__left-bg"
+              style={{
+                backgroundImage: " url(assets/images/resources/960x575.png)",
+              }}
+            ></div>
+          </div>
+          <div className="donation-one__right">
+            <div
+              className="donation-one__content-box"
+              style={{ backgroundColor: "#21273F" }}
+            >
+              <div className="section-title-two text-left sec-title-animation animation-style2">
+                <div className="section-title-two__tagline-box">
+                  <span
+                    className="section-title-two__tagline"
+                    style={{ color: "#C78E1D" }}
+                  >
+                    Our Mission
+                  </span>
                 </div>
-                <div className="donation-one__right">
-                    <div className="donation-one__content-box">
-                        <div className="section-title-two text-left sec-title-animation animation-style2">
-                            <div className="section-title-two__tagline-box">
-                                <span className="section-title-two__tagline">Join Us Now</span>
-                            </div>
-                            <h2 className="section-title-two__title title-animation">Helping To Make Our <br/> World
-                                <span>Better</span> Living </h2>
-                        </div>
-                        <div className="donation-one__donate-box">
-                            <div className="donate-amount wow fadeInUp" data-wow-delay=".5s">
-                                <button className={activeIndex == 1 ? "active amount-btn" : "amount-btn"} onClick={() => handleOnClick(1)}>$10</button>
-                                <button className={activeIndex == 2 ? "active amount-btn" : "amount-btn"} onClick={() => handleOnClick(2)}>$30</button>
-                                <button className={activeIndex == 3 ? "active amount-btn" : "amount-btn"} onClick={() => handleOnClick(3)}>$50</button>
-                                <button className={activeIndex == 4 ? "active amount-btn" : "amount-btn"} onClick={() => handleOnClick(4)}>$100</button>
-                                <button className={activeIndex == 5 ? "active amount-btn" : "amount-btn"} onClick={() => handleOnClick(5)}>$200</button>
-                            </div>
-                            <div className="donate-now wow fadeInUp" data-wow-delay=".7s">
-                                <input type="text" className="addAmount-value" placeholder="$ Costume Amount" />
-                                <div className="donation-one__btn-box">
-                                    <Link href="#" className="donation-one__btn thm-btn">Donate Now<span><i
-                                                className="icon-arrow-right"></i></span></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h2
+                  className="section-title-two__title title-animation"
+                  style={{ color: "#fdf3e4" }}
+                >
+                  To bridge medicine, faith, and culture through doctor-led,
+                  multilingual programmes — empowering women and improving
+                  outcomes for every community.
+                </h2>
+              </div>
+              <div className="donation-one__donate-box">
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "12px",
+                    flexDirection: "row",
+                    marginTop: "30px",
+                  }}
+                >
+                  <Link
+                    href="#"
+                    className="thm-btn"
+                    style={{
+                      backgroundColor: "#C78E1D",
+                      color: "#fff",
+                      padding: "8px 25px 8px",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    Get your team trained
+                  </Link>
+                  <Link
+                    href="#"
+                    className="thm-btn"
+                    style={{
+                      backgroundColor: "#C78E1D",
+                      color: "#fff",
+                      padding: "8px 25px 8px",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    Introduce your patients
+                  </Link>
                 </div>
+              </div>
             </div>
-        </section>
-        {/*Donation One End */}
-        </>
-    )
+          </div>
+        </div>
+      </section>
+      {/*Donation One End */}
+    </>
+  );
 }

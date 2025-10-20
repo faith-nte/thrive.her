@@ -31,6 +31,16 @@ export default function WhyThisWorkMattersInfographic() {
   });
   const [submittedMessage, setSubmittedMessage] = useState("");
 
+  // Scroll to next section function
+  const scrollToNextSection = () => {
+    const nextSection = document.querySelector(
+      ".next-section-after-why-matters"
+    );
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setCredentials((prev) => ({
@@ -630,245 +640,10 @@ export default function WhyThisWorkMattersInfographic() {
           </div>
 
           {/* Mission Statement Section */}
-          <div className="row mt-5 pt-4 justify-content-center">
-            <div className="col-lg-12">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="mission-statement"
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "20px",
-                  alignItems: "stretch",
-                  maxWidth: "900px",
-                  margin: "0 auto",
-                }}
-              >
-                {/* Left: Image and Info */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                  }}
-                >
-                  {/* Image Section */}
-                  <div
-                    style={{
-                      width: "100%",
-                      maxWidth: "300px",
-                      height: "300px",
-                      borderRadius: "20px",
-                      overflow: "hidden",
-                      marginBottom: "24px",
-                      boxShadow: "0 8px 32px rgba(199, 142, 29, 0.25)",
-                      border: "4px solid #C78E1D",
-                      alignSelf: "flex-end",
-                    }}
-                  >
-                    <img
-                      src="/assets/images/resources/dr-syeda-hero.svg"
-                      alt="Dr Syeda"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                        e.currentTarget.nextElementSibling.style.display =
-                          "flex";
-                      }}
-                    />
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: "rgba(199, 142, 29, 0.1)",
-                        display: "none",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "#C78E1D",
-                        fontSize: "14px",
-                        textAlign: "center",
-                        padding: "20px",
-                      }}
-                    >
-                      Image placeholder
-                    </div>
-                  </div>
-
-                  {/* Dr Syeda Info */}
-                  <h3
-                    style={{
-                      color: "#21273F",
-                      fontWeight: 700,
-                      fontSize: "22px",
-                      marginBottom: "6px",
-                      textAlign: "right",
-                      alignSelf: "flex-end",
-                    }}
-                  >
-                    Dr Syeda Insha Hussaini
-                  </h3>
-                  <p
-                    style={{
-                      color: "#C78E1D",
-                      fontSize: "12px",
-                      fontWeight: 600,
-                      marginBottom: "8px",
-                      letterSpacing: "0.5px",
-                      textAlign: "right",
-                      alignSelf: "flex-end",
-                    }}
-                  >
-                    MBChB, MRCGP, DRCOG, LoC IUD
-                  </p>
-                  <p
-                    style={{
-                      color: "#21273F",
-                      fontSize: "13px",
-                      lineHeight: "1.6",
-                      fontWeight: 500,
-                      textAlign: "right",
-                      flex: 1,
-                      alignSelf: "flex-end",
-                    }}
-                  >
-                    Founder & Women's Health Doctor | ThriveHer Clinic
-                  </p>
-                </div>
-
-                {/* Right: Mission Callout and Buttons */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "20px",
-                  }}
-                >
-                  {/* Mission Bubble */}
-                  <div
-                    style={{
-                      backgroundColor: "#21273F",
-                      borderRadius: "16px",
-                      padding: "32px",
-                      textAlign: "center",
-                      flex: 1,
-                      boxShadow: "0 10px 40px rgba(199, 142, 29, 0.15)",
-                      border: "2px solid #C78E1D",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <h4
-                      style={{
-                        color: "#C78E1D",
-                        fontWeight: 700,
-                        fontSize: "16px",
-                        marginBottom: "16px",
-                        letterSpacing: "0.5px",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      Our Mission
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        lineHeight: "1.8",
-                        color: "#fdf3e4",
-                        margin: "0",
-                      }}
-                    >
-                      To bridge medicine, faith, and culture through doctor-led,
-                      multilingual programmes — empowering women and improving
-                      outcomes for every community.
-                    </p>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "12px",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <button
-                      style={{
-                        backgroundColor: "#C78E1D",
-                        color: "#fff",
-                        border: "none",
-                        padding: "14px 24px",
-                        borderRadius: "6px",
-                        fontSize: "14px",
-                        fontWeight: 600,
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#b8791a";
-                        e.currentTarget.style.transform = "translateY(-2px)";
-                        e.currentTarget.style.boxShadow =
-                          "0 4px 12px rgba(199, 142, 29, 0.3)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#C78E1D";
-                        e.currentTarget.style.transform = "translateY(0)";
-                        e.currentTarget.style.boxShadow = "none";
-                      }}
-                    >
-                      Get your team trained
-                    </button>
-                    <button
-                      style={{
-                        backgroundColor: "transparent",
-                        color: "#C78E1D",
-                        border: "2px solid #C78E1D",
-                        padding: "12px 22px",
-                        borderRadius: "6px",
-                        fontSize: "14px",
-                        fontWeight: 600,
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#C78E1D";
-                        e.currentTarget.style.color = "#fff";
-                        e.currentTarget.style.transform = "translateY(-2px)";
-                        e.currentTarget.style.boxShadow =
-                          "0 4px 12px rgba(199, 142, 29, 0.3)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "transparent";
-                        e.currentTarget.style.color = "#C78E1D";
-                        e.currentTarget.style.transform = "translateY(0)";
-                        e.currentTarget.style.boxShadow = "none";
-                      }}
-                    >
-                      Introduce us to your patients
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
         </div>
 
         {/* Responsive styles */}
         <style>{`
-          @media (max-width: 768px) {
-            .mission-statement {
-              grid-template-columns: 1fr !important;
-              gap: 25px !important;
-            }
-          }
         `}</style>
       </section>
       {/* Infographic Section End */}

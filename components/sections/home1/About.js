@@ -61,11 +61,11 @@ export default function About() {
               >
                 <div className="section-title text-left sec-title-animation animation-style2">
                   <div className="section-title__tagline-box">
-                    <span className="section-title__tagline">About Us</span>
+                    <span className="section-title__tagline">How We Work</span>
                   </div>
                   <h2 className="section-title__title title-animation">
-                    Unite for a Cause
-                    <br /> Change the World
+                    Ways to Work
+                    <br /> With Us
                   </h2>
                 </div>
                 <div className="about-One__vission-mission">
@@ -77,7 +77,7 @@ export default function About() {
                         }
                         onClick={() => handleOnClick(1)}
                       >
-                        <span>Our Mission</span>
+                        <span>Workshops</span>
                       </li>
                       <li
                         className={
@@ -85,7 +85,7 @@ export default function About() {
                         }
                         onClick={() => handleOnClick(2)}
                       >
-                        <span>Our Vision</span>
+                        <span>Train-the-Trainer</span>
                       </li>
                       <li
                         className={
@@ -93,7 +93,7 @@ export default function About() {
                         }
                         onClick={() => handleOnClick(3)}
                       >
-                        <span>Our Goal</span>
+                        <span>Partnerships</span>
                       </li>
                     </ul>
                     <div className="tabs-content">
@@ -107,10 +107,8 @@ export default function About() {
                       >
                         <div className="tabs-content__inner">
                           <p>
-                            Dicta sunt explicabo. Nemo enim ipsam voluptatem
-                            quia voluptas sit aspernaturaut odit aut fugit, sed
-                            quia consequuntur. Dicta sunt explicabo. Nemo enim
-                            ipsam voluptatem quia voluptas.
+                            Invite us as doctors to lead sessions in your
+                            mosques, women groups and community organisation.
                           </p>
                         </div>
                       </div>
@@ -125,10 +123,9 @@ export default function About() {
                       >
                         <div className="tabs-content__inner">
                           <p>
-                            Dicta sunt explicabo. Nemo enim ipsam voluptatem
-                            quia voluptas sit aspernaturaut odit aut fugit, sed
-                            quia consequuntur. Dicta sunt explicabo. Nemo enim
-                            ipsam voluptatem quia voluptas.
+                            Book us to train healthcare professionals in your
+                            organisation and community so they can adequately
+                            support muslim and black women.
                           </p>
                         </div>
                       </div>
@@ -143,10 +140,10 @@ export default function About() {
                       >
                         <div className="tabs-content__inner">
                           <p>
-                            Dicta sunt explicabo. Nemo enim ipsam voluptatem
-                            quia voluptas sit aspernaturaut odit aut fugit, sed
-                            quia consequuntur. Dicta sunt explicabo. Nemo enim
-                            ipsam voluptatem quia voluptas.
+                            Bring us in to collaborate with your ICB, PCN, GP
+                            Team, and NHS leadership teams, to facilitate
+                            pilots, and co-create toolkits that support Muslim
+                            and black women.
                           </p>
                         </div>
                       </div>
@@ -155,24 +152,78 @@ export default function About() {
                   </div>
                 </div>
                 <div className="about-One__btn-and-need-help">
-                  <div className="about-One__btn-box">
-                    <Link
-                      href="donation-details"
-                      className="about-One__btn thm-btn"
+                  <div
+                    style={{
+                      backgroundColor: "rgba(253, 243, 228, 0.7)",
+                      borderRadius: "12px",
+                      padding: "20px",
+                      marginTop: "20px",
+                      boxShadow: "0 4px 12px rgba(33, 39, 63, 0.08)",
+                      border: "1px solid rgba(199, 142, 29, 0.15)",
+                    }}
+                  >
+                    <h4
+                      style={{
+                        color: "#21273F",
+                        fontWeight: 700,
+                        fontSize: "16px",
+                        margin: "0 0 12px 0",
+                      }}
                     >
-                      Donate Now
-                    </Link>
-                  </div>
-                  <div className="about-One__need-help">
-                    <div className="icon">
-                      <span className="icon-phone-call"></span>
-                    </div>
-                    <div className="content">
-                      <p>Need help?</p>
-                      <h4>
-                        <Link href="tel:3195550115">(319) 555-0115</Link>
-                      </h4>
-                    </div>
+                      For women who want to master their hormones
+                    </h4>
+                    <p
+                      style={{
+                        color: "#21273F",
+                        fontSize: "14px",
+                        lineHeight: "1.6",
+                        margin: "0 0 16px 0",
+                      }}
+                    >
+                      Sign up to receive our Hormonal Reset Guide – A free
+                      digital guide combining evidence and Islamic principles.
+                    </p>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      style={{
+                        width: "100%",
+                        padding: "10px 12px",
+                        borderRadius: "6px",
+                        border: "1px solid rgba(33, 39, 63, 0.2)",
+                        fontSize: "14px",
+                        color: "#21273F",
+                        boxSizing: "border-box",
+                        marginBottom: "12px",
+                      }}
+                    />
+                    <button
+                      style={{
+                        width: "100%",
+                        backgroundColor: "#C78E1D",
+                        color: "#fff",
+                        border: "none",
+                        padding: "10px 12px",
+                        borderRadius: "6px",
+                        fontSize: "14px",
+                        fontWeight: 600,
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#b8791a";
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.boxShadow =
+                          "0 4px 12px rgba(199, 142, 29, 0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "none";
+                      }}
+                    >
+                      Get Guide
+                    </button>
                   </div>
                 </div>
               </div>
