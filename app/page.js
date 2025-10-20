@@ -24,7 +24,6 @@ export default function Home() {
         <Banner />
         <WhyThisWorkMattersHero />
         <WhyThisWorkMattersInfographic />
-        <Found />
         <About />
         <Welcome />
         <Who />

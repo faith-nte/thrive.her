@@ -23,6 +23,38 @@ ChartJS.register(
 );
 
 export default function WhyThisWorkMattersInfographic() {
+  // Form state management
+  const [credentials, setCredentials] = useState({
+    name: "",
+    title: "",
+    email: "",
+  });
+  const [submittedMessage, setSubmittedMessage] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setCredentials((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(credentials.email)) {
+      setSubmittedMessage("Please enter a valid email address.");
+      return;
+    }
+    // Save to localStorage
+    localStorage.setItem("drSyedaCredentials", JSON.stringify(credentials));
+    setSubmittedMessage("Credentials saved successfully!");
+    setCredentials({ name: "", title: "", email: "" });
+    // Clear message after 3 seconds
+    setTimeout(() => setSubmittedMessage(""), 3000);
+  };
+
   // Chart data configuration
   const data = {
     labels: ["White women", "Asian women", "Black women"],
@@ -47,7 +79,13 @@ export default function WhyThisWorkMattersInfographic() {
     animation: { duration: 1500, easing: "easeOutQuart" },
     plugins: {
       legend: { display: false },
-      title: { display: false },
+      title: {
+        display: true,
+        text: "Maternal Mortality Risk by Ethnicity",
+        color: "#21273F",
+        font: { size: 16, weight: "600" },
+        padding: { bottom: 20 },
+      },
       tooltip: {
         backgroundColor: "#fff",
         borderColor: "#C78E1D",
@@ -136,12 +174,29 @@ export default function WhyThisWorkMattersInfographic() {
     {
       id: 1,
       title: "1. Maternal Risk Gap",
-      description: "Black women are 3.7× more likely and Asian women 1.8× more likely to die during pregnancy compared to white women.",
+      description:
+        "Black women are 3.7× more likely and Asian women 1.8× more likely to die during pregnancy compared to white women.",
       source: "MBRRACE-UK, 2023",
       icon: (
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#C78E1D" strokeWidth="2" />
-          <path d="M12 8V12L15 15" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+            stroke="#C78E1D"
+            strokeWidth="2"
+          />
+          <path
+            d="M12 8V12L15 15"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       ),
       showChart: true,
@@ -149,15 +204,44 @@ export default function WhyThisWorkMattersInfographic() {
     {
       id: 2,
       title: "2. Cultural Disconnect",
-      description: "Language, culture, and faith barriers create obstacles that lead to misunderstandings, delayed treatment, and poorer outcomes.",
+      description:
+        "Language, culture, and faith barriers create obstacles that lead to misunderstandings, delayed treatment, and poorer outcomes.",
       source: "CORE20PLUS5, 2023",
       icon: (
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#C78E1D" strokeWidth="2" />
-          <path d="M3.6 9H20.4" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" />
-          <path d="M3.6 15H20.4" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" />
-          <path d="M12 3C13.933 5.04 15 7.828 15 12C15 16.172 13.933 18.96 12 21" stroke="#C78E1D" strokeWidth="2" />
-          <path d="M12 3C10.067 5.04 9 7.828 9 12C9 16.172 10.067 18.96 12 21" stroke="#C78E1D" strokeWidth="2" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+            stroke="#C78E1D"
+            strokeWidth="2"
+          />
+          <path
+            d="M3.6 9H20.4"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M3.6 15H20.4"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 3C13.933 5.04 15 7.828 15 12C15 16.172 13.933 18.96 12 21"
+            stroke="#C78E1D"
+            strokeWidth="2"
+          />
+          <path
+            d="M12 3C10.067 5.04 9 7.828 9 12C9 16.172 10.067 18.96 12 21"
+            stroke="#C78E1D"
+            strokeWidth="2"
+          />
         </svg>
       ),
       showChart: false,
@@ -165,11 +249,24 @@ export default function WhyThisWorkMattersInfographic() {
     {
       id: 3,
       title: "3. Diagnostic Delays",
-      description: "Minority women often experience later diagnoses in menopause, fertility, and chronic conditions — shaped by bias and poor cultural understanding.",
+      description:
+        "Minority women often experience later diagnoses in menopause, fertility, and chronic conditions — shaped by bias and poor cultural understanding.",
       source: "Women's Health Strategy, 2022",
       icon: (
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       ),
       showChart: false,
@@ -177,12 +274,28 @@ export default function WhyThisWorkMattersInfographic() {
     {
       id: 4,
       title: "4. The Cost to the NHS",
-      description: "When care isn't inclusive, early signs are missed. Those missed red flags cost the NHS around £2 billion each year in repeat visits and late interventions.",
+      description:
+        "When care isn't inclusive, early signs are missed. Those missed red flags cost the NHS around £2 billion each year in repeat visits and late interventions.",
       source: "NHS England, 2022",
       icon: (
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 6V12M12 12V18M12 12H18M12 12H6" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" />
-          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#C78E1D" strokeWidth="2" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 6V12M12 12V18M12 12H18M12 12H6"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            stroke="#C78E1D"
+            strokeWidth="2"
+          />
         </svg>
       ),
       showChart: false,
@@ -190,16 +303,35 @@ export default function WhyThisWorkMattersInfographic() {
     {
       id: 5,
       title: "5. The Global Opportunity",
-      description: "Closing the women's health gap isn't only the right thing to do — it could unlock $1 trillion in global GDP by 2040 through better wellbeing and participation.",
+      description:
+        "Closing the women's health gap isn't only the right thing to do — it could unlock $1 trillion in global GDP by 2040 through better wellbeing and participation.",
       source: "McKinsey Health Institute, 2023",
       icon: (
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 6H21M3 12H21M3 18H21" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M12 3V6M12 12V15M12 18V21" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 6H21M3 12H21M3 18H21"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 3V6M12 12V15M12 18V21"
+            stroke="#C78E1D"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       ),
       showChart: false,
-    }
+    },
   ];
 
   return (
@@ -208,7 +340,7 @@ export default function WhyThisWorkMattersInfographic() {
       <section
         className="why-this-work-matters-infographic"
         style={{
-          backgroundColor: "#fdf3e4",
+          backgroundColor: "transparent",
           padding: "100px 0 80px",
           position: "relative",
           overflow: "hidden",
@@ -220,7 +352,7 @@ export default function WhyThisWorkMattersInfographic() {
               className="section-title__title"
               style={{ color: "#21273F", marginBottom: "15px" }}
             >
-              The Journey to Health Equity
+              Black and Asian women
             </h2>
             <p
               style={{
@@ -229,8 +361,9 @@ export default function WhyThisWorkMattersInfographic() {
                 margin: "0 auto",
               }}
             >
-              Yet many still face barriers that compromise their health. 
-              The data tells a clear story — one of inequality, but also of opportunity.
+              Experience significantly higher risks in maternal health due to
+              systemic inequalities. But also an opportunity for healthcare
+              providers and community partners to drive change.
             </p>
           </div>
 
@@ -244,14 +377,15 @@ export default function WhyThisWorkMattersInfographic() {
                 viewport={{ once: true }}
                 className="chart-container"
                 style={{
-                  background: "rgba(249, 232, 207, 0.8)",
+                  background: "transparent",
                   borderRadius: "16px",
                   padding: "40px",
                   height: "350px",
-                  border: "1px solid rgba(199, 142, 29, 0.2)",
-                  boxShadow: "rgba(0, 0, 0, 0.06) 0px 8px 24px",
+                  border: "2px solid #C78E1D",
+                  boxShadow: "none",
                   position: "relative",
                   overflow: "hidden",
+                  transition: "all 0.3s ease",
                 }}
               >
                 <div style={{ height: "100%" }}>
@@ -268,7 +402,10 @@ export default function WhyThisWorkMattersInfographic() {
                 {/* Carousel Container */}
                 <div className="carousel-container position-relative">
                   {/* Carousel Items */}
-                  <div className="carousel-inner" style={{ position: "relative", minHeight: "300px" }}>
+                  <div
+                    className="carousel-inner"
+                    style={{ position: "relative", minHeight: "300px" }}
+                  >
                     {slides.map((slide, index) => (
                       <motion.div
                         key={slide.id}
@@ -278,11 +415,11 @@ export default function WhyThisWorkMattersInfographic() {
                         className="carousel-item"
                         style={{
                           minWidth: "100%",
-                          background: "rgba(249, 232, 207, 0.8)",
+                          background: "transparent",
                           borderRadius: "16px",
                           padding: "40px",
-                          border: "1px solid rgba(199, 142, 29, 0.2)",
-                          boxShadow: "rgba(0, 0, 0, 0.06) 0px 8px 24px",
+                          border: "none",
+                          boxShadow: "none",
                           display: "flex",
                           flexDirection: "column",
                           alignItems: "center",
@@ -294,7 +431,8 @@ export default function WhyThisWorkMattersInfographic() {
                           width: "100%",
                           height: "100%",
                           opacity: currentSlide === index ? 1 : 0,
-                          pointerEvents: currentSlide === index ? "all" : "none",
+                          pointerEvents:
+                            currentSlide === index ? "all" : "none",
                         }}
                       >
                         <div
@@ -308,6 +446,18 @@ export default function WhyThisWorkMattersInfographic() {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
+                            transition: "all 0.3s ease",
+                            cursor: "pointer",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor =
+                              "rgba(199, 142, 29, 0.3)";
+                            e.currentTarget.style.transform = "scale(1.1)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor =
+                              "rgba(199, 142, 29, 0.15)";
+                            e.currentTarget.style.transform = "scale(1)";
                           }}
                         >
                           {slide.icon}
@@ -320,30 +470,23 @@ export default function WhyThisWorkMattersInfographic() {
                               marginBottom: "15px",
                               position: "relative",
                               display: "inline-block",
+                              transition: "all 0.3s ease",
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.color = "#C78E1D";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.color = "#21273F";
                             }}
                           >
-                            <span style={{ position: "relative", zIndex: 1 }}>
-                              {slide.title}
-                            </span>
-                            <span
-                              style={{
-                                position: "absolute",
-                                bottom: "0",
-                                left: "0",
-                                right: "0",
-                                height: "10px",
-                                width: "100%",
-                                background: "rgba(199, 142, 29, 0.15)",
-                                zIndex: 0,
-                              }}
-                            ></span>
+                            {slide.title}
                           </h3>
-                          <p 
-                            style={{ 
-                              fontSize: "16px", 
-                              lineHeight: "1.6", 
+                          <p
+                            style={{
+                              fontSize: "16px",
+                              lineHeight: "1.6",
                               maxWidth: "700px",
-                              margin: "0 auto 10px" 
+                              margin: "0 auto 10px",
                             }}
                           >
                             {slide.description}
@@ -361,146 +504,98 @@ export default function WhyThisWorkMattersInfographic() {
                       </motion.div>
                     ))}
                   </div>
-
-                  {/* Navigation Buttons */}
-                  <button
-                    onClick={goToPrevSlide}
-                    className="carousel-control prev"
-                    aria-label="Previous slide"
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "-20px",
-                      transform: "translateY(-50%)",
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      background: "#fff",
-                      border: "1px solid rgba(199, 142, 29, 0.3)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                      zIndex: 2,
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15 18L9 12L15 6" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={goToNextSlide}
-                    className="carousel-control next"
-                    aria-label="Next slide"
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      right: "-20px",
-                      transform: "translateY(-50%)",
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      background: "#fff",
-                      border: "1px solid rgba(199, 142, 29, 0.3)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                      zIndex: 2,
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 6L15 12L9 18" stroke="#C78E1D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
                 </div>
 
-                {/* Carousel Indicators */}
-                <div 
-                  className="carousel-indicators" 
-                  style={{ 
-                    display: "flex", 
-                    justifyContent: "center", 
-                    marginTop: "30px", 
-                    gap: "10px" 
-                  }}
-                >
-                  {slides.map((slide, index) => (
-                    <button
-                      key={slide.id}
-                      onClick={() => handleManualNavigation(index)}
-                      className={`indicator ${currentSlide === index ? "active" : ""}`}
-                      aria-label={`Go to slide ${index + 1}`}
-                      style={{
-                        width: "10px",
-                        height: "10px",
-                        borderRadius: "50%",
-                        background: currentSlide === index ? "#C78E1D" : "#E5BA6D",
-                        opacity: currentSlide === index ? 1 : 0.5,
-                        border: "none",
-                        padding: 0,
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                      }}
-                    ></button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mission Statement Section */}
-          <div className="row mt-5 pt-4">
-            <div className="col-xl-8 col-lg-10 mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="mission-statement"
-                style={{
-                  background: "rgba(249, 232, 207, 0.8)",
-                  borderRadius: "16px",
-                  padding: "40px",
-                  textAlign: "center",
-                  marginBottom: "20px",
-                  border: "1px solid rgba(199, 142, 29, 0.2)",
-                  boxShadow: "rgba(0, 0, 0, 0.08) 0px 10px 30px",
-                }}
-              >
+                {/* Navigation Controls */}
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    marginBottom: "20px",
+                    alignItems: "center",
+                    marginTop: "30px",
+                    gap: "20px",
                   }}
                 >
-                  <div
-                    style={{
-                      width: "80px",
-                      height: "3px",
-                      backgroundColor: "#C78E1D",
-                    }}
-                  ></div>
+                  {/* Arrow Buttons */}
+                  <div style={{ display: "flex", gap: "12px" }}>
+                    <button
+                      onClick={goToNextSlide}
+                      className="carousel-control next"
+                      aria-label="Next slide"
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        background: "#fff",
+                        border: "2px solid #C78E1D",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                        zIndex: 2,
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#fff";
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="#C78E1D"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Carousel Indicators */}
+                  <div style={{ display: "flex", gap: "10px" }}>
+                    {slides.map((slide, index) => (
+                      <button
+                        key={slide.id}
+                        onClick={() => handleManualNavigation(index)}
+                        className={`indicator ${
+                          currentSlide === index ? "active" : ""
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                        style={{
+                          width: "10px",
+                          height: "10px",
+                          borderRadius: "50%",
+                          background:
+                            currentSlide === index ? "#C78E1D" : "#E5BA6D",
+                          opacity: currentSlide === index ? 1 : 0.5,
+                          border: "none",
+                          padding: 0,
+                          cursor: "pointer",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "scale(1.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "scale(1)";
+                        }}
+                      ></button>
+                    ))}
+                  </div>
                 </div>
-                <h3
-                  className="mb-4"
-                  style={{
-                    color: "#21273F",
-                    fontWeight: 600,
-                    fontSize: "28px",
-                  }}
-                >
-                  Our Mission
-                </h3>
-                <p style={{ fontSize: "19px", lineHeight: "1.7" }}>
-                  To bridge medicine, faith, and culture through doctor-led,
-                  multilingual programmes — empowering women and improving
-                  outcomes for every community.
-                </p>
-              </motion.div>
+              </div>
             </div>
           </div>
 
@@ -527,14 +622,254 @@ export default function WhyThisWorkMattersInfographic() {
                   <strong style={{ color: "#21273F", fontWeight: "500" }}>
                     Data Sources:
                   </strong>{" "}
-                  MBRRACE-UK (2023), CORE20PLUS5 (2023), Women's Health
-                  Strategy (2022), NHS England (2022), McKinsey Health
-                  Institute (2023)
+                  MBRRACE-UK (2023), CORE20PLUS5 (2023), Women's Health Strategy
+                  (2022), NHS England (2022), McKinsey Health Institute (2023)
                 </p>
               </div>
             </div>
           </div>
+
+          {/* Mission Statement Section */}
+          <div className="row mt-5 pt-4 justify-content-center">
+            <div className="col-lg-12">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="mission-statement"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "20px",
+                  alignItems: "stretch",
+                  maxWidth: "900px",
+                  margin: "0 auto",
+                }}
+              >
+                {/* Left: Image and Info */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                  }}
+                >
+                  {/* Image Section */}
+                  <div
+                    style={{
+                      width: "100%",
+                      maxWidth: "300px",
+                      height: "300px",
+                      borderRadius: "20px",
+                      overflow: "hidden",
+                      marginBottom: "24px",
+                      boxShadow: "0 8px 32px rgba(199, 142, 29, 0.25)",
+                      border: "4px solid #C78E1D",
+                      alignSelf: "flex-end",
+                    }}
+                  >
+                    <img
+                      src="/assets/images/resources/dr-syeda-hero.svg"
+                      alt="Dr Syeda"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                        e.currentTarget.nextElementSibling.style.display =
+                          "flex";
+                      }}
+                    />
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: "rgba(199, 142, 29, 0.1)",
+                        display: "none",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "#C78E1D",
+                        fontSize: "14px",
+                        textAlign: "center",
+                        padding: "20px",
+                      }}
+                    >
+                      Image placeholder
+                    </div>
+                  </div>
+
+                  {/* Dr Syeda Info */}
+                  <h3
+                    style={{
+                      color: "#21273F",
+                      fontWeight: 700,
+                      fontSize: "22px",
+                      marginBottom: "6px",
+                      textAlign: "right",
+                      alignSelf: "flex-end",
+                    }}
+                  >
+                    Dr Syeda Insha Hussaini
+                  </h3>
+                  <p
+                    style={{
+                      color: "#C78E1D",
+                      fontSize: "12px",
+                      fontWeight: 600,
+                      marginBottom: "8px",
+                      letterSpacing: "0.5px",
+                      textAlign: "right",
+                      alignSelf: "flex-end",
+                    }}
+                  >
+                    MBChB, MRCGP, DRCOG, LoC IUD
+                  </p>
+                  <p
+                    style={{
+                      color: "#21273F",
+                      fontSize: "13px",
+                      lineHeight: "1.6",
+                      fontWeight: 500,
+                      textAlign: "right",
+                      flex: 1,
+                      alignSelf: "flex-end",
+                    }}
+                  >
+                    Founder & Women's Health Doctor | ThriveHer Clinic
+                  </p>
+                </div>
+
+                {/* Right: Mission Callout and Buttons */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "20px",
+                  }}
+                >
+                  {/* Mission Bubble */}
+                  <div
+                    style={{
+                      backgroundColor: "#21273F",
+                      borderRadius: "16px",
+                      padding: "32px",
+                      textAlign: "center",
+                      flex: 1,
+                      boxShadow: "0 10px 40px rgba(199, 142, 29, 0.15)",
+                      border: "2px solid #C78E1D",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <h4
+                      style={{
+                        color: "#C78E1D",
+                        fontWeight: 700,
+                        fontSize: "16px",
+                        marginBottom: "16px",
+                        letterSpacing: "0.5px",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      Our Mission
+                    </h4>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        lineHeight: "1.8",
+                        color: "#fdf3e4",
+                        margin: "0",
+                      }}
+                    >
+                      To bridge medicine, faith, and culture through doctor-led,
+                      multilingual programmes — empowering women and improving
+                      outcomes for every community.
+                    </p>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "12px",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <button
+                      style={{
+                        backgroundColor: "#C78E1D",
+                        color: "#fff",
+                        border: "none",
+                        padding: "14px 24px",
+                        borderRadius: "6px",
+                        fontSize: "14px",
+                        fontWeight: 600,
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#b8791a";
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.boxShadow =
+                          "0 4px 12px rgba(199, 142, 29, 0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "none";
+                      }}
+                    >
+                      Get your team trained
+                    </button>
+                    <button
+                      style={{
+                        backgroundColor: "transparent",
+                        color: "#C78E1D",
+                        border: "2px solid #C78E1D",
+                        padding: "12px 22px",
+                        borderRadius: "6px",
+                        fontSize: "14px",
+                        fontWeight: 600,
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                        e.currentTarget.style.color = "#fff";
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.boxShadow =
+                          "0 4px 12px rgba(199, 142, 29, 0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "transparent";
+                        e.currentTarget.style.color = "#C78E1D";
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "none";
+                      }}
+                    >
+                      Introduce us to your patients
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
+
+        {/* Responsive styles */}
+        <style>{`
+          @media (max-width: 768px) {
+            .mission-statement {
+              grid-template-columns: 1fr !important;
+              gap: 25px !important;
+            }
+          }
+        `}</style>
       </section>
       {/* Infographic Section End */}
     </>

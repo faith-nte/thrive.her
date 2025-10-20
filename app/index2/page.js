@@ -11,7 +11,7 @@ import Video from "@/components/sections/home2/Video";
 export default function Home() {
   return (
     <>
-      <Layout headerStyle={2} footerStyle={2}>
+      <Layout headerStyle={1} footerStyle={1}>
         <Banner />
 
         <Feature />

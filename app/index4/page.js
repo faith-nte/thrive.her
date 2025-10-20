@@ -10,7 +10,7 @@ import Country from "@/components/sections/home4/Country";
 export default function Home() {
   return (
     <>
-      <Layout headerStyle={3} footerStyle={3}>
+      <Layout headerStyle={1} footerStyle={1}>
         <About />
         <Slogan />
         <Mission />

@@ -105,53 +105,6 @@ export default function WhyThisWorkMattersHero() {
                     , every woman feels seen. By learning and working together,
                     we can make health fair for all.
                   </p>
-                  <p>
-                    Yet many still face barriers that compromise their health.
-                    The data tells a clear story one of inequality, but also of{" "}
-                    <span style={{ color: "#C78E1D", fontWeight: 500 }}>
-                      opportunity
-                    </span>
-                    .
-                  </p>
-                </div>
-                <div className="hero-buttons">
-                  <Link
-                    href="/about"
-                    className="btn btn-primary"
-                    style={{
-                      backgroundColor: "#C78E1D",
-                      borderColor: "#C78E1D",
-                      padding: "12px 28px",
-                      fontSize: "1rem",
-                      fontWeight: 600,
-                      borderRadius: "6px",
-                      boxShadow: "0 4px 14px rgba(199, 142, 29, 0.3)",
-                      transition: "all 0.3s ease",
-                      textDecoration: "none",
-                      color: "#fff",
-                      marginRight: "15px",
-                    }}
-                  >
-                    Learn More
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="btn btn-outline"
-                    style={{
-                      backgroundColor: "transparent",
-                      borderColor: "#C78E1D",
-                      borderWidth: "2px",
-                      padding: "10px 24px",
-                      fontSize: "1rem",
-                      fontWeight: 600,
-                      borderRadius: "6px",
-                      color: "#C78E1D",
-                      transition: "all 0.3s ease",
-                      textDecoration: "none",
-                    }}
-                  >
-                    Get Involved
-                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -171,20 +124,19 @@ export default function WhyThisWorkMattersHero() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            backgroundColor: "rgba(33, 39, 63, 0.4)",
             padding: "10px 16px",
             borderRadius: "20px",
-            backdropFilter: "blur(4px)",
           }}
         >
           <p
             style={{
               color: "rgba(255, 255, 255, 0.95)",
               marginBottom: "8px",
-              fontSize: "14px",
+              fontSize: "16px",
+              fontWeight: 500,
             }}
           >
-            Scroll to explore
+            See who's most affected
           </p>
           <motion.div
             animate={{

@@ -10,7 +10,7 @@ import Cta from "@/components/sections/home3/Cta";
 export default function Home() {
   return (
     <>
-      <Layout headerStyle={3} footerStyle={3}>
+      <Layout headerStyle={1} footerStyle={1}>
         <Banner />
         <Feature />
         <About />
