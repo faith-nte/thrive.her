@@ -18,39 +18,18 @@ export default function About() {
                 className="about-One__left  wow slideInLeft"
                 data-wow-delay="100ms"
                 data-wow-duration="2500ms"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100%" }}
               >
                 <div className="about-One__img-box">
                   <div className="about-One__img">
                     <img
-                      src="assets/images/resources/about-one-img-1.jpg"
+                      src="assets/images/backgrounds/partnerships.png"
                       alt=""
                     />
                   </div>
                   <div className="about-One__img-2">
-                    <img
-                      src="assets/images/resources/about-one-img-2.jpg"
-                      alt=""
-                    />
+                    <img src="assets/images/backgrounds/workshop.png" alt="" />
                   </div>
-                  <div
-                    className="about-One__provide-box wow zoomIn animated animated"
-                    data-wow-delay="500ms"
-                    data-wow-duration="2500ms"
-                  >
-                    <div className="about-One__provide-icon">
-                      <span className="icon-pet-care"></span>
-                    </div>
-                    <div className="about-One__provide-content">
-                      <div className="about-One__provide-count count-box">
-                        <h3 className="count-text">250</h3>
-                        <span>+</span>
-                      </div>
-                      <p className="about-One__provide-count-text">
-                        Services we provide
-                      </p>
-                    </div>
-                  </div>
-                  <div className="about-One__shape-1"></div>
                 </div>
               </div>
             </div>
