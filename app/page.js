@@ -16,7 +16,6 @@ import WhyThisWorkMattersHero from "@/components/sections/home1/WhyThisWorkMatte
 import WhyThisWorkMattersInfographic from "@/components/sections/home1/WhyThisWorkMattersInfographic";
 import Mission from "@/components/sections/home1/mission";
 import Work from "@/components/sections/home1/work";
-import WaysToWork from "@/components/sections/home1/WaysToWork";
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
         <Banner />
         <WhyThisWorkMattersInfographic />
         <Mission />
-        <WaysToWork />
         <Work />
         <Testimonial />
       </Layout>
