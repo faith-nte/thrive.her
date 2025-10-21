@@ -38,7 +38,10 @@ export default function MissionImpactSection() {
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-3 rounded shadow-md border border-[#A7B093]" role="tooltip">
+        <div
+          className="bg-white p-3 rounded shadow-md border border-[#A7B093]"
+          role="tooltip"
+        >
           <p className="text-[#21273F] font-medium mb-1">
             {payload[0].payload.name}
           </p>
@@ -52,7 +55,7 @@ export default function MissionImpactSection() {
   return (
     <section
       id="mission-impact"
-      className={`w-full py-16 lg:py-20 px-4 sm:px-6 bg-[#F9E8CF] transition-all duration-700 ${
+      className={`section-secondary w-full transition-all duration-700 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
@@ -62,8 +65,9 @@ export default function MissionImpactSection() {
             The Challenge in Numbers
           </h2>
           <p className="text-lg text-[#21273F] max-w-3xl mx-auto">
-            Maternal health inequalities persist across the UK, with significant disparities
-            in outcomes based on ethnicity, language access, and cultural understanding.
+            Maternal health inequalities persist across the UK, with significant
+            disparities in outcomes based on ethnicity, language access, and
+            cultural understanding.
           </p>
         </div>
 
@@ -118,11 +122,14 @@ export default function MissionImpactSection() {
         {/* Key facts */}
         <div className="bg-white rounded-lg shadow-sm p-4 md:p-8 mb-10 border border-[#A7B093]">
           <p className="text-lg text-[#21273F] mb-4">
-            Women of Black African heritage are <span className="font-bold">83% more likely</span> to
-            experience a near miss in childbirth. Missed red flags cost the NHS billions each year.
+            Women of Black African heritage are{" "}
+            <span className="font-bold">83% more likely</span> to experience a
+            near miss in childbirth. Missed red flags cost the NHS billions each
+            year.
           </p>
           <p className="text-sm text-[#21273F] text-right italic">
-            Sources: MBRRACE-UK, Women & Equalities Committee, CQC, The Guardian.
+            Sources: MBRRACE-UK, Women & Equalities Committee, CQC, The
+            Guardian.
           </p>
         </div>
 
@@ -131,46 +138,60 @@ export default function MissionImpactSection() {
           {/* Gradient background with animation */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#21273F] via-[#2a304d] to-[#323950] opacity-95"></div>
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;opacity=0.03')] bg-repeat"></div>
-          
+
           {/* Decorative accent bars */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C78E1D] to-transparent"></div>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#A7B093] to-transparent"></div>
-          
+
           {/* Content */}
           <div className="relative p-6 sm:p-8 md:p-12 lg:p-16">
             {/* Mission header */}
             <div className="mb-6 md:mb-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-1 h-8 md:h-12 bg-gradient-to-b from-[#C78E1D] to-[#A7B093] rounded-full"></div>
-                <span className="text-[#C78E1D] text-xs md:text-sm font-semibold tracking-widest uppercase">Our North Star</span>
+                <span className="text-[#C78E1D] text-xs md:text-sm font-semibold tracking-widest uppercase">
+                  Our North Star
+                </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-4 leading-tight">
                 Our Mission
               </h2>
               <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-[#C78E1D] to-[#A7B093] rounded-full"></div>
             </div>
-            
+
             {/* Mission statement text */}
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#F9E8CF] leading-relaxed md:leading-loose font-light mb-8 max-w-4xl">
-              To bridge 
-              <span className="font-bold text-[#C78E1D] mx-2">medicine, faith, and culture</span>
+              To bridge
+              <span className="font-bold text-[#C78E1D] mx-2">
+                medicine, faith, and culture
+              </span>
               through
-              <span className="font-bold text-[#A7B093] mx-2">doctor-led, multilingual programmes</span>
+              <span className="font-bold text-[#A7B093] mx-2">
+                doctor-led, multilingual programmes
+              </span>
               — empowering women and improving outcomes for every community.
             </p>
-            
+
             {/* Emphasis boxes - responsive grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12">
               {/* Box 1 */}
               <div className="bg-[#C78E1D] bg-opacity-10 border border-[#C78E1D] border-opacity-30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
-                <div className="text-[#C78E1D] text-sm font-semibold uppercase tracking-wide mb-2">Core Focus</div>
-                <p className="text-white text-base md:text-lg font-medium">Eliminate health inequities through culturally competent care</p>
+                <div className="text-[#C78E1D] text-sm font-semibold uppercase tracking-wide mb-2">
+                  Core Focus
+                </div>
+                <p className="text-white text-base md:text-lg font-medium">
+                  Eliminate health inequities through culturally competent care
+                </p>
               </div>
-              
+
               {/* Box 2 */}
               <div className="bg-[#A7B093] bg-opacity-10 border border-[#A7B093] border-opacity-30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
-                <div className="text-[#A7B093] text-sm font-semibold uppercase tracking-wide mb-2">Impact</div>
-                <p className="text-white text-base md:text-lg font-medium">Save lives through multilingual, faith-respecting programmes</p>
+                <div className="text-[#A7B093] text-sm font-semibold uppercase tracking-wide mb-2">
+                  Impact
+                </div>
+                <p className="text-white text-base md:text-lg font-medium">
+                  Save lives through multilingual, faith-respecting programmes
+                </p>
               </div>
             </div>
           </div>

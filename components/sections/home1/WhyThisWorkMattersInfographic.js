@@ -348,7 +348,7 @@ export default function WhyThisWorkMattersInfographic() {
     <>
       {/* Infographic Section Start */}
       <section
-        className="why-this-work-matters-infographic"
+        className="why-this-work-matters-infographic section-primary"
         style={{
           backgroundColor: "transparent",
           padding: "100px 0 80px",

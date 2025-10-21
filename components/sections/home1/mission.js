@@ -10,7 +10,7 @@ export default function Donation() {
   return (
     <>
       {/*Donation One Start */}
-      <section className="donation-one">
+      <section className="donation-one section-primary">
         <div className="donation-one__wrapper">
           <div className="donation-one__left">
             <div

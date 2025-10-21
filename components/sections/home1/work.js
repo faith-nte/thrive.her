@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       {/*About One Start */}
-      <section className="about-One">
+      <section className="about-One section-primary">
         <div className="container">
           <div className="row">
             <div className="col-xl-6">

@@ -238,7 +238,7 @@ const tree = {
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 66186)), "/home/faithnte/Downloads/fenn digital/client/Dr Syeda/website/thrive.her/app/page.js"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 70681)), "/home/faithnte/Downloads/fenn digital/client/Dr Syeda/website/thrive.her/app/page.js"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 57481))).default(props))],
     apple: [],
@@ -294,15 +294,15 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 21510:
+/***/ 65549:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 76496));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78650));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 89708, 23));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 23398));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50954, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 75826));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 89708, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 23398));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 32254));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 27849));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 72503));
@@ -311,234 +311,11 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_re
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 24502));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 27138));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 91667));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 19084));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 56548))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 19084))
 
 /***/ }),
 
-/***/ 56548:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ WaysToWorkSection)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(56786);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18038);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(83728);
-/* __next_internal_client_entry_do_not_use__ default auto */ 
-
-
-function WaysToWorkSection() {
-    const [isInView, setIsInView] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
-    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
-        const section = document.getElementById("ways-to-work");
-        const observer = new IntersectionObserver(([entry])=>setIsInView(entry.isIntersecting), {
-            threshold: 0.2
-        });
-        if (section) observer.observe(section);
-        return ()=>observer && observer.disconnect();
-    }, []);
-    const cards = [
-        {
-            id: 1,
-            title: "Community Champions",
-            description: "Partner with community leaders to deliver grassroots training and culturally tailored support.",
-            icon: "\uD83D\uDC65",
-            details: [
-                "Train local advocates",
-                "Peer-to-peer support",
-                "Community events"
-            ]
-        },
-        {
-            id: 2,
-            title: "Clinical Leaders",
-            description: "Work with NHS and clinical teams to integrate culturally competent practices into standard care.",
-            icon: "⚕️",
-            details: [
-                "Staff training",
-                "Policy integration",
-                "Outcomes measurement"
-            ]
-        }
-    ];
-    const containerVariants = {
-        hidden: {
-            opacity: 0
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const cardVariants = {
-        hidden: {
-            opacity: 0,
-            y: 20
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
-        id: "ways-to-work",
-        className: "py-24 sm:py-32 lg:py-40",
-        style: {
-            backgroundColor: "#ffffff"
-        },
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-            className: "mx-auto max-w-7xl px-6 lg:px-8",
-            children: [
-                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: "mx-auto max-w-2xl text-center mb-16",
-                    children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                            className: "text-sm font-semibold uppercase tracking-widest mb-2",
-                            style: {
-                                color: "#D1A38A"
-                            },
-                            children: "Ways to Partner"
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                            className: "text-4xl font-bold tracking-tight sm:text-5xl mb-4",
-                            style: {
-                                color: "#21273F"
-                            },
-                            children: "Ways to Work With Us"
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                            className: "text-lg leading-8",
-                            style: {
-                                color: "#21273F"
-                            },
-                            children: "Choose the partnership model that best fits your organisational goals and capacity."
-                        })
-                    ]
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_2__/* .motion */ .E.div, {
-                    className: "grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12",
-                    variants: containerVariants,
-                    initial: "hidden",
-                    animate: isInView ? "visible" : "hidden",
-                    children: cards.map((card)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_2__/* .motion */ .E.div, {
-                            className: "rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2",
-                            style: {
-                                backgroundColor: "#D1A38A",
-                                color: "#21273F"
-                            },
-                            variants: cardVariants,
-                            children: [
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "p-8",
-                                    children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                            className: "text-5xl mb-4",
-                                            children: card.icon
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                            className: "text-2xl font-bold mb-2",
-                                            children: card.title
-                                        })
-                                    ]
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    style: {
-                                        height: "2px",
-                                        backgroundColor: "rgba(33, 39, 63, 0.2)"
-                                    }
-                                }),
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "p-8",
-                                    children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                            className: "text-base leading-relaxed mb-6",
-                                            children: card.description
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
-                                            className: "space-y-3 mb-8",
-                                            children: card.details.map((detail, idx)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
-                                                    className: "flex items-start gap-3",
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                            className: "flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold",
-                                                            style: {
-                                                                backgroundColor: "#21273F",
-                                                                color: "#D1A38A"
-                                                            },
-                                                            children: "✓"
-                                                        }),
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                            children: detail
-                                                        })
-                                                    ]
-                                                }, idx))
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                                            className: "rounded-md px-6 py-3 text-sm font-semibold transition-all hover:opacity-90 w-full text-center",
-                                            style: {
-                                                backgroundColor: "#21273F",
-                                                color: "#F9E8CF"
-                                            },
-                                            onMouseEnter: (e)=>{
-                                                e.currentTarget.style.backgroundColor = "#1a1e30";
-                                            },
-                                            onMouseLeave: (e)=>{
-                                                e.currentTarget.style.backgroundColor = "#21273F";
-                                            },
-                                            children: "Learn More"
-                                        })
-                                    ]
-                                })
-                            ]
-                        }, card.id))
-                }),
-                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: "mt-16 text-center",
-                    children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                            className: "text-lg mb-6",
-                            style: {
-                                color: "#21273F"
-                            },
-                            children: "Ready to make a difference?"
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                            className: "rounded-md px-8 py-3 text-sm font-semibold transition-all hover:opacity-90",
-                            style: {
-                                backgroundColor: "#D1A38A",
-                                color: "#21273F"
-                            },
-                            onMouseEnter: (e)=>{
-                                e.currentTarget.style.backgroundColor = "#BB8C74";
-                            },
-                            onMouseLeave: (e)=>{
-                                e.currentTarget.style.backgroundColor = "#D1A38A";
-                            },
-                            children: "Start a Partnership Today"
-                        })
-                    ]
-                })
-            ]
-        })
-    });
-}
-
-
-/***/ }),
-
-/***/ 66186:
+/***/ 70681:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -608,21 +385,7 @@ const WhyThisWorkMattersInfographic_default_ = WhyThisWorkMattersInfographic_pro
 
 
 /* harmony default export */ const WhyThisWorkMattersInfographic = (WhyThisWorkMattersInfographic_default_);
-;// CONCATENATED MODULE: ./components/sections/home1/WaysToWork.js
-
-const WaysToWork_proxy = (0,module_proxy.createProxy)(String.raw`/home/faithnte/Downloads/fenn digital/client/Dr Syeda/website/thrive.her/components/sections/home1/WaysToWork.js`)
-
-// Accessing the __esModule property and exporting $$typeof are required here.
-// The __esModule getter forces the proxy target to create the default export
-// and the $$typeof value is for rendering logic to determine if the module
-// is a client boundary.
-const { __esModule: WaysToWork_esModule, $$typeof: WaysToWork_$$typeof } = WaysToWork_proxy;
-const WaysToWork_default_ = WaysToWork_proxy.default;
-
-
-/* harmony default export */ const WaysToWork = (WaysToWork_default_);
 ;// CONCATENATED MODULE: ./app/page.js
-
 
 
 
@@ -651,7 +414,6 @@ function Home() {
                 /*#__PURE__*/ jsx_runtime_.jsx(Banner/* default */.Z, {}),
                 /*#__PURE__*/ jsx_runtime_.jsx(WhyThisWorkMattersInfographic, {}),
                 /*#__PURE__*/ jsx_runtime_.jsx(mission/* default */.ZP, {}),
-                /*#__PURE__*/ jsx_runtime_.jsx(WaysToWork, {}),
                 /*#__PURE__*/ jsx_runtime_.jsx(work/* default */.ZP, {}),
                 /*#__PURE__*/ jsx_runtime_.jsx(Testimonial/* default */.ZP, {})
             ]
@@ -695,7 +457,7 @@ const __default__ = proxy.default;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [3587,5183,2547,2513,4119,8515], () => (__webpack_exec__(60642)));
+var __webpack_exports__ = __webpack_require__.X(0, [3587,5183,2547,2513,1888,8515], () => (__webpack_exec__(60642)));
 module.exports = __webpack_exports__;
 
 })();

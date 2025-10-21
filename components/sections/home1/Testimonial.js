@@ -54,10 +54,7 @@ export default function Testimonial() {
   return (
     <>
       {/*Testimonial One Start */}
-      <section
-        className="testimonial-one"
-        style={{ backgroundColor: "transparent", padding: "80px 0" }}
-      >
+      <section className="testimonial-one section-secondary">
         <div className="container">
           <div className="section-title text-center sec-title-animation animation-style1">
             <div className="section-title__tagline-box">
