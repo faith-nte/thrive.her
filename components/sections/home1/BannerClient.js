@@ -86,66 +86,48 @@ export default function BannerClient() {
                         And Minority Women.
                       </p>
                     </div>
-                    <div
-                      className="btn-box"
-                      style={{
-                        display: "flex",
-                        gap: "24px",
-                        alignItems: "center",
-                      }}
-                    >
+                    <div className="btn-box flex flex-col sm:flex-row gap-3 sm:gap-6 items-start sm:items-center mt-8">
                       <Link
                         href="/about"
+                        className="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-xs transition-all w-full sm:w-auto text-center"
                         style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          backgroundColor: "#c78e1d",
-                          color: "#ffffff",
-                          padding: "32px 24px",
-                          borderRadius: "4px",
-                          fontSize: "14px",
-                          fontWeight: "600",
-                          textDecoration: "none",
-                          transition: "all 0.2s ease",
-                          animation: "pulse 2s infinite",
-                          position: "relative",
+                          backgroundColor: "#D1A38A",
+                          color: "#21273F",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#b17d17";
-                          e.currentTarget.style.animation = "none";
+                          e.currentTarget.style.backgroundColor = "#BB8C74";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#c78e1d";
-                          e.currentTarget.style.animation = "pulse 2s infinite";
+                          e.currentTarget.style.backgroundColor = "#D1A38A";
                         }}
                       >
-                        PARTNER WITH US
+                        Partner With Us
                       </Link>
                       <Link
                         href="/about"
+                        className="text-sm font-semibold transition-all w-full sm:w-auto text-center py-2.5"
                         style={{
-                          display: "inline-flex",
-                          alignItems: "center",
-                          color: "#ffffff",
-                          textDecoration: "none",
-                          fontSize: "14px",
-                          fontWeight: "600",
-                          lineHeight: "1.5",
-                          gap: "4px",
-                          transition: "color 0.2s ease",
+                          color: "#F9E8CF",
+                          borderBottom: "2px solid #3A7C7C",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.color = "#f3f4f6";
+                          e.currentTarget.style.color = "#ffffff";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.color = "#ffffff";
+                          e.currentTarget.style.color = "#F9E8CF";
                         }}
                       >
                         See our trainings
-                        <span aria-hidden="true">→</span>
+                        <span aria-hidden="true"> →</span>
                       </Link>
                     </div>
+                    <p
+                      className="mt-3 text-sm text-cream/90 italic"
+                      style={{ color: "rgba(249, 232, 207, 0.9)" }}
+                    >
+                      Dr Syeda Hussaini MBBS MRCPsych — Founder, ThriveHer
+                      Clinic
+                    </p>
                   </div>
                 </div>
               </div>

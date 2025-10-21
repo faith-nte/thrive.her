@@ -44,60 +44,18 @@ export default function Donation() {
                 </h2>
               </div>
               <div className="donation-one__donate-box">
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "clamp(12px, 3vw, 20px)",
-                    flexDirection: "row",
-                    marginTop: "30px",
-                    flexWrap: "wrap",
-                  }}
-                >
+                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-3 sm:gap-y-0">
                   <Link
                     href="#"
-                    className="thm-btn"
-                    style={{
-                      backgroundColor: "#C78E1D",
-                      color: "#fff",
-                      padding: "clamp(12px, 3vw, 16px) clamp(16px, 4vw, 32px)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "8px",
-                      whiteSpace: "normal",
-                      textAlign: "center",
-                      fontSize: "clamp(14px, 2.5vw, 16px)",
-                      fontWeight: "600",
-                      borderRadius: "8px",
-                      flex: "1 1 auto",
-                      minWidth: "clamp(150px, 45vw, 200px)",
-                      transition: "all 0.3s ease",
-                      cursor: "pointer",
-                    }}
+                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white w-full sm:w-auto"
+                    style={{ backgroundColor: "#C78E1D", color: "#fff" }}
                   >
                     Get your team trained
                   </Link>
                   <Link
                     href="#"
-                    className="thm-btn"
-                    style={{
-                      backgroundColor: "#C78E1D",
-                      color: "#fff",
-                      padding: "clamp(12px, 3vw, 16px) clamp(16px, 4vw, 32px)",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      gap: "8px",
-                      whiteSpace: "normal",
-                      textAlign: "center",
-                      fontSize: "clamp(14px, 2.5vw, 16px)",
-                      fontWeight: "600",
-                      borderRadius: "8px",
-                      flex: "1 1 auto",
-                      minWidth: "clamp(150px, 45vw, 200px)",
-                      transition: "all 0.3s ease",
-                      cursor: "pointer",
-                    }}
+                    className="text-sm font-semibold text-white hover:text-gray-100 w-full sm:w-auto text-center py-2.5"
+                    style={{ color: "#fdf3e4" }}
                   >
                     Introduce your patients
                   </Link>

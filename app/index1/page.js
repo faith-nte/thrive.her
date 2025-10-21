@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Layout from "@/components/layout/Layout";
-import About from "@/components/sections/home1/About";
+import About from "@/components/sections/home1/work";
 import AboutThree from "@/components/sections/home1/AboutThree";
 import Banner from "@/components/sections/home1/Banner";
 import WhyThisWorkMatters from "@/components/sections/home1/WhyThisWorkMatters";
@@ -9,7 +9,7 @@ import Brands from "@/components/sections/home1/Brands";
 import Country from "@/components/sections/home1/Country";
 import Cta from "@/components/sections/home1/Cta";
 import Donate from "@/components/sections/home1/Donate";
-import Donation from "@/components/sections/home1/Donation";
+import Donation from "@/components/sections/home1/mission";
 import Event from "@/components/sections/home1/Event";
 import Found from "@/components/sections/home1/Found";
 import Team from "@/components/sections/home1/Team";
