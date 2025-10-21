@@ -73,7 +73,7 @@ export default function WhyThisWorkMattersInfographic() {
         label: "Relative risk of maternal mortality",
         data: [1, 1.8, 3.7],
         backgroundColor: (context) => {
-          if (context.dataIndex === 2) return "#C78E1D"; // Gold for Black women
+          if (context.dataIndex === 2) return "#D1A38A"; // Pink for Black women
           if (context.dataIndex === 1) return "#E5BA6D"; // Lighter gold for Asian women
           return "#83919C"; // Gray for White women
         },
@@ -98,7 +98,7 @@ export default function WhyThisWorkMattersInfographic() {
       },
       tooltip: {
         backgroundColor: "#fff",
-        borderColor: "#C78E1D",
+        borderColor: "#D1A38A",
         borderWidth: 1,
         titleColor: "#21273F",
         bodyColor: "#21273F",
@@ -197,12 +197,12 @@ export default function WhyThisWorkMattersInfographic() {
         >
           <path
             d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
           />
           <path
             d="M12 8V12L15 15"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -227,29 +227,29 @@ export default function WhyThisWorkMattersInfographic() {
         >
           <path
             d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
           />
           <path
             d="M3.6 9H20.4"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
           />
           <path
             d="M3.6 15H20.4"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
           />
           <path
             d="M12 3C13.933 5.04 15 7.828 15 12C15 16.172 13.933 18.96 12 21"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
           />
           <path
             d="M12 3C10.067 5.04 9 7.828 9 12C9 16.172 10.067 18.96 12 21"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
           />
         </svg>
@@ -272,7 +272,7 @@ export default function WhyThisWorkMattersInfographic() {
         >
           <path
             d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -297,13 +297,13 @@ export default function WhyThisWorkMattersInfographic() {
         >
           <path
             d="M12 6V12M12 12V18M12 12H18M12 12H6"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
           />
           <path
             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
           />
         </svg>
@@ -326,14 +326,14 @@ export default function WhyThisWorkMattersInfographic() {
         >
           <path
             d="M3 6H21M3 12H21M3 18H21"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M12 3V6M12 12V15M12 18V21"
-            stroke="#C78E1D"
+            stroke="#D1A38A"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -348,7 +348,7 @@ export default function WhyThisWorkMattersInfographic() {
     <>
       {/* Infographic Section Start */}
       <section
-        className="why-this-work-matters-infographic section-primary"
+        className="why-this-work-matters-infographic"
         style={{
           backgroundColor: "transparent",
           padding: "100px 0 80px",
@@ -391,7 +391,7 @@ export default function WhyThisWorkMattersInfographic() {
                   borderRadius: "16px",
                   padding: "40px",
                   height: "350px",
-                  border: "2px solid #C78E1D",
+                  border: "2px solid #D1A38A",
                   boxShadow: "none",
                   position: "relative",
                   overflow: "hidden",
@@ -451,7 +451,7 @@ export default function WhyThisWorkMattersInfographic() {
                             width: "80px",
                             height: "80px",
                             margin: "0 auto 20px",
-                            backgroundColor: "rgba(199, 142, 29, 0.15)",
+                            backgroundColor: "rgba(209, 163, 138, 0.15)",
                             borderRadius: "50%",
                             display: "flex",
                             alignItems: "center",
@@ -483,7 +483,7 @@ export default function WhyThisWorkMattersInfographic() {
                               transition: "all 0.3s ease",
                             }}
                             onMouseEnter={(e) => {
-                              e.currentTarget.style.color = "#C78E1D";
+                              e.currentTarget.style.color = "#D1A38A";
                             }}
                             onMouseLeave={(e) => {
                               e.currentTarget.style.color = "#21273F";
@@ -537,7 +537,7 @@ export default function WhyThisWorkMattersInfographic() {
                         height: "40px",
                         borderRadius: "50%",
                         background: "#fff",
-                        border: "2px solid #C78E1D",
+                        border: "2px solid #D1A38A",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -547,7 +547,7 @@ export default function WhyThisWorkMattersInfographic() {
                         transition: "all 0.3s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                        e.currentTarget.style.backgroundColor = "#D1A38A";
                         e.currentTarget.style.transform = "scale(1.1)";
                       }}
                       onMouseLeave={(e) => {
@@ -564,7 +564,7 @@ export default function WhyThisWorkMattersInfographic() {
                       >
                         <path
                           d="M9 6L15 12L9 18"
-                          stroke="#C78E1D"
+                          stroke="#D1A38A"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -588,7 +588,7 @@ export default function WhyThisWorkMattersInfographic() {
                           height: "10px",
                           borderRadius: "50%",
                           background:
-                            currentSlide === index ? "#C78E1D" : "#E5BA6D",
+                            currentSlide === index ? "#D1A38A" : "#E5BA6D",
                           opacity: currentSlide === index ? 1 : 0.5,
                           border: "none",
                           padding: 0,

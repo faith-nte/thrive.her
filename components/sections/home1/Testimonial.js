@@ -54,13 +54,16 @@ export default function Testimonial() {
   return (
     <>
       {/*Testimonial One Start */}
-      <section className="testimonial-one section-secondary">
+      <section
+        className="testimonial-one"
+        style={{ backgroundColor: "transparent", padding: "80px 0" }}
+      >
         <div className="container">
           <div className="section-title text-center sec-title-animation animation-style1">
             <div className="section-title__tagline-box">
               <span
                 className="section-title__tagline"
-                style={{ color: "#C78E1D", fontWeight: "600" }}
+                style={{ color: "#D1A38A", fontWeight: "600" }}
               >
                 Testimonial
               </span>
@@ -70,7 +73,7 @@ export default function Testimonial() {
               style={{ color: "#21273F", fontSize: "42px", fontWeight: "700" }}
             >
               ThriveHer.Clinic <br />{" "}
-              <span style={{ color: "#C78E1D" }}>Feedback</span>
+              <span style={{ color: "#D1A38A" }}>Feedback</span>
             </h2>
             <p
               style={{
@@ -124,23 +127,23 @@ export default function Testimonial() {
                   >
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D" }}
+                      style={{ color: "#D1A38A" }}
                     ></span>
                   </div>
                   <p
@@ -179,7 +182,7 @@ export default function Testimonial() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(199, 142, 29, 0.15)";
+                      "0 8px 24px rgba(209, 163, 138, 0.15)";
                     e.currentTarget.style.transform = "translateY(-4px)";
                   }}
                   onMouseLeave={(e) => {
@@ -194,23 +197,23 @@ export default function Testimonial() {
                   >
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D" }}
+                      style={{ color: "#D1A38A" }}
                     ></span>
                   </div>
                   <p
@@ -249,7 +252,7 @@ export default function Testimonial() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(199, 142, 29, 0.15)";
+                      "0 8px 24px rgba(209, 163, 138, 0.15)";
                     e.currentTarget.style.transform = "translateY(-4px)";
                   }}
                   onMouseLeave={(e) => {
@@ -264,23 +267,23 @@ export default function Testimonial() {
                   >
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D" }}
+                      style={{ color: "#D1A38A" }}
                     ></span>
                   </div>
                   <p
@@ -319,7 +322,7 @@ export default function Testimonial() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(199, 142, 29, 0.15)";
+                      "0 8px 24px rgba(209, 163, 138, 0.15)";
                     e.currentTarget.style.transform = "translateY(-4px)";
                   }}
                   onMouseLeave={(e) => {
@@ -334,23 +337,23 @@ export default function Testimonial() {
                   >
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D" }}
+                      style={{ color: "#D1A38A" }}
                     ></span>
                   </div>
                   <p
@@ -390,7 +393,7 @@ export default function Testimonial() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(199, 142, 29, 0.15)";
+                      "0 8px 24px rgba(209, 163, 138, 0.15)";
                     e.currentTarget.style.transform = "translateY(-4px)";
                   }}
                   onMouseLeave={(e) => {
@@ -405,23 +408,23 @@ export default function Testimonial() {
                   >
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D", marginRight: "5px" }}
+                      style={{ color: "#D1A38A", marginRight: "5px" }}
                     ></span>
                     <span
                       className="fas fa-star"
-                      style={{ color: "#C78E1D" }}
+                      style={{ color: "#D1A38A" }}
                     ></span>
                   </div>
                   <p

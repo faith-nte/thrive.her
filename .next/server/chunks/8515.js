@@ -60,13 +60,13 @@ function BannerClient() {
             overflow: "hidden",
             position: "relative"
         },
-        className: "jsx-34a7ad3353785b04" + " " + "main-slider-four",
+        className: "jsx-77d5cc3801d02726" + " " + "main-slider-four",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 style: {
                     height: "100%"
                 },
-                className: "jsx-34a7ad3353785b04" + " " + "swiper-container banner-slider",
+                className: "jsx-77d5cc3801d02726" + " " + "swiper-container banner-slider",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(swiper_react__WEBPACK_IMPORTED_MODULE_3__/* .Swiper */ .tq, {
                     ...swiperOptions,
                     className: "swiper-wrapper",
@@ -81,10 +81,10 @@ function BannerClient() {
                             style: {
                                 height: "100%"
                             },
-                            className: "jsx-34a7ad3353785b04" + " " + "swiper-slide",
+                            className: "jsx-77d5cc3801d02726" + " " + "swiper-slide",
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    className: "jsx-34a7ad3353785b04" + " " + "bg1"
+                                    className: "jsx-77d5cc3801d02726" + " " + "bg1"
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                     style: {
@@ -94,7 +94,7 @@ function BannerClient() {
                                         backgroundPosition: "center 0",
                                         backgroundRepeat: "no-repeat"
                                     },
-                                    className: "jsx-34a7ad3353785b04" + " " + "image-layer hero-image"
+                                    className: "jsx-77d5cc3801d02726" + " " + "image-layer hero-image"
                                 }),
                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                     style: {
@@ -102,26 +102,26 @@ function BannerClient() {
                                         display: "flex",
                                         alignItems: "center"
                                     },
-                                    className: "jsx-34a7ad3353785b04" + " " + "main-slider-four__inner",
+                                    className: "jsx-77d5cc3801d02726" + " " + "main-slider-four__inner",
                                     children: [
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                             style: {
                                                 height: "100%"
                                             },
-                                            className: "jsx-34a7ad3353785b04" + " " + "main-slider-four__inner-bg"
+                                            className: "jsx-77d5cc3801d02726" + " " + "main-slider-four__inner-bg"
                                         }),
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                            className: "jsx-34a7ad3353785b04" + " " + "container",
+                                            className: "jsx-77d5cc3801d02726" + " " + "container",
                                             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                                 style: {
                                                     position: "relative"
                                                 },
-                                                className: "jsx-34a7ad3353785b04" + " " + "content-box",
+                                                className: "jsx-77d5cc3801d02726" + " " + "content-box",
                                                 children: [
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                                        className: "jsx-34a7ad3353785b04" + " " + "big-title",
+                                                        className: "jsx-77d5cc3801d02726" + " " + "big-title",
                                                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h2", {
-                                                            className: "jsx-34a7ad3353785b04",
+                                                            className: "jsx-77d5cc3801d02726",
                                                             children: [
                                                                 "Helping",
                                                                 " ",
@@ -129,21 +129,21 @@ function BannerClient() {
                                                                     style: {
                                                                         fontStyle: "italic"
                                                                     },
-                                                                    className: "jsx-34a7ad3353785b04",
+                                                                    className: "jsx-77d5cc3801d02726",
                                                                     children: "NHS & Community Partners"
                                                                 })
                                                             ]
                                                         })
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                                        className: "jsx-34a7ad3353785b04" + " " + "text-box",
+                                                        className: "jsx-77d5cc3801d02726" + " " + "text-box",
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                                            className: "jsx-34a7ad3353785b04",
+                                                            className: "jsx-77d5cc3801d02726",
                                                             children: "Deliver Care That Improves Health Outcomes For Muslim And Minority Women."
                                                         })
                                                     }),
                                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                        className: "jsx-34a7ad3353785b04" + " " + "btn-box flex flex-col sm:flex-row gap-3 sm:gap-6 items-start sm:items-center mt-8",
+                                                        className: "jsx-77d5cc3801d02726" + " " + "btn-box flex flex-col sm:flex-row gap-3 sm:gap-6 items-start sm:items-center mt-8",
                                                         children: [
                                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                                 href: "/about",
@@ -177,7 +177,7 @@ function BannerClient() {
                                                                     "See our trainings",
                                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                                         "aria-hidden": "true",
-                                                                        className: "jsx-34a7ad3353785b04",
+                                                                        className: "jsx-77d5cc3801d02726",
                                                                         children: " →"
                                                                     })
                                                                 ]
@@ -188,7 +188,7 @@ function BannerClient() {
                                                         style: {
                                                             color: "rgba(249, 232, 207, 0.9)"
                                                         },
-                                                        className: "jsx-34a7ad3353785b04" + " " + "mt-3 text-sm text-cream/90 italic",
+                                                        className: "jsx-77d5cc3801d02726" + " " + "mt-3 text-sm text-cream/90 italic",
                                                         children: "Dr Syeda Hussaini MBBS MRCPsych — Founder, ThriveHer Clinic"
                                                     })
                                                 ]
@@ -205,41 +205,41 @@ function BannerClient() {
                 style: {
                     display: "none"
                 },
-                className: "jsx-34a7ad3353785b04" + " " + "banner-slider-nav-four",
+                className: "jsx-77d5cc3801d02726" + " " + "banner-slider-nav-four",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                        className: "jsx-34a7ad3353785b04" + " " + "banner-slider-control-four banner-slider-button-prev",
+                        className: "jsx-77d5cc3801d02726" + " " + "banner-slider-control-four banner-slider-button-prev",
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                            className: "jsx-34a7ad3353785b04",
+                            className: "jsx-77d5cc3801d02726",
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
                                 "aria-hidden": "true",
-                                className: "jsx-34a7ad3353785b04" + " " + "icon-arrow-right-two"
+                                className: "jsx-77d5cc3801d02726" + " " + "icon-arrow-right-two"
                             })
                         })
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                        className: "jsx-34a7ad3353785b04" + " " + "banner-slider-control-four banner-slider-button-next",
+                        className: "jsx-77d5cc3801d02726" + " " + "banner-slider-control-four banner-slider-button-next",
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                            className: "jsx-34a7ad3353785b04",
+                            className: "jsx-77d5cc3801d02726",
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
                                 "aria-hidden": "true",
-                                className: "jsx-34a7ad3353785b04" + " " + "icon-arrow-right-two"
+                                className: "jsx-77d5cc3801d02726" + " " + "icon-arrow-right-two"
                             })
                         })
                     })
                 ]
             }),
             react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default()), {
-                id: "34a7ad3353785b04",
-                children: "@-webkit-keyframes pullArrow{0%{-webkit-transform:translatey(0);transform:translatey(0)}40%{-webkit-transform:translatey(12px);transform:translatey(12px)}60%{-webkit-transform:translatey(12px);transform:translatey(12px)}100%{-webkit-transform:translatey(0);transform:translatey(0)}}@-moz-keyframes pullArrow{0%{-moz-transform:translatey(0);transform:translatey(0)}40%{-moz-transform:translatey(12px);transform:translatey(12px)}60%{-moz-transform:translatey(12px);transform:translatey(12px)}100%{-moz-transform:translatey(0);transform:translatey(0)}}@-o-keyframes pullArrow{0%{-o-transform:translatey(0);transform:translatey(0)}40%{-o-transform:translatey(12px);transform:translatey(12px)}60%{-o-transform:translatey(12px);transform:translatey(12px)}100%{-o-transform:translatey(0);transform:translatey(0)}}@keyframes pullArrow{0%{-webkit-transform:translatey(0);-moz-transform:translatey(0);-o-transform:translatey(0);transform:translatey(0)}40%{-webkit-transform:translatey(12px);-moz-transform:translatey(12px);-o-transform:translatey(12px);transform:translatey(12px)}60%{-webkit-transform:translatey(12px);-moz-transform:translatey(12px);-o-transform:translatey(12px);transform:translatey(12px)}100%{-webkit-transform:translatey(0);-moz-transform:translatey(0);-o-transform:translatey(0);transform:translatey(0)}}@-webkit-keyframes pulse{0%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,.4);box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{-webkit-box-shadow:0 0 0 10px rgba(199,142,29,0);box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,0);box-shadow:0 0 0 0 rgba(199,142,29,0)}}@-moz-keyframes pulse{0%{-moz-box-shadow:0 0 0 0 rgba(199,142,29,.4);box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{-moz-box-shadow:0 0 0 10px rgba(199,142,29,0);box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{-moz-box-shadow:0 0 0 0 rgba(199,142,29,0);box-shadow:0 0 0 0 rgba(199,142,29,0)}}@-o-keyframes pulse{0%{box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{box-shadow:0 0 0 0 rgba(199,142,29,0)}}@keyframes pulse{0%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,.4);-moz-box-shadow:0 0 0 0 rgba(199,142,29,.4);box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{-webkit-box-shadow:0 0 0 10px rgba(199,142,29,0);-moz-box-shadow:0 0 0 10px rgba(199,142,29,0);box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,0);-moz-box-shadow:0 0 0 0 rgba(199,142,29,0);box-shadow:0 0 0 0 rgba(199,142,29,0)}}.scroll-arrow{position:absolute;bottom:40px;left:0;right:0;margin:0 auto;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;cursor:pointer;z-index:10;-webkit-animation:pullArrow 3s ease-in-out infinite;-moz-animation:pullArrow 3s ease-in-out infinite;-o-animation:pullArrow 3s ease-in-out infinite;animation:pullArrow 3s ease-in-out infinite;-webkit-transition:opacity.3s ease;-moz-transition:opacity.3s ease;-o-transition:opacity.3s ease;transition:opacity.3s ease;background:transparent;border:none;padding:0;outline:none;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;gap:8px}.scroll-text{color:#fff;font-size:16px;font-weight:500;text-shadow:0 1px 3px rgba(0,0,0,.5);-webkit-transition:color.3s ease;-moz-transition:color.3s ease;-o-transition:color.3s ease;transition:color.3s ease}.scroll-arrow:hover{opacity:.9}.scroll-arrow:hover .scroll-text{color:#c78e1d}@media(max-width:768px){.scroll-arrow{bottom:32px}.scroll-text{font-size:14px}.big-title{padding-top:4rem!important}.hero-image{background-position:center top 35%!important}}"
+                id: "77d5cc3801d02726",
+                children: "@-webkit-keyframes pullArrow{0%{-webkit-transform:translatey(0);transform:translatey(0)}40%{-webkit-transform:translatey(12px);transform:translatey(12px)}60%{-webkit-transform:translatey(12px);transform:translatey(12px)}100%{-webkit-transform:translatey(0);transform:translatey(0)}}@-moz-keyframes pullArrow{0%{-moz-transform:translatey(0);transform:translatey(0)}40%{-moz-transform:translatey(12px);transform:translatey(12px)}60%{-moz-transform:translatey(12px);transform:translatey(12px)}100%{-moz-transform:translatey(0);transform:translatey(0)}}@-o-keyframes pullArrow{0%{-o-transform:translatey(0);transform:translatey(0)}40%{-o-transform:translatey(12px);transform:translatey(12px)}60%{-o-transform:translatey(12px);transform:translatey(12px)}100%{-o-transform:translatey(0);transform:translatey(0)}}@keyframes pullArrow{0%{-webkit-transform:translatey(0);-moz-transform:translatey(0);-o-transform:translatey(0);transform:translatey(0)}40%{-webkit-transform:translatey(12px);-moz-transform:translatey(12px);-o-transform:translatey(12px);transform:translatey(12px)}60%{-webkit-transform:translatey(12px);-moz-transform:translatey(12px);-o-transform:translatey(12px);transform:translatey(12px)}100%{-webkit-transform:translatey(0);-moz-transform:translatey(0);-o-transform:translatey(0);transform:translatey(0)}}@-webkit-keyframes pulse{0%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,.4);box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{-webkit-box-shadow:0 0 0 10px rgba(199,142,29,0);box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,0);box-shadow:0 0 0 0 rgba(199,142,29,0)}}@-moz-keyframes pulse{0%{-moz-box-shadow:0 0 0 0 rgba(199,142,29,.4);box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{-moz-box-shadow:0 0 0 10px rgba(199,142,29,0);box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{-moz-box-shadow:0 0 0 0 rgba(199,142,29,0);box-shadow:0 0 0 0 rgba(199,142,29,0)}}@-o-keyframes pulse{0%{box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{box-shadow:0 0 0 0 rgba(199,142,29,0)}}@keyframes pulse{0%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,.4);-moz-box-shadow:0 0 0 0 rgba(199,142,29,.4);box-shadow:0 0 0 0 rgba(199,142,29,.4)}70%{-webkit-box-shadow:0 0 0 10px rgba(199,142,29,0);-moz-box-shadow:0 0 0 10px rgba(199,142,29,0);box-shadow:0 0 0 10px rgba(199,142,29,0)}100%{-webkit-box-shadow:0 0 0 0 rgba(199,142,29,0);-moz-box-shadow:0 0 0 0 rgba(199,142,29,0);box-shadow:0 0 0 0 rgba(199,142,29,0)}}.scroll-arrow{position:absolute;bottom:40px;left:0;right:0;margin:0 auto;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;cursor:pointer;z-index:10;-webkit-animation:pullArrow 3s ease-in-out infinite;-moz-animation:pullArrow 3s ease-in-out infinite;-o-animation:pullArrow 3s ease-in-out infinite;animation:pullArrow 3s ease-in-out infinite;-webkit-transition:opacity.3s ease;-moz-transition:opacity.3s ease;-o-transition:opacity.3s ease;transition:opacity.3s ease;background:transparent;border:none;padding:0;outline:none;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;gap:8px}.scroll-text{color:#fff;font-size:16px;font-weight:500;text-shadow:0 1px 3px rgba(0,0,0,.5);-webkit-transition:color.3s ease;-moz-transition:color.3s ease;-o-transition:color.3s ease;transition:color.3s ease}.scroll-arrow:hover{opacity:.9}.scroll-arrow:hover .scroll-text{color:#d1a38a}@media(max-width:768px){.scroll-arrow{bottom:32px}.scroll-text{font-size:14px}.big-title{padding-top:4rem!important}.hero-image{background-position:center top 35%!important}}"
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
                 onClick: scrollToNextSection,
                 "aria-label": "Scroll to Why This Work Matters section",
-                className: "jsx-34a7ad3353785b04" + " " + "scroll-arrow",
+                className: "jsx-77d5cc3801d02726" + " " + "scroll-arrow",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "jsx-34a7ad3353785b04" + " " + "scroll-text",
+                        className: "jsx-77d5cc3801d02726" + " " + "scroll-text",
                         children: "See Why This Work Matters"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
@@ -250,14 +250,14 @@ function BannerClient() {
                         style: {
                             background: "transparent"
                         },
-                        className: "jsx-34a7ad3353785b04",
+                        className: "jsx-77d5cc3801d02726",
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                             d: "M7 10l5 5 5-5",
                             fill: "none",
-                            stroke: "#c78e1d",
+                            stroke: "#d1a38a",
                             strokeWidth: "2",
                             vectorEffect: "non-scaling-stroke",
-                            className: "jsx-34a7ad3353785b04"
+                            className: "jsx-77d5cc3801d02726"
                         })
                     })
                 ]
@@ -1928,7 +1928,11 @@ const swiperOptions = {
 function Testimonial() {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
-            className: "testimonial-one section-secondary",
+            className: "testimonial-one",
+            style: {
+                backgroundColor: "transparent",
+                padding: "80px 0"
+            },
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: "container",
                 children: [
@@ -1940,7 +1944,7 @@ function Testimonial() {
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                     className: "section-title__tagline",
                                     style: {
-                                        color: "#C78E1D",
+                                        color: "#D1A38A",
                                         fontWeight: "600"
                                     },
                                     children: "Testimonial"
@@ -1959,7 +1963,7 @@ function Testimonial() {
                                     " ",
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                         style: {
-                                            color: "#C78E1D"
+                                            color: "#D1A38A"
                                         },
                                         children: "Feedback"
                                     })
@@ -2021,35 +2025,35 @@ function Testimonial() {
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D"
+                                                            color: "#D1A38A"
                                                         }
                                                     })
                                                 ]
@@ -2088,7 +2092,7 @@ function Testimonial() {
                                             cursor: "pointer"
                                         },
                                         onMouseEnter: (e)=>{
-                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(199, 142, 29, 0.15)";
+                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(209, 163, 138, 0.15)";
                                             e.currentTarget.style.transform = "translateY(-4px)";
                                         },
                                         onMouseLeave: (e)=>{
@@ -2106,35 +2110,35 @@ function Testimonial() {
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D"
+                                                            color: "#D1A38A"
                                                         }
                                                     })
                                                 ]
@@ -2173,7 +2177,7 @@ function Testimonial() {
                                             cursor: "pointer"
                                         },
                                         onMouseEnter: (e)=>{
-                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(199, 142, 29, 0.15)";
+                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(209, 163, 138, 0.15)";
                                             e.currentTarget.style.transform = "translateY(-4px)";
                                         },
                                         onMouseLeave: (e)=>{
@@ -2191,35 +2195,35 @@ function Testimonial() {
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D"
+                                                            color: "#D1A38A"
                                                         }
                                                     })
                                                 ]
@@ -2258,7 +2262,7 @@ function Testimonial() {
                                             cursor: "pointer"
                                         },
                                         onMouseEnter: (e)=>{
-                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(199, 142, 29, 0.15)";
+                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(209, 163, 138, 0.15)";
                                             e.currentTarget.style.transform = "translateY(-4px)";
                                         },
                                         onMouseLeave: (e)=>{
@@ -2276,35 +2280,35 @@ function Testimonial() {
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D"
+                                                            color: "#D1A38A"
                                                         }
                                                     })
                                                 ]
@@ -2343,7 +2347,7 @@ function Testimonial() {
                                             cursor: "pointer"
                                         },
                                         onMouseEnter: (e)=>{
-                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(199, 142, 29, 0.15)";
+                                            e.currentTarget.style.boxShadow = "0 8px 24px rgba(209, 163, 138, 0.15)";
                                             e.currentTarget.style.transform = "translateY(-4px)";
                                         },
                                         onMouseLeave: (e)=>{
@@ -2361,35 +2365,35 @@ function Testimonial() {
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D",
+                                                            color: "#D1A38A",
                                                             marginRight: "5px"
                                                         }
                                                     }),
                                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                         className: "fas fa-star",
                                                         style: {
-                                                            color: "#C78E1D"
+                                                            color: "#D1A38A"
                                                         }
                                                     })
                                                 ]
@@ -3167,7 +3171,7 @@ function WhyThisWorkMattersHero() {
                                             " ",
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                 style: {
-                                                    color: "#C78E1D"
+                                                    color: "#D1A38A"
                                                 },
                                                 children: "close the gap"
                                             }),
@@ -3192,7 +3196,7 @@ function WhyThisWorkMattersHero() {
                                                 " ",
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                     style: {
-                                                        color: "#C78E1D",
+                                                        color: "#D1A38A",
                                                         fontWeight: 500
                                                     },
                                                     children: "understanding"
@@ -3201,7 +3205,7 @@ function WhyThisWorkMattersHero() {
                                                 "and",
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
                                                     style: {
-                                                        color: "#C78E1D",
+                                                        color: "#D1A38A",
                                                         fontWeight: 500
                                                     },
                                                     children: [
@@ -3271,7 +3275,7 @@ function WhyThisWorkMattersHero() {
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                                     d: "M12 5L12 19M12 19L18 13M12 19L6 13",
-                                    stroke: "#C78E1D",
+                                    stroke: "#D1A38A",
                                     strokeWidth: "2",
                                     strokeLinecap: "round",
                                     strokeLinejoin: "round"
@@ -3367,7 +3371,7 @@ function WhyThisWorkMattersInfographic() {
                     3.7
                 ],
                 backgroundColor: (context)=>{
-                    if (context.dataIndex === 2) return "#C78E1D"; // Gold for Black women
+                    if (context.dataIndex === 2) return "#D1A38A"; // Pink for Black women
                     if (context.dataIndex === 1) return "#E5BA6D"; // Lighter gold for Asian women
                     return "#83919C"; // Gray for White women
                 },
@@ -3401,7 +3405,7 @@ function WhyThisWorkMattersInfographic() {
             },
             tooltip: {
                 backgroundColor: "#fff",
-                borderColor: "#C78E1D",
+                borderColor: "#D1A38A",
                 borderWidth: 1,
                 titleColor: "#21273F",
                 bodyColor: "#21273F",
@@ -3500,12 +3504,12 @@ function WhyThisWorkMattersInfographic() {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M12 8V12L15 15",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2",
                         strokeLinecap: "round",
                         strokeLinejoin: "round"
@@ -3528,29 +3532,29 @@ function WhyThisWorkMattersInfographic() {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M3.6 9H20.4",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2",
                         strokeLinecap: "round"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M3.6 15H20.4",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2",
                         strokeLinecap: "round"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M12 3C13.933 5.04 15 7.828 15 12C15 16.172 13.933 18.96 12 21",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M12 3C10.067 5.04 9 7.828 9 12C9 16.172 10.067 18.96 12 21",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2"
                     })
                 ]
@@ -3570,7 +3574,7 @@ function WhyThisWorkMattersInfographic() {
                 xmlns: "http://www.w3.org/2000/svg",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                     d: "M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z",
-                    stroke: "#C78E1D",
+                    stroke: "#D1A38A",
                     strokeWidth: "2",
                     strokeLinecap: "round",
                     strokeLinejoin: "round"
@@ -3592,13 +3596,13 @@ function WhyThisWorkMattersInfographic() {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M12 6V12M12 12V18M12 12H18M12 12H6",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2",
                         strokeLinecap: "round"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2"
                     })
                 ]
@@ -3619,14 +3623,14 @@ function WhyThisWorkMattersInfographic() {
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M3 6H21M3 12H21M3 18H21",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2",
                         strokeLinecap: "round",
                         strokeLinejoin: "round"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                         d: "M12 3V6M12 12V15M12 18V21",
-                        stroke: "#C78E1D",
+                        stroke: "#D1A38A",
                         strokeWidth: "2",
                         strokeLinecap: "round",
                         strokeLinejoin: "round"
@@ -3638,7 +3642,7 @@ function WhyThisWorkMattersInfographic() {
     ];
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("section", {
-            className: "why-this-work-matters-infographic section-primary",
+            className: "why-this-work-matters-infographic",
             style: {
                 backgroundColor: "transparent",
                 padding: "100px 0 80px",
@@ -3696,7 +3700,7 @@ function WhyThisWorkMattersInfographic() {
                                         borderRadius: "16px",
                                         padding: "40px",
                                         height: "350px",
-                                        border: "2px solid #C78E1D",
+                                        border: "2px solid #D1A38A",
                                         boxShadow: "none",
                                         position: "relative",
                                         overflow: "hidden",
@@ -3767,7 +3771,7 @@ function WhyThisWorkMattersInfographic() {
                                                                     width: "80px",
                                                                     height: "80px",
                                                                     margin: "0 auto 20px",
-                                                                    backgroundColor: "rgba(199, 142, 29, 0.15)",
+                                                                    backgroundColor: "rgba(209, 163, 138, 0.15)",
                                                                     borderRadius: "50%",
                                                                     display: "flex",
                                                                     alignItems: "center",
@@ -3798,7 +3802,7 @@ function WhyThisWorkMattersInfographic() {
                                                                             transition: "all 0.3s ease"
                                                                         },
                                                                         onMouseEnter: (e)=>{
-                                                                            e.currentTarget.style.color = "#C78E1D";
+                                                                            e.currentTarget.style.color = "#D1A38A";
                                                                         },
                                                                         onMouseLeave: (e)=>{
                                                                             e.currentTarget.style.color = "#21273F";
@@ -3854,7 +3858,7 @@ function WhyThisWorkMattersInfographic() {
                                                             height: "40px",
                                                             borderRadius: "50%",
                                                             background: "#fff",
-                                                            border: "2px solid #C78E1D",
+                                                            border: "2px solid #D1A38A",
                                                             display: "flex",
                                                             alignItems: "center",
                                                             justifyContent: "center",
@@ -3864,7 +3868,7 @@ function WhyThisWorkMattersInfographic() {
                                                             transition: "all 0.3s ease"
                                                         },
                                                         onMouseEnter: (e)=>{
-                                                            e.currentTarget.style.backgroundColor = "#C78E1D";
+                                                            e.currentTarget.style.backgroundColor = "#D1A38A";
                                                             e.currentTarget.style.transform = "scale(1.1)";
                                                         },
                                                         onMouseLeave: (e)=>{
@@ -3879,7 +3883,7 @@ function WhyThisWorkMattersInfographic() {
                                                             xmlns: "http://www.w3.org/2000/svg",
                                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
                                                                 d: "M9 6L15 12L9 18",
-                                                                stroke: "#C78E1D",
+                                                                stroke: "#D1A38A",
                                                                 strokeWidth: "2",
                                                                 strokeLinecap: "round",
                                                                 strokeLinejoin: "round"
@@ -3900,7 +3904,7 @@ function WhyThisWorkMattersInfographic() {
                                                                 width: "10px",
                                                                 height: "10px",
                                                                 borderRadius: "50%",
-                                                                background: currentSlide === index ? "#C78E1D" : "#E5BA6D",
+                                                                background: currentSlide === index ? "#D1A38A" : "#E5BA6D",
                                                                 opacity: currentSlide === index ? 1 : 0.5,
                                                                 border: "none",
                                                                 padding: 0,
@@ -3992,7 +3996,7 @@ function Donation() {
     };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
-            className: "donation-one section-primary",
+            className: "donation-one",
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: "donation-one__wrapper",
                 children: [
@@ -4021,7 +4025,7 @@ function Donation() {
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                 className: "section-title-two__tagline",
                                                 style: {
-                                                    color: "#C78E1D"
+                                                    color: "#D1A38A"
                                                 },
                                                 children: "Our Mission"
                                             })
@@ -4044,7 +4048,7 @@ function Donation() {
                                                 href: "#",
                                                 className: "rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white w-full sm:w-auto",
                                                 style: {
-                                                    backgroundColor: "#C78E1D",
+                                                    backgroundColor: "#D1A38A",
                                                     color: "#fff"
                                                 },
                                                 children: "Get your team trained"
@@ -4095,7 +4099,7 @@ function About() {
     };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
-            className: "about-One section-primary",
+            className: "about-One",
             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "container",
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -4273,7 +4277,7 @@ function About() {
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                                                     style: {
                                                         width: "100%",
-                                                        backgroundColor: "#C78E1D",
+                                                        backgroundColor: "#D1A38A",
                                                         color: "#fff",
                                                         border: "none",
                                                         padding: "10px 12px",
@@ -4284,12 +4288,12 @@ function About() {
                                                         transition: "all 0.3s ease"
                                                     },
                                                     onMouseEnter: (e)=>{
-                                                        e.currentTarget.style.backgroundColor = "#b8791a";
+                                                        e.currentTarget.style.backgroundColor = "#c49279";
                                                         e.currentTarget.style.transform = "translateY(-2px)";
-                                                        e.currentTarget.style.boxShadow = "0 4px 12px rgba(199, 142, 29, 0.3)";
+                                                        e.currentTarget.style.boxShadow = "0 4px 12px rgba(209, 163, 138, 0.3)";
                                                     },
                                                     onMouseLeave: (e)=>{
-                                                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                                                        e.currentTarget.style.backgroundColor = "#D1A38A";
                                                         e.currentTarget.style.transform = "translateY(0)";
                                                         e.currentTarget.style.boxShadow = "none";
                                                     },
@@ -4774,7 +4778,7 @@ function Found() {
                                         " ",
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                             style: {
-                                                color: "#C78E1D"
+                                                color: "#D1A38A"
                                             },
                                             children: "Make"
                                         }),
@@ -4818,9 +4822,12 @@ function Found() {
                                                             children: "Help For Ecosystem"
                                                         })
                                                     }),
-                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                                                         className: "found-one__text",
-                                                        children: "Charity and Donation is a categorys that involves giving financial "
+                                                        children: [
+                                                            "Charity and Donation is a categorys that involves giving financial",
+                                                            " "
+                                                        ]
                                                     }),
                                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                                         className: "found-one__goals",
@@ -4914,9 +4921,12 @@ function Found() {
                                                             children: "Water For All"
                                                         })
                                                     }),
-                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                                                         className: "found-one__text",
-                                                        children: "Charity and Donation is a categorys that involves giving financial "
+                                                        children: [
+                                                            "Charity and Donation is a categorys that involves giving financial",
+                                                            " "
+                                                        ]
                                                     }),
                                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                                         className: "found-one__goals",
@@ -5010,9 +5020,12 @@ function Found() {
                                                             children: "Vaccine Aid Camp"
                                                         })
                                                     }),
-                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                                                         className: "found-one__text",
-                                                        children: "Charity and Donation is a categorys that involves giving financial "
+                                                        children: [
+                                                            "Charity and Donation is a categorys that involves giving financial",
+                                                            " "
+                                                        ]
                                                     }),
                                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                                         className: "found-one__goals",

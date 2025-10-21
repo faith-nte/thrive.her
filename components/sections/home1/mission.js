@@ -10,7 +10,7 @@ export default function Donation() {
   return (
     <>
       {/*Donation One Start */}
-      <section className="donation-one section-primary">
+      <section className="donation-one">
         <div className="donation-one__wrapper">
           <div className="donation-one__left">
             <div
@@ -29,7 +29,7 @@ export default function Donation() {
                 <div className="section-title-two__tagline-box">
                   <span
                     className="section-title-two__tagline"
-                    style={{ color: "#C78E1D" }}
+                    style={{ color: "#D1A38A" }}
                   >
                     Our Mission
                   </span>
@@ -48,7 +48,7 @@ export default function Donation() {
                   <Link
                     href="#"
                     className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white w-full sm:w-auto"
-                    style={{ backgroundColor: "#C78E1D", color: "#fff" }}
+                    style={{ backgroundColor: "#D1A38A", color: "#fff" }}
                   >
                     Get your team trained
                   </Link>

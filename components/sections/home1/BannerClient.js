@@ -212,7 +212,7 @@ export default function BannerClient() {
         }
 
         .scroll-arrow:hover .scroll-text {
-          color: #c78e1d;
+          color: #d1a38a;
         }
 
         @media (max-width: 768px) {
@@ -247,7 +247,7 @@ export default function BannerClient() {
           <path
             d="M7 10l5 5 5-5"
             fill="none"
-            stroke="#c78e1d"
+            stroke="#d1a38a"
             strokeWidth="2"
             vectorEffect="non-scaling-stroke"
           />

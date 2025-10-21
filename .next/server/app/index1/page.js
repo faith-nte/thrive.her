@@ -303,21 +303,21 @@ const routeModule = new AppPageRouteModule({
 
 /***/ }),
 
-/***/ 68735:
+/***/ 65192:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 89708, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 76496));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78650));
-Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50954, 23));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 75826));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 23398));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 32254));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 27849));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 50954, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 89708, 23));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 23398));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 78650));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 72503));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 87432));
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 65438));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 27849));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 24502));
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 65438));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 27138));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4375));
 Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 40562))
@@ -429,7 +429,7 @@ function AboutThree() {
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                             className: "icon-check",
                                                             style: {
-                                                                color: "#C78E1D"
+                                                                color: "#D1A38A"
                                                             }
                                                         })
                                                     }),
@@ -448,7 +448,7 @@ function AboutThree() {
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                             className: "icon-check",
                                                             style: {
-                                                                color: "#C78E1D"
+                                                                color: "#D1A38A"
                                                             }
                                                         })
                                                     }),
@@ -467,7 +467,7 @@ function AboutThree() {
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                             className: "icon-check",
                                                             style: {
-                                                                color: "#C78E1D"
+                                                                color: "#D1A38A"
                                                             }
                                                         })
                                                     }),
@@ -510,7 +510,7 @@ function AboutThree() {
                                                             style: {
                                                                 position: "relative",
                                                                 zIndex: 2,
-                                                                backgroundColor: "#C78E1D",
+                                                                backgroundColor: "#D1A38A",
                                                                 color: "white",
                                                                 padding: "0.75rem 2rem",
                                                                 borderRadius: "8px",
@@ -521,9 +521,9 @@ function AboutThree() {
                                                                 fontWeight: "600",
                                                                 textTransform: "uppercase",
                                                                 letterSpacing: "0.5px",
-                                                                border: "2px solid #C78E1D",
+                                                                border: "2px solid #D1A38A",
                                                                 transition: "all 0.3s ease",
-                                                                boxShadow: "0 4px 12px rgba(199, 142, 29, 0.3)"
+                                                                boxShadow: "0 4px 12px rgba(209, 163, 138, 0.3)"
                                                             },
                                                             children: "READ MORE"
                                                         })
@@ -538,7 +538,7 @@ function AboutThree() {
                                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                             className: "icon-phone-call",
                                                             style: {
-                                                                color: "#C78E1D"
+                                                                color: "#D1A38A"
                                                             }
                                                         })
                                                     }),
@@ -846,7 +846,7 @@ function Home() {
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [3587,5183,2547,2513,1888,8515], () => (__webpack_exec__(58369)));
+var __webpack_exports__ = __webpack_require__.X(0, [3587,5183,2547,2513,7997,8515], () => (__webpack_exec__(58369)));
 module.exports = __webpack_exports__;
 
 })();

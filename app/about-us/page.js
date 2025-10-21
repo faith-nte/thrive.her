@@ -331,7 +331,7 @@ export default function Home() {
                       padding: "20px",
                       backgroundColor: "#F9E8CF",
                       borderRadius: "8px",
-                      borderLeft: "4px solid #C78E1D",
+                      borderLeft: "4px solid #D1A38A",
                     }}
                   >
                     <h4

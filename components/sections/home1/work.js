@@ -10,7 +10,7 @@ export default function About() {
   return (
     <>
       {/*About One Start */}
-      <section className="about-One section-primary">
+      <section className="about-One">
         <div className="container">
           <div className="row">
             <div className="col-xl-6">
@@ -18,7 +18,12 @@ export default function About() {
                 className="about-One__left  wow slideInLeft"
                 data-wow-delay="100ms"
                 data-wow-duration="2500ms"
-                style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100%" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minHeight: "100%",
+                }}
               >
                 <div className="about-One__img-box">
                   <div className="about-One__img">
@@ -179,7 +184,7 @@ export default function About() {
                     <button
                       style={{
                         width: "100%",
-                        backgroundColor: "#C78E1D",
+                        backgroundColor: "#D1A38A",
                         color: "#fff",
                         border: "none",
                         padding: "10px 12px",
@@ -190,13 +195,13 @@ export default function About() {
                         transition: "all 0.3s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#b8791a";
+                        e.currentTarget.style.backgroundColor = "#c49279";
                         e.currentTarget.style.transform = "translateY(-2px)";
                         e.currentTarget.style.boxShadow =
-                          "0 4px 12px rgba(199, 142, 29, 0.3)";
+                          "0 4px 12px rgba(209, 163, 138, 0.3)";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#C78E1D";
+                        e.currentTarget.style.backgroundColor = "#D1A38A";
                         e.currentTarget.style.transform = "translateY(0)";
                         e.currentTarget.style.boxShadow = "none";
                       }}

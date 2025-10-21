@@ -1,0 +1,375 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./styles/Footer.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+.Footer_site-footer__2dK96 {
+    background-color: var(--thriveher-navy);
+    color: var(--thriveher-cream);
+    padding: 4rem 0 3rem;
+}
+
+.Footer_footer-top__sO9S_ {
+    border-bottom: 1px solid rgba(249, 232, 207, 0.15);
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+
+.Footer_footer-nav-section__UuVZB {
+    padding-bottom: 3rem;
+}
+
+/* Footer Logo - refined styling */
+.Footer_footer-logo__5r9hK {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.Footer_footer-logo__5r9hK img {
+    max-height: 200px;
+    width: auto;
+    transition: opacity 0.3s ease;
+    filter: brightness(1.1);
+}
+
+.Footer_footer-logo__5r9hK img:hover {
+    opacity: 0.9;
+}
+
+/* Navigation Links - refined OneWelbeck-style */
+.Footer_footer-nav__bV8nA {
+    margin-bottom: 2rem;
+}
+
+.Footer_footer-nav__bV8nA h5 {
+    color: var(--thriveher-gold);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    letter-spacing: 0;
+    opacity: 1;
+}
+
+.Footer_footer-nav__bV8nA ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Footer_footer-nav__bV8nA ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.Footer_footer-nav__bV8nA ul li a {
+    color: rgba(249, 232, 207, 0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    line-height: 1.4;
+}
+
+.Footer_footer-nav__bV8nA ul li a:hover {
+    color: var(--thriveher-cream);
+}
+
+/* Social Media - OneWelbeck-style boxes */
+.Footer_footer-social__7_zyb {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.Footer_footer-social__7_zyb a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: rgba(249, 232, 207, 0.8);
+    border: 1px solid rgba(249, 232, 207, 0.3);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.Footer_footer-social__7_zyb a:hover {
+    color: var(--thriveher-cream);
+    border-color: rgba(249, 232, 207, 0.6);
+    background-color: rgba(249, 232, 207, 0.05);
+}
+
+/* Footer Widget */
+.Footer_footer-widget__hEHSo {
+    margin-bottom: 2rem;
+}
+
+.Footer_footer-widget__title__zUrKR {
+    color: var(--thriveher-rose);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.Footer_footer-widget__list__7Nn6I {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Footer_footer-widget__list__7Nn6I li {
+    margin-bottom: 0.625rem;
+}
+
+.Footer_footer-widget__list__7Nn6I li a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Footer_footer-widget__list__7Nn6I li a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Contact Widget */
+.Footer_footer-widget__contact__NPoum {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Footer_footer-widget__contact__NPoum li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.Footer_footer-widget__contact__NPoum li i {
+    color: var(--thriveher-rose);
+    margin-right: 0.625rem;
+    margin-top: 0.25rem;
+}
+
+.Footer_footer-widget__contact__NPoum li p,
+.Footer_footer-widget__contact__NPoum li a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    margin: 0;
+}
+
+.Footer_footer-widget__contact__NPoum li a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Social Media */
+.Footer_footer-widget__social__Skqen {
+    display: flex;
+    gap: 1rem;
+}
+
+.Footer_footer-widget__social__Skqen a {
+    color: var(--thriveher-cream);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Footer_footer-widget__social__Skqen a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Footer Bottom */
+.Footer_footer-bottom__Bh2FT {
+    border-top: 1px solid rgba(249, 232, 207, 0.1);
+    padding-top: 1.25rem;
+}
+
+.Footer_footer-bottom__copyright__KKh3m {
+    margin-bottom: 0.625rem;
+}
+
+.Footer_footer-bottom__copyright__KKh3m p {
+    color: var(--thriveher-cream);
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.Footer_footer-bottom__links__jjYhR ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+}
+
+.Footer_footer-bottom__links__jjYhR li a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.Footer_footer-bottom__links__jjYhR li a:hover {
+    color: var(--thriveher-rose);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Footer_footer-bottom__links__jjYhR ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .Footer_footer-widget__hEHSo {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.Footer_footer-widget__hEHSo {
+    margin-bottom: 2rem;
+}
+
+.Footer_footer-widget__title__zUrKR {
+    color: var(--thriveher-gold);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.Footer_footer-widget__list__7Nn6I {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Footer_footer-widget__list__7Nn6I li {
+    margin-bottom: 0.75rem;
+}
+
+.Footer_footer-widget__list__7Nn6I a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Footer_footer-widget__list__7Nn6I a:hover {
+    color: var(--thriveher-rose);
+}
+
+.Footer_footer-widget__contact__NPoum {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Footer_footer-widget__contact__NPoum li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.Footer_footer-widget__contact__NPoum i {
+    color: var(--thriveher-gold);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+.Footer_footer-widget__social__Skqen {
+    display: flex;
+    gap: 1rem;
+}
+
+.Footer_footer-widget__social__Skqen a {
+    color: var(--thriveher-cream);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.Footer_footer-widget__social__Skqen a:hover {
+    color: var(--thriveher-rose);
+}
+
+.Footer_footer-bottom__Bh2FT {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(249, 232, 207, 0.1);
+}
+
+.Footer_footer-bottom__copyright__KKh3m {
+    color: var(--thriveher-cream);
+    opacity: 0.8;
+}
+
+.Footer_footer-bottom__links__jjYhR ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.Footer_footer-bottom__links__jjYhR a {
+    color: var(--thriveher-cream);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.Footer_footer-bottom__links__jjYhR a:hover {
+    color: var(--thriveher-gold);
+    opacity: 1;
+}
+
+/* Enhanced spacing and alignment */
+.Footer_footer-top__sO9S_ .Footer_row__QYb4M {
+    align-items: center;
+}
+
+.Footer_footer-nav-section__UuVZB .Footer_row__QYb4M {
+    justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+    .Footer_footer-nav__bV8nA {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer_site-footer__2dK96 {
+        padding: 3rem 0 2rem;
+    }
+    
+    .Footer_footer-top__sO9S_ {
+        text-align: center;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .Footer_footer-logo__5r9hK {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .Footer_footer-nav__bV8nA {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .Footer_footer-social__7_zyb {
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    .Footer_footer-bottom__links__jjYhR ul {
+        justify-content: center;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+}

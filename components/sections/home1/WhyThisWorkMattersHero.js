@@ -79,7 +79,7 @@ export default function WhyThisWorkMattersHero() {
                   }}
                 >
                   Together, we can{" "}
-                  <span style={{ color: "#C78E1D" }}>close the gap</span>
+                  <span style={{ color: "#D1A38A" }}>close the gap</span>
                   <br />
                   in women's health
                 </h1>
@@ -94,11 +94,11 @@ export default function WhyThisWorkMattersHero() {
                 >
                   <p style={{ marginBottom: "1.2rem" }}>
                     When care is built with{" "}
-                    <span style={{ color: "#C78E1D", fontWeight: 500 }}>
+                    <span style={{ color: "#D1A38A", fontWeight: 500 }}>
                       understanding
                     </span>{" "}
                     and
-                    <span style={{ color: "#C78E1D", fontWeight: 500 }}>
+                    <span style={{ color: "#D1A38A", fontWeight: 500 }}>
                       {" "}
                       respect
                     </span>
@@ -157,7 +157,7 @@ export default function WhyThisWorkMattersHero() {
             >
               <path
                 d="M12 5L12 19M12 19L18 13M12 19L6 13"
-                stroke="#C78E1D"
+                stroke="#D1A38A"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

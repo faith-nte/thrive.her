@@ -45,7 +45,7 @@ export default function MissionImpactSection() {
           <p className="text-[#21273F] font-medium mb-1">
             {payload[0].payload.name}
           </p>
-          <p className="text-[#C78E1D]">{`${payload[0].value}× higher risk`}</p>
+          <p className="text-[#D1A38A]">{`${payload[0].value}× higher risk`}</p>
         </div>
       );
     }
@@ -55,7 +55,7 @@ export default function MissionImpactSection() {
   return (
     <section
       id="mission-impact"
-      className={`section-secondary w-full transition-all duration-700 ${
+      className={`w-full py-16 lg:py-20 px-4 sm:px-6 bg-[#F9E8CF] transition-all duration-700 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
     >
@@ -99,8 +99,8 @@ export default function MissionImpactSection() {
                 <Tooltip content={<CustomTooltip />} />
                 <Bar
                   dataKey="risk"
-                  fill="#C78E1D"
-                  radius={[6, 6, 0, 0]}
+                  fill="#D1A38A"
+                  radius={[8, 8, 0, 0]}
                   animationDuration={1500}
                 >
                   <LabelList
@@ -140,7 +140,7 @@ export default function MissionImpactSection() {
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;opacity=0.03')] bg-repeat"></div>
 
           {/* Decorative accent bars */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C78E1D] to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D1A38A] to-transparent"></div>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#A7B093] to-transparent"></div>
 
           {/* Content */}
@@ -148,21 +148,21 @@ export default function MissionImpactSection() {
             {/* Mission header */}
             <div className="mb-6 md:mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-1 h-8 md:h-12 bg-gradient-to-b from-[#C78E1D] to-[#A7B093] rounded-full"></div>
-                <span className="text-[#C78E1D] text-xs md:text-sm font-semibold tracking-widest uppercase">
+                <div className="w-1 h-8 md:h-12 bg-gradient-to-b from-[#D1A38A] to-[#A7B093] rounded-full"></div>
+                <span className="text-[#D1A38A] text-xs md:text-sm font-semibold tracking-widest uppercase">
                   Our North Star
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 md:mb-4 leading-tight">
                 Our Mission
               </h2>
-              <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-[#C78E1D] to-[#A7B093] rounded-full"></div>
+              <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-[#D1A38A] to-[#A7B093] rounded-full"></div>
             </div>
 
             {/* Mission statement text */}
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#F9E8CF] leading-relaxed md:leading-loose font-light mb-8 max-w-4xl">
               To bridge
-              <span className="font-bold text-[#C78E1D] mx-2">
+              <span className="font-bold text-[#D1A38A] mx-2">
                 medicine, faith, and culture
               </span>
               through
@@ -175,8 +175,8 @@ export default function MissionImpactSection() {
             {/* Emphasis boxes - responsive grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12">
               {/* Box 1 */}
-              <div className="bg-[#C78E1D] bg-opacity-10 border border-[#C78E1D] border-opacity-30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
-                <div className="text-[#C78E1D] text-sm font-semibold uppercase tracking-wide mb-2">
+              <div className="bg-[#D1A38A] bg-opacity-10 border border-[#D1A38A] border-opacity-30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
+                <div className="text-[#D1A38A] text-sm font-semibold uppercase tracking-wide mb-2">
                   Core Focus
                 </div>
                 <p className="text-white text-base md:text-lg font-medium">
