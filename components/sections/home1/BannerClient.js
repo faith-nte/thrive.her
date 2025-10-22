@@ -7,27 +7,19 @@ const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
   slidesPerView: 1,
   spaceBetween: 0,
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
+  autoplay: { delay: 6000, disableOnInteraction: false },
   loop: true,
   navigation: {
     nextEl: ".banner-slider-button-next",
     prevEl: ".banner-slider-button-prev",
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  pagination: { el: ".swiper-pagination", clickable: true },
 };
 
 export default function BannerClient() {
   const scrollToNextSection = () => {
     const nextSection = document.querySelector(".why-this-work-matters");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
-    }
+    if (nextSection) nextSection.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -58,6 +50,7 @@ export default function BannerClient() {
                   backgroundRepeat: "no-repeat",
                 }}
               ></div>
+
               <div
                 className="main-slider-four__inner"
                 style={{
@@ -86,47 +79,35 @@ export default function BannerClient() {
                         And Minority Women.
                       </p>
                     </div>
-                    <div className="btn-box flex flex-col sm:flex-row gap-3 sm:gap-6 items-start sm:items-center mt-8">
-                      <Link
-                        href="/about"
-                        className="rounded-md px-3.5 py-2.5 text-sm font-semibold shadow-xs transition-all w-full sm:w-auto text-center"
-                        style={{
-                          backgroundColor: "#D1A38A",
-                          color: "#21273F",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#BB8C74";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#D1A38A";
-                        }}
+                    {/* Button group */}
+                    <div className="hero-buttons flex gap-4 mt-10 flex-wrap items-center">
+                      <button
+                        type="button"
+                        className="primary-btn"
+                        onClick={() => (window.location.href = "/about")}
                       >
                         Partner With Us
-                      </Link>
-                      <Link
-                        href="/about"
-                        className="text-sm font-semibold transition-all w-full sm:w-auto text-center py-2.5"
-                        style={{
-                          color: "#F9E8CF",
-                          borderBottom: "2px solid #3A7C7C",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.color = "#F9E8CF";
-                        }}
+                      </button>
+                      <button
+                        type="button"
+                        className="secondary-btn"
+                        onClick={() => (window.location.href = "/trainings")}
                       >
-                        See our trainings
-                        <span aria-hidden="true"> →</span>
-                      </Link>
+                        See our trainings →
+                      </button>
                     </div>
+                    {/* Founder line */}
                     <p
-                      className="mt-3 text-sm text-cream/90 italic"
-                      style={{ color: "rgba(249, 232, 207, 0.9)" }}
+                      style={{
+                        marginTop: "2rem",
+                        fontSize: "1rem",
+                        color: "#F9E8CF",
+                        fontStyle: "italic",
+                        fontWeight: 500,
+                        textShadow: "0 2px 8px rgba(0,0,0,0.3)",
+                      }}
                     >
-                      Dr Syeda Hussaini MBBS MRCPsych — Founder, ThriveHer
-                      Clinic
+                      Dr Syeda Hussaini MBBS MRCPsych Founder, ThriveHer Clinic
                     </p>
                   </div>
                 </div>
@@ -135,6 +116,7 @@ export default function BannerClient() {
           </SwiperSlide>
         </Swiper>
       </div>
+
       {/* Navigation arrows hidden per request */}
       <ul className="banner-slider-nav-four" style={{ display: "none" }}>
         <li className="banner-slider-control-four banner-slider-button-prev">
@@ -149,88 +131,7 @@ export default function BannerClient() {
         </li>
       </ul>
 
-      <style jsx global>{`
-        @keyframes pullArrow {
-          0% {
-            transform: translateY(0);
-          }
-          40% {
-            transform: translateY(12px);
-          }
-          60% {
-            transform: translateY(12px);
-          }
-          100% {
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes pulse {
-          0% {
-            box-shadow: 0 0 0 0 rgba(199, 142, 29, 0.4);
-          }
-          70% {
-            box-shadow: 0 0 0 10px rgba(199, 142, 29, 0);
-          }
-          100% {
-            box-shadow: 0 0 0 0 rgba(199, 142, 29, 0);
-          }
-        }
-
-        .scroll-arrow {
-          position: absolute;
-          bottom: 40px;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          width: fit-content;
-          cursor: pointer;
-          z-index: 10;
-          animation: pullArrow 3s ease-in-out infinite;
-          transition: opacity 0.3s ease;
-          background: transparent;
-          border: none;
-          padding: 0;
-          outline: none;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .scroll-text {
-          color: #ffffff;
-          font-size: 16px;
-          font-weight: 500;
-          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-          transition: color 0.3s ease;
-        }
-
-        .scroll-arrow:hover {
-          opacity: 0.9;
-        }
-
-        .scroll-arrow:hover .scroll-text {
-          color: #d1a38a;
-        }
-
-        @media (max-width: 768px) {
-          .scroll-arrow {
-            bottom: 32px;
-          }
-          .scroll-text {
-            font-size: 14px;
-          }
-          .big-title {
-            padding-top: 4rem !important;
-          }
-          .hero-image {
-            background-position: center top 35% !important;
-          }
-        }
-      `}</style>
-
+      {/* Scroll Arrow */}
       <button
         onClick={scrollToNextSection}
         className="scroll-arrow"
@@ -253,6 +154,67 @@ export default function BannerClient() {
           />
         </svg>
       </button>
+
+      <style jsx global>{`
+        @keyframes pullArrow {
+          0% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(12px);
+          }
+          60% {
+            transform: translateY(12px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        .scroll-arrow {
+          position: absolute;
+          bottom: 40px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: fit-content;
+          cursor: pointer;
+          z-index: 10;
+          animation: pullArrow 3s ease-in-out infinite;
+          background: transparent;
+          border: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .scroll-text {
+          color: #f9e8cf;
+          font-size: 16px;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        .scroll-arrow:hover .scroll-text {
+          color: #d1a38a;
+        }
+
+        @media (max-width: 768px) {
+          .scroll-arrow {
+            bottom: 32px;
+          }
+          .scroll-text {
+            font-size: 14px;
+          }
+          .big-title {
+            padding-top: 4rem !important;
+          }
+          .hero-image {
+            background-position: center top 35% !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

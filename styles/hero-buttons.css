@@ -1,0 +1,44 @@
+/* Banner hero button overrides for bulletproof styling */
+.hero-buttons .primary-btn {
+  background: #D1A38A !important;
+  color: #21273F !important;
+  border: 2px solid #BB8C74 !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 0.75rem 1.5rem !important;
+  box-shadow: 0 1px 2px rgba(33,39,63,0.04) !important;
+  transition: all 0.2s !important;
+  display: inline-block !important;
+}
+.hero-buttons .primary-btn:hover,
+.hero-buttons .primary-btn:focus {
+  background: #BB8C74 !important;
+  color: #21273F !important;
+  border-color: #BB8C74 !important;
+}
+.hero-buttons .primary-btn:active {
+  transform: scale(0.98) !important;
+}
+
+.hero-buttons .secondary-btn {
+  background: transparent !important;
+  color: #F9E8CF !important;
+  border: 2px solid #3A7C7C !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 0.625rem 1.25rem !important;
+  transition: all 0.2s !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.hero-buttons .secondary-btn:hover,
+.hero-buttons .secondary-btn:focus {
+  color: #D1A38A !important;
+  border-color: #D1A38A !important;
+}
+.hero-buttons .secondary-btn:active {
+  transform: scale(0.98) !important;
+}
