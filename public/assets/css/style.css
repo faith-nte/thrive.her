@@ -95,8 +95,8 @@
   /* Legacy mappings for backward compatibility */
   --anity-base: var(--thriveher-gold);
   /* CTAs, buttons, and accent elements use Gold */
-  --anity-black: var(--thriveher-gold);
-  /* Redirected from navy to gold - navy only for text */
+  --anity-black: var(--thriveher-navy);
+  /* Background overlays use navy, not gold */
   --anity-black-rgb: 33, 39, 63;
   /* RGB values for navy #21273F */
   --anity-primary: var(--thriveher-gold);
