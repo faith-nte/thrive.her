@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
+import { Bar } from "react-chartjs-2";
+import { motion } from "framer-motion";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,8 +12,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
-import { motion } from "framer-motion";
 
 ChartJS.register(
   CategoryScale,
@@ -22,171 +22,327 @@ ChartJS.register(
   Legend
 );
 
-export default function WhyThisWorkMattersInfographic() {
-  // Form state management
-  const [credentials, setCredentials] = useState({
-    name: "",
-    title: "",
-    email: "",
-  });
-  const [submittedMessage, setSubmittedMessage] = useState("");
-
-  // Scroll to next section function
-  const scrollToNextSection = () => {
-    const nextSection = document.querySelector(
-      ".next-section-after-why-matters"
+// Helper for card tilt effect
+function useCardTilt(cardCount) {
+  const [tilt, setTilt] = React.useState(
+    Array(cardCount).fill({ x: 0, y: 0, scale: 1 })
+  );
+  function handleMouseMove(idx, e) {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    setTilt((prev) =>
+      prev.map((t, i) =>
+        i === idx
+          ? {
+              x: y * 10,
+              y: -x * 10,
+              scale: 1.04,
+            }
+          : t
+      )
     );
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+  function handleMouseLeave(idx) {
+    setTilt((prev) =>
+      prev.map((t, i) => (i === idx ? { x: 0, y: 0, scale: 1 } : t))
+    );
+  }
+  return { tilt, handleMouseMove, handleMouseLeave };
+}
+
+// Add responsive styles
+const gridStyles = `
+  @media (max-width: 768px) {
+    .stats-block {
+      grid-template-columns: 1fr !important;
     }
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setCredentials((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Validate email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(credentials.email)) {
-      setSubmittedMessage("Please enter a valid email address.");
-      return;
+  }
+  @media (max-width: 480px) {
+    .stats-block {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
     }
-    // Save to localStorage
-    localStorage.setItem("drSyedaCredentials", JSON.stringify(credentials));
-    setSubmittedMessage("Credentials saved successfully!");
-    setCredentials({ name: "", title: "", email: "" });
-    // Clear message after 3 seconds
-    setTimeout(() => setSubmittedMessage(""), 3000);
-  };
+  }
+`;
 
-  // Chart data configuration
+// Inject styles
+if (
+  typeof document !== "undefined" &&
+  !document.getElementById("stats-block-styles")
+) {
+  const style = document.createElement("style");
+  style.id = "stats-block-styles";
+  style.textContent = gridStyles;
+  document.head.appendChild(style);
+}
+
+export default function WhyThisWorkMattersInfographic() {
   const data = {
-    labels: ["White women", "Asian women", "Black women"],
+    labels: ["White", "Black", "Asian"],
     datasets: [
       {
-        label: "Relative risk of maternal mortality",
-        data: [1, 1.8, 3.7],
-        backgroundColor: (context) => {
-          if (context.dataIndex === 2) return "#D1A38A"; // Pink for Black women
-          if (context.dataIndex === 1) return "#E5BA6D"; // Lighter gold for Asian women
-          return "#83919C"; // Gray for White women
-        },
-        borderRadius: 8,
-        borderSkipped: false,
+        label: "Maternal Mortality Rate",
+        data: [1, 3.7, 1.8],
+        backgroundColor: ["#A7B093", "#D1A38A", "#C78E1D"],
       },
     ],
   };
-
   const options = {
+    indexAxis: "y",
     responsive: true,
     maintainAspectRatio: false,
-    animation: { duration: 1500, easing: "easeOutQuart" },
     plugins: {
       legend: { display: false },
-      title: {
-        display: true,
-        text: "Maternal Mortality Risk by Ethnicity",
-        color: "#21273F",
-        font: { size: 16, weight: "600" },
-        padding: { bottom: 20 },
-      },
-      tooltip: {
-        backgroundColor: "#fff",
-        borderColor: "#D1A38A",
-        borderWidth: 1,
-        titleColor: "#21273F",
-        bodyColor: "#21273F",
-        cornerRadius: 6,
-        padding: 10,
-        displayColors: false,
-        callbacks: {
-          label: (context) => `${context.raw}× more likely than white women`,
-        },
-      },
+      title: { display: false },
     },
     scales: {
-      x: {
-        grid: { display: false },
-        ticks: {
-          color: "#21273F",
-          font: { size: 12 },
-          angle: -15,
-        },
-      },
-      y: {
-        title: {
-          display: true,
-          text: "Relative risk (× times)",
-          color: "#21273F",
-          font: { size: 12 },
-        },
-        beginAtZero: true,
-        max: 4,
-        ticks: {
-          color: "#21273F",
-          font: { size: 11 },
-          stepSize: 1,
-        },
-        grid: { color: "rgba(0, 0, 0, 0.05)" },
-      },
+      x: { grid: { display: false }, beginAtZero: true, max: 4 },
+      y: { grid: { display: false } },
     },
   };
 
-  // Carousel state and functionality
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 5; // Total number of infographic slides
-  const autoSlideInterval = useRef(null);
+  return (
+    <section
+      className="why-this-work-matters-infographic"
+      style={{
+        backgroundColor: "transparent",
+        backgroundImage: "linear-gradient(to bottom, #F9F6F1, #ffffff)",
+        padding: "120px 20px 140px",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        className="container"
+        style={{ maxWidth: "1100px", margin: "0 auto" }}
+      >
+        <div
+          className="section-title text-center mb-5"
+          style={{ marginBottom: "80px" }}
+        >
+          <motion.h2
+            className="section-title__title"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            style={{
+              color: "#21273F",
+              marginBottom: "24px",
+              fontSize: "clamp(2.5rem, 8vw, 3.5rem)",
+              fontWeight: 800,
+              letterSpacing: "-1px",
+              lineHeight: 1.1,
+            }}
+          >
+            Why This Work Matters
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <p
+              style={{
+                maxWidth: "800px",
+                margin: "0 auto 24px",
+                fontSize: "clamp(1.5rem, 4vw, 2.2rem)",
+                color: "#21273F",
+                lineHeight: 1.4,
+                fontWeight: 700,
+                letterSpacing: "-0.5px",
+              }}
+            >
+              Every number below represents{" "}
+              <span style={{ color: "#D1A38A" }}>a woman whose story</span>{" "}
+              could have ended differently with better care.
+            </p>
+            <p
+              style={{
+                maxWidth: "700px",
+                margin: "0 auto",
+                fontSize: "clamp(1rem, 2vw, 1.125rem)",
+                color: "#444444",
+                lineHeight: 1.8,
+                letterSpacing: "0.3px",
+                fontWeight: 400,
+              }}
+            ></p>
+          </motion.div>
+        </div>
+        {/* Chart display - always visible at the top */}
+        <div
+          className="row justify-content-center mb-5"
+          style={{ marginTop: "60px", marginBottom: "80px" }}
+        >
+          <div className="col-lg-10">
+            {/* Humanized chart caption */}
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              style={{
+                textAlign: "center",
+                fontSize: "clamp(0.9rem, 1.5vw, 1rem)",
+                color: "#21273F",
+                fontWeight: 600,
+                marginBottom: "24px",
+                lineHeight: 1.7,
+              }}
+            >
+              Black women are almost four times more likely to die during
+              pregnancy.
+              <br />
+              Asian women are nearly twice as likely.
+              <br />
+              This gap has barely changed in a decade.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+              className="chart-container"
+              style={{
+                background: "#fff",
+                borderRadius: "16px",
+                padding: "32px",
+                height: "280px",
+                border: "1px solid rgba(199, 142, 29, 0.12)",
+                boxShadow: "0 1px 6px rgba(33, 39, 63, 0.04)",
+                position: "relative",
+                overflow: "visible",
+                transition: "all 0.3s ease",
+                opacity: 0.95,
+              }}
+            >
+              <div
+                style={{ height: "100%", width: "100%", position: "relative" }}
+              >
+                <Bar data={data} options={options} />
+              </div>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "0.85rem",
+                  color: "#7D7D7D",
+                  fontStyle: "italic",
+                  marginTop: "12px",
+                  paddingTop: "12px",
+                  paddingBottom: "12px",
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                }}
+              >
+                Source: MBRRACE-UK, 2023
+              </p>
+            </motion.div>
+          </div>
+        </div>
+        {/* Interactive Stats Block */}
+        <div className="row justify-content-center">
+          <div className="col-lg-12">
+            <StatsBlockInteractive />
+          </div>
+        </div>
+        {/* Closing CTA */}
+        <div
+          className="row justify-content-center"
+          style={{ marginTop: "100px", marginBottom: "60px" }}
+        >
+          <div className="col-lg-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <p
+                style={{
+                  fontSize: "clamp(1.1rem, 2vw, 1.3rem)",
+                  color: "#21273F",
+                  lineHeight: 1.8,
+                  marginBottom: "16px",
+                  fontWeight: 700,
+                  letterSpacing: "-0.3px",
+                }}
+              >
+                Together, we can close this gap.
+                <br />
+                One conversation, one lesson, one act of care at a time.
+              </p>
+            </motion.div>
+            <motion.a
+              href="/training"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{
+                backgroundColor: "#C78E1D",
+                color: "#fff",
+                boxShadow: "0 8px 24px rgba(199, 142, 29, 0.25)",
+              }}
+              whileTap={{ scale: 0.96 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.3,
+              }}
+              viewport={{ once: true }}
+              style={{
+                display: "inline-block",
+                paddingTop: "16px",
+                paddingBottom: "16px",
+                paddingLeft: "40px",
+                paddingRight: "40px",
+                backgroundColor: "#21273F",
+                color: "#fff",
+                textDecoration: "none",
+                borderRadius: "50px",
+                fontWeight: 700,
+                fontSize: "1.125rem",
+                cursor: "pointer",
+                border: "none",
+                marginTop: "24px",
+              }}
+            >
+              Explore Our Training
+            </motion.a>
+          </div>
+        </div>
+        {/* Sources */}
+        <div className="row">
+          <div className="col-12 text-center">
+            <div
+              style={{
+                maxWidth: "700px",
+                margin: "20px auto 0",
+                padding: "15px 20px",
+                borderTop: "1px solid rgba(199, 142, 29, 0.15)",
+                borderBottom: "1px solid rgba(199, 142, 29, 0.15)",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "13px",
+                  fontStyle: "italic",
+                  color: "#7D7D7D",
+                  margin: "0",
+                }}
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-  const goToSlide = (slideIndex) => {
-    setCurrentSlide(slideIndex);
-  };
-
-  const goToNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const goToPrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  // Auto sliding functionality
-  useEffect(() => {
-    autoSlideInterval.current = setInterval(() => {
-      goToNextSlide();
-    }, 8000); // Change slide every 8 seconds
-
-    return () => {
-      if (autoSlideInterval.current) {
-        clearInterval(autoSlideInterval.current);
-      }
-    };
-  }, []);
-
-  // Reset timer when manually changing slides
-  const handleManualNavigation = (index) => {
-    if (autoSlideInterval.current) {
-      clearInterval(autoSlideInterval.current);
-    }
-    goToSlide(index);
-    autoSlideInterval.current = setInterval(() => {
-      goToNextSlide();
-    }, 8000);
-  };
-
-  // Slide content
-  const slides = [
+function StatsBlockInteractive() {
+  const stats = [
     {
-      id: 1,
-      title: "1. Maternal Risk Gap",
-      description:
-        "Black women are 3.7× more likely and Asian women 1.8× more likely to die during pregnancy compared to white women.",
-      source: "MBRRACE-UK, 2023",
       icon: (
         <svg
           width="40"
@@ -195,28 +351,29 @@ export default function WhyThisWorkMattersInfographic() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Heart with pulse */}
           <path
-            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M12 2C12 2 5 8 5 13C5 16.3137 7.68629 19 11 19C13.21 19 15.16 17.9 16.2 16.2C17.24 17.9 19.19 19 21.4 19C23.7137 19 26 16.3137 26 13C26 8 19 2 12 2Z"
+            fill="currentColor"
+            fillOpacity="0.2"
           />
           <path
-            d="M12 8V12L15 15"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M12 4C12 4 6 9 6 13C6 15.76 8.24 18 11 18C12.6 18 14.07 17.27 15 16.11C15.93 17.27 17.4 18 19 18C20.76 18 22 16.76 22 15C22 13.5 20.5 9 12 4Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
       ),
-      showChart: true,
+      title: "The Risk That Persists",
+      figure: "3.7× / 1.8×",
+      highlight:
+        "Black and Asian women face far greater risk in pregnancy. These are not just numbers but lives cut short.",
+      humanInsight: null,
+      source: "MBRRACE-UK (2023)",
     },
     {
-      id: 2,
-      title: "2. Cultural Disconnect",
-      description:
-        "Language, culture, and faith barriers create obstacles that lead to misunderstandings, delayed treatment, and poorer outcomes.",
-      source: "CORE20PLUS5, 2023",
       icon: (
         <svg
           width="40"
@@ -225,43 +382,29 @@ export default function WhyThisWorkMattersInfographic() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Two people talking */}
+          <circle cx="7" cy="6" r="2" fill="currentColor" fillOpacity="0.3" />
+          <circle cx="17" cy="6" r="2" fill="currentColor" fillOpacity="0.3" />
           <path
-            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M4 9C4 8.45 4.45 8 5 8H9C9.55 8 10 8.45 10 9V13C10 13.55 9.55 14 9 14H7L5 16V14C4.45 14 4 13.55 4 13V9Z"
+            fill="currentColor"
+            fillOpacity="0.2"
           />
           <path
-            d="M3.6 9H20.4"
-            stroke="#D1A38A"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M3.6 15H20.4"
-            stroke="#D1A38A"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M12 3C13.933 5.04 15 7.828 15 12C15 16.172 13.933 18.96 12 21"
-            stroke="#D1A38A"
-            strokeWidth="2"
-          />
-          <path
-            d="M12 3C10.067 5.04 9 7.828 9 12C9 16.172 10.067 18.96 12 21"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M14 9C14 8.45 14.45 8 15 8H19C19.55 8 20 8.45 20 9V13C20 13.55 19.55 14 19 14H17L15 16V14C14.45 14 14 13.55 14 13V9Z"
+            fill="currentColor"
+            fillOpacity="0.2"
           />
         </svg>
       ),
-      showChart: false,
+      title: "When Care Misses Culture",
+      figure: "Language barriers still exist",
+      highlight:
+        "When culture or faith is not understood, warning signs are lost. Understanding saves time, trust and lives.",
+      humanInsight: null,
+      source: "CORE20PLUS5 (2023)",
     },
     {
-      id: 3,
-      title: "3. Diagnostic Delays",
-      description:
-        "Minority women often experience later diagnoses in menopause, fertility, and chronic conditions — shaped by bias and poor cultural understanding.",
-      source: "Women's Health Strategy, 2022",
       icon: (
         <svg
           width="40"
@@ -270,23 +413,38 @@ export default function WhyThisWorkMattersInfographic() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Magnifying glass / discovery */}
+          <circle
+            cx="10"
+            cy="10"
+            r="6"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          />
           <path
-            d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M14.5 14.5L19 19"
+            stroke="currentColor"
+            strokeWidth="1.5"
             strokeLinecap="round"
-            strokeLinejoin="round"
+          />
+          <circle cx="10" cy="10" r="3" fill="currentColor" fillOpacity="0.1" />
+          <path
+            d="M8 10H12M10 8V12"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+            opacity="0.5"
           />
         </svg>
       ),
-      showChart: false,
+      title: "Bias Delays the Diagnosis",
+      figure: "Delays cost lives",
+      highlight:
+        "Unseen bias means symptoms are missed until it is too late. Listening early can prevent harm.",
+      humanInsight: null,
+      source: "Women's Health Strategy (2022)",
     },
     {
-      id: 4,
-      title: "4. The Cost to the NHS",
-      description:
-        "When care isn't inclusive, early signs are missed. Those missed red flags cost the NHS around £2 billion each year in repeat visits and late interventions.",
-      source: "NHS England, 2022",
       icon: (
         <svg
           width="40"
@@ -295,358 +453,147 @@ export default function WhyThisWorkMattersInfographic() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Pound sign / cost */}
           <path
-            d="M12 6V12M12 12V18M12 12H18M12 12H6"
-            stroke="#D1A38A"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-            stroke="#D1A38A"
-            strokeWidth="2"
-          />
-        </svg>
-      ),
-      showChart: false,
-    },
-    {
-      id: 5,
-      title: "5. The Global Opportunity",
-      description:
-        "Closing the women's health gap isn't only the right thing to do — it could unlock $1 trillion in global GDP by 2040 through better wellbeing and participation.",
-      source: "McKinsey Health Institute, 2023",
-      icon: (
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M3 6H21M3 12H21M3 18H21"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M8 4H16M8 8H16M10 4V16C10 17.66 11.34 19 13 19H14M8 12H14"
+            stroke="currentColor"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M12 3V6M12 12V15M12 18V21"
-            stroke="#D1A38A"
-            strokeWidth="2"
+            d="M6 6L18 18"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeOpacity="0.3"
             strokeLinecap="round"
-            strokeLinejoin="round"
           />
         </svg>
       ),
-      showChart: false,
+      title: "The Cost of Delay",
+      figure: "£2 billion each year",
+      highlight:
+        "Late action costs the NHS billions and families their peace. Fair, faster care protects everyone.",
+      humanInsight: null,
+      source: "NHS England (2022)",
     },
   ];
 
+  const { tilt, handleMouseMove, handleMouseLeave } = useCardTilt(stats.length);
+
   return (
-    <>
-      {/* Infographic Section Start */}
-      <section
-        className="why-this-work-matters-infographic"
-        style={{
-          backgroundColor: "transparent",
-          padding: "100px 0 80px",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div className="container">
-          <div className="section-title text-center mb-5">
-            <h2
-              className="section-title__title"
-              style={{ color: "#21273F", marginBottom: "15px" }}
-            >
-              Black and Asian women
-            </h2>
-            <p
+    <div
+      className="stats-block"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: "2rem",
+        margin: "80px auto 3rem",
+        maxWidth: "1200px",
+        background: "transparent",
+        borderRadius: "16px",
+        padding: "0",
+      }}
+    >
+      {stats.map((stat, idx) => {
+        const accentColors = ["#D1A38A", "#C78E1D", "#A7B093", "#21273F"];
+        const accentColor = accentColors[idx];
+
+        return (
+          <motion.div
+            key={stat.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{
+              y: -6,
+              scale: 1.02,
+              boxShadow: "0 6px 20px rgba(33, 39, 63, 0.1)",
+            }}
+            whileTap={{ scale: 0.98 }}
+            transition={{
+              duration: 0.6,
+              delay: idx * 0.1,
+              hover: { duration: 0.3, ease: "easeOut" },
+            }}
+            viewport={{ once: true }}
+            style={{
+              textAlign: "left",
+              background: "#fff",
+              borderRadius: "16px",
+              border: "none",
+              borderTop: `4px solid ${accentColor}`,
+              boxShadow: "0 2px 8px rgba(33, 39, 63, 0.06)",
+              padding: "36px 32px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              cursor: "pointer",
+              transform: `perspective(700px) rotateX(${tilt[idx].x}deg) rotateY(${tilt[idx].y}deg) scale(${tilt[idx].scale})`,
+            }}
+            onMouseMove={(e) => handleMouseMove(idx, e)}
+            onMouseLeave={() => handleMouseLeave(idx)}
+          >
+            <div style={{ marginBottom: "16px", color: accentColor }}>
+              {stat.icon}
+            </div>
+            <div
               style={{
-                marginBottom: "40px",
-                maxWidth: "800px",
-                margin: "0 auto",
+                fontSize: "clamp(2rem, 3.5vw, 2.5rem)",
+                color: accentColor,
+                fontWeight: 800,
+                marginBottom: "16px",
+                letterSpacing: "-0.8px",
               }}
             >
-              Experience significantly higher risks in maternal health due to
-              systemic inequalities. But also an opportunity for healthcare
-              providers and community partners to drive change.
+              {stat.figure}
+            </div>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                color: "#555555",
+                marginBottom: "16px",
+                lineHeight: 1.7,
+                flex: 1,
+                fontWeight: 400,
+              }}
+            >
+              {stat.highlight}
             </p>
-          </div>
-
-          {/* Chart display - always visible at the top */}
-          <div className="row justify-content-center mb-5">
-            <div className="col-lg-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="chart-container"
-                style={{
-                  background: "transparent",
-                  borderRadius: "16px",
-                  padding: "40px",
-                  height: "350px",
-                  border: "2px solid #D1A38A",
-                  boxShadow: "none",
-                  position: "relative",
-                  overflow: "hidden",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                <div style={{ height: "100%" }}>
-                  <Bar data={data} options={options} />
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-          {/* Infographic Carousel */}
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="infographic-carousel">
-                {/* Carousel Container */}
-                <div className="carousel-container position-relative">
-                  {/* Carousel Items */}
-                  <div
-                    className="carousel-inner"
-                    style={{ position: "relative", minHeight: "300px" }}
-                  >
-                    {slides.map((slide, index) => (
-                      <motion.div
-                        key={slide.id}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: currentSlide === index ? 1 : 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="carousel-item"
-                        style={{
-                          minWidth: "100%",
-                          background: "transparent",
-                          borderRadius: "16px",
-                          padding: "40px",
-                          border: "none",
-                          boxShadow: "none",
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          textAlign: "center",
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          width: "100%",
-                          height: "100%",
-                          opacity: currentSlide === index ? 1 : 0,
-                          pointerEvents:
-                            currentSlide === index ? "all" : "none",
-                        }}
-                      >
-                        <div
-                          className="icon-wrapper"
-                          style={{
-                            width: "80px",
-                            height: "80px",
-                            margin: "0 auto 20px",
-                            backgroundColor: "rgba(209, 163, 138, 0.15)",
-                            borderRadius: "50%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            transition: "all 0.3s ease",
-                            cursor: "pointer",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor =
-                              "rgba(199, 142, 29, 0.3)";
-                            e.currentTarget.style.transform = "scale(1.1)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor =
-                              "rgba(199, 142, 29, 0.15)";
-                            e.currentTarget.style.transform = "scale(1)";
-                          }}
-                        >
-                          {slide.icon}
-                        </div>
-                        <div className="slide-content">
-                          <h3
-                            style={{
-                              color: "#21273F",
-                              fontWeight: 600,
-                              marginBottom: "15px",
-                              position: "relative",
-                              display: "inline-block",
-                              transition: "all 0.3s ease",
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.color = "#D1A38A";
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.color = "#21273F";
-                            }}
-                          >
-                            {slide.title}
-                          </h3>
-                          <p
-                            style={{
-                              fontSize: "16px",
-                              lineHeight: "1.6",
-                              maxWidth: "700px",
-                              margin: "0 auto 10px",
-                            }}
-                          >
-                            {slide.description}
-                          </p>
-                          <p
-                            style={{
-                              marginTop: "10px",
-                              fontSize: "13px",
-                              color: "#9A8D78",
-                            }}
-                          >
-                            Source: {slide.source}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Navigation Controls */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginTop: "30px",
-                    gap: "20px",
-                  }}
-                >
-                  {/* Arrow Buttons */}
-                  <div style={{ display: "flex", gap: "12px" }}>
-                    <button
-                      onClick={goToNextSlide}
-                      className="carousel-control next"
-                      aria-label="Next slide"
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        borderRadius: "50%",
-                        background: "#fff",
-                        border: "2px solid #D1A38A",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        cursor: "pointer",
-                        zIndex: 2,
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#D1A38A";
-                        e.currentTarget.style.transform = "scale(1.1)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#fff";
-                        e.currentTarget.style.transform = "scale(1)";
-                      }}
-                    >
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M9 6L15 12L9 18"
-                          stroke="#D1A38A"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-
-                  {/* Carousel Indicators */}
-                  <div style={{ display: "flex", gap: "10px" }}>
-                    {slides.map((slide, index) => (
-                      <button
-                        key={slide.id}
-                        onClick={() => handleManualNavigation(index)}
-                        className={`indicator ${
-                          currentSlide === index ? "active" : ""
-                        }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                        style={{
-                          width: "10px",
-                          height: "10px",
-                          borderRadius: "50%",
-                          background:
-                            currentSlide === index ? "#D1A38A" : "#E5BA6D",
-                          opacity: currentSlide === index ? 1 : 0.5,
-                          border: "none",
-                          padding: 0,
-                          cursor: "pointer",
-                          transition: "all 0.3s ease",
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = "scale(1.3)";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = "scale(1)";
-                        }}
-                      ></button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Sources */}
-          <div className="row">
-            <div className="col-12 text-center">
+            {stat.humanInsight && (
               <div
                 style={{
-                  maxWidth: "700px",
-                  margin: "20px auto 0",
-                  padding: "15px 20px",
-                  borderTop: "1px solid rgba(199, 142, 29, 0.2)",
-                  borderBottom: "1px solid rgba(199, 142, 29, 0.2)",
+                  paddingTop: "12px",
+                  borderTop: "1px solid rgba(33, 39, 63, 0.08)",
+                  marginBottom: "12px",
                 }}
               >
                 <p
                   style={{
-                    fontSize: "13px",
+                    fontSize: "0.9rem",
+                    color: "#21273F",
+                    fontWeight: 500,
                     fontStyle: "italic",
-                    color: "#9A8D78",
-                    margin: "0",
+                    lineHeight: 1.5,
+                    margin: 0,
                   }}
                 >
-                  <strong style={{ color: "#21273F", fontWeight: "500" }}>
-                    Data Sources:
-                  </strong>{" "}
-                  MBRRACE-UK (2023), CORE20PLUS5 (2023), Women's Health Strategy
-                  (2022), NHS England (2022), McKinsey Health Institute (2023)
+                  {stat.humanInsight}
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Mission Statement Section */}
-        </div>
-
-        {/* Responsive styles */}
-        <style>{`
-        `}</style>
-      </section>
-      {/* Infographic Section End */}
-    </>
+            )}
+            <span
+              style={{
+                fontSize: "0.8rem",
+                color: "#7D7D7D",
+                fontStyle: "italic",
+                marginTop: "auto",
+              }}
+            >
+              {stat.source}
+            </span>
+          </motion.div>
+        );
+      })}
+    </div>
   );
 }
