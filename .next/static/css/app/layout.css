@@ -22701,9 +22701,9 @@ a:focus,
 }
 .hero-buttons .primary-btn:hover,
 .hero-buttons .primary-btn:focus {
-  background: #BB8C74 !important;
+  background: #A7B093 !important;
   color: #21273F !important;
-  border-color: #BB8C74 !important;
+  border-color: #A7B093 !important;
 }
 .hero-buttons .primary-btn:active {
   transform: scale(0.98) !important;
@@ -22712,7 +22712,7 @@ a:focus,
 .hero-buttons .secondary-btn {
   background: transparent !important;
   color: #F9E8CF !important;
-  border: 2px solid #3A7C7C !important;
+  border: 2px solid #D1A38A !important;
   border-radius: 0.5rem !important;
   font-weight: 600 !important;
   font-size: 1rem !important;
@@ -22724,8 +22724,8 @@ a:focus,
 }
 .hero-buttons .secondary-btn:hover,
 .hero-buttons .secondary-btn:focus {
-  color: #D1A38A !important;
-  border-color: #D1A38A !important;
+  color: #A7B093 !important;
+  border-color: #A7B093 !important;
 }
 .hero-buttons .secondary-btn:active {
   transform: scale(0.98) !important;

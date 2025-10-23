@@ -80,11 +80,18 @@ export default function BannerClient() {
                       </p>
                     </div>
                     {/* Button group */}
-                    <div className="hero-buttons flex gap-4 mt-10 flex-wrap items-center">
+                    <div
+                      className="hero-buttons flex gap-4 mt-10 flex-wrap items-center"
+                      style={{ marginTop: "2.5rem" }}
+                    >
                       <button
                         type="button"
                         className="primary-btn"
                         onClick={() => (window.location.href = "/about")}
+                        style={{
+                          marginRight: "12px",
+                          marginBottom: "8px",
+                        }}
                       >
                         Partner With Us
                       </button>
@@ -92,6 +99,10 @@ export default function BannerClient() {
                         type="button"
                         className="secondary-btn"
                         onClick={() => (window.location.href = "/trainings")}
+                        style={{
+                          border: "2px solid #D1A38A",
+                          marginBottom: "8px",
+                        }}
                       >
                         See our trainings →
                       </button>
@@ -100,15 +111,56 @@ export default function BannerClient() {
                     <p
                       style={{
                         marginTop: "2rem",
-                        fontSize: "1rem",
+                        fontSize: "clamp(0.875rem, 1.5vw, 1rem)",
                         color: "#F9E8CF",
                         fontStyle: "italic",
                         fontWeight: 500,
                         textShadow: "0 2px 8px rgba(0,0,0,0.3)",
+                        lineHeight: 1.5,
+                        marginBottom: "1.5rem",
                       }}
                     >
-                      Dr Syeda Hussaini MBBS MRCPsych Founder, ThriveHer Clinic
+                      Led by Dr Syeda Hussaini MBBS MRCPsych
                     </p>
+                    {/* Credibility logos with label */}
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "1rem",
+                        flexWrap: "wrap",
+                        marginTop: "1.5rem",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)",
+                          color: "#FFFFFF",
+                          fontStyle: "italic",
+                          fontWeight: 500,
+                          letterSpacing: "0.02em",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        Advised by:
+                      </span>
+                      <img
+                        src="/assets/images/credibility/east.png"
+                        alt="Health Innovation East Midlands"
+                        style={{
+                          height: "96px",
+                          width: "auto",
+                        }}
+                      />
+                      <img
+                        src="/assets/images/credibility/health-innovation-east.png"
+                        alt="Health Innovation East"
+                        style={{
+                          height: "96px",
+                          width: "auto",
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

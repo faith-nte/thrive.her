@@ -65,6 +65,14 @@ const gridStyles = `
       gap: 1rem !important;
     }
   }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
 `;
 
 // Inject styles
@@ -96,6 +104,17 @@ export default function WhyThisWorkMattersInfographic() {
     plugins: {
       legend: { display: false },
       title: { display: false },
+      datalabels: {
+        display: true,
+        color: "#21273F",
+        font: {
+          weight: "bold",
+          size: 14,
+        },
+        padding: 8,
+        anchor: "end",
+        align: "right",
+      },
     },
     scales: {
       x: { grid: { display: false }, beginAtZero: true, max: 4 },
@@ -107,78 +126,141 @@ export default function WhyThisWorkMattersInfographic() {
     <section
       className="why-this-work-matters-infographic"
       style={{
-        backgroundColor: "transparent",
-        backgroundImage: "linear-gradient(to bottom, #F9F6F1, #ffffff)",
+        background: "var(--thriveher-cream)",
         padding: "120px 20px 140px",
         position: "relative",
         overflow: "hidden",
       }}
     >
+      {/* Subtle texture overlay */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.03,
+          backgroundImage:
+            'url(\'data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h40v40H0z" fill="none" stroke="%23000" stroke-width="0.5"/%3E%3Ccircle cx="10" cy="10" r="1" fill="%23000" opacity="0.3"/%3E%3Ccircle cx="30" cy="30" r="1" fill="%23000" opacity="0.3"/%3E%3C/svg%3E\')',
+          backgroundRepeat: "repeat",
+          pointerEvents: "none",
+        }}
+      ></div>
       <div
         className="container"
         style={{ maxWidth: "1100px", margin: "0 auto" }}
       >
+        {/* Chart display - moved to top */}
+        <div
+          className="row justify-content-center mb-5"
+          style={{ marginTop: "60px", marginBottom: "7rem" }}
+        >
+          <div className="col-lg-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+              className="chart-container"
+              style={{
+                background: "rgba(167, 176, 147, 0.1)",
+                borderRadius: "16px",
+                padding: "32px",
+                height: "auto",
+                border: "1px solid rgba(253, 243, 228, 0.1)",
+                backdropFilter: "blur(8px)",
+                boxShadow: "0 8px 20px rgba(33, 39, 63, 0.15)",
+                position: "relative",
+                overflow: "visible",
+                transition: "all 0.3s ease",
+              }}
+            >
+              <div
+                style={{
+                  height: "280px",
+                  width: "100%",
+                  position: "relative",
+                  marginBottom: "16px",
+                }}
+              >
+                <Bar data={data} options={options} />
+              </div>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "0.8rem",
+                  color: "#888888",
+                  fontStyle: "italic",
+                  margin: "0",
+                  padding: "12px 0 0 0",
+                  borderTop: "1px solid rgba(167, 176, 147, 0.2)",
+                }}
+              >
+                Source: MBRRACE-UK, 2023
+              </p>
+            </motion.div>
+          </div>
+        </div>
         <div
           className="section-title text-center mb-5"
-          style={{ marginBottom: "80px" }}
+          style={{ marginBottom: "5rem" }}
         >
-          <motion.h2
-            className="section-title__title"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            style={{
-              color: "#21273F",
-              marginBottom: "24px",
-              fontSize: "clamp(2.5rem, 8vw, 3.5rem)",
-              fontWeight: 800,
-              letterSpacing: "-1px",
-              lineHeight: 1.1,
-            }}
-          >
-            Why This Work Matters
-          </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <p
+            <h2
               style={{
                 maxWidth: "800px",
                 margin: "0 auto 24px",
-                fontSize: "clamp(1.5rem, 4vw, 2.2rem)",
+                fontSize: "clamp(1.5rem, 4vw, 3rem)",
                 color: "#21273F",
                 lineHeight: 1.4,
                 fontWeight: 700,
                 letterSpacing: "-0.5px",
               }}
             >
-              Every number below represents{" "}
-              <span style={{ color: "#D1A38A" }}>a woman whose story</span>{" "}
-              could have ended differently with better care.
-            </p>
-            <p
-              style={{
-                maxWidth: "700px",
-                margin: "0 auto",
-                fontSize: "clamp(1rem, 2vw, 1.125rem)",
-                color: "#444444",
-                lineHeight: 1.8,
-                letterSpacing: "0.3px",
-                fontWeight: 400,
-              }}
-            ></p>
+              Every number represents a woman whose story could have ended
+              differently with better care.
+            </h2>
           </motion.div>
         </div>
-        {/* Chart display - always visible at the top */}
+        {/* Statistics with arrow pointing up */}
         <div
           className="row justify-content-center mb-5"
-          style={{ marginTop: "60px", marginBottom: "80px" }}
+          style={{ marginTop: "60px", marginBottom: "5rem" }}
         >
           <div className="col-lg-10">
+            {/* Arrow pointing upward to chart */}
+            <div
+              style={{
+                textAlign: "center",
+                marginBottom: "8px",
+                position: "relative",
+                zIndex: 2,
+              }}
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{
+                  display: "inline-block",
+                  animation: "bounce 2s infinite",
+                  transform: "scaleY(-1)",
+                }}
+              >
+                <path
+                  d="M16 2v20M10 20l6 6 6-6"
+                  fill="none"
+                  stroke="#C78E1D"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
             {/* Humanized chart caption */}
             <motion.p
               initial={{ opacity: 0, y: -10 }}
@@ -187,11 +269,16 @@ export default function WhyThisWorkMattersInfographic() {
               viewport={{ once: true }}
               style={{
                 textAlign: "center",
-                fontSize: "clamp(0.9rem, 1.5vw, 1rem)",
+                fontSize: "clamp(0.95rem, 1.8vw, 1.2rem)",
                 color: "#21273F",
                 fontWeight: 600,
-                marginBottom: "24px",
+                marginBottom: "48px",
                 lineHeight: 1.7,
+                backgroundColor: "rgba(199, 142, 29, 0.08)",
+                padding: "20px 24px",
+                borderRadius: "12px",
+                border: "2px solid #C78E1D",
+                position: "relative",
               }}
             >
               Black women are almost four times more likely to die during
@@ -201,46 +288,6 @@ export default function WhyThisWorkMattersInfographic() {
               <br />
               This gap has barely changed in a decade.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-              viewport={{ once: true }}
-              className="chart-container"
-              style={{
-                background: "#fff",
-                borderRadius: "16px",
-                padding: "32px",
-                height: "280px",
-                border: "1px solid rgba(199, 142, 29, 0.12)",
-                boxShadow: "0 1px 6px rgba(33, 39, 63, 0.04)",
-                position: "relative",
-                overflow: "visible",
-                transition: "all 0.3s ease",
-                opacity: 0.95,
-              }}
-            >
-              <div
-                style={{ height: "100%", width: "100%", position: "relative" }}
-              >
-                <Bar data={data} options={options} />
-              </div>
-              <p
-                style={{
-                  textAlign: "center",
-                  fontSize: "0.85rem",
-                  color: "#7D7D7D",
-                  fontStyle: "italic",
-                  marginTop: "12px",
-                  paddingTop: "12px",
-                  paddingBottom: "12px",
-                  paddingLeft: "16px",
-                  paddingRight: "16px",
-                }}
-              >
-                Source: MBRRACE-UK, 2023
-              </p>
-            </motion.div>
           </div>
         </div>
         {/* Interactive Stats Block */}
@@ -345,6 +392,7 @@ function StatsBlockInteractive() {
       ),
       title: "The Risk That Persists",
       figure: "3.7× / 1.8×",
+      accentColor: "#21273F",
       highlight:
         "Black and Asian women face far greater risk in pregnancy. These are not just numbers but lives cut short.",
       humanInsight: null,
@@ -376,6 +424,7 @@ function StatsBlockInteractive() {
       ),
       title: "When Care Misses Culture",
       figure: "Language barriers still exist",
+      accentColor: "#21273F",
       highlight:
         "When culture or faith is not understood, warning signs are lost. Understanding saves time, trust and lives.",
       humanInsight: null,
@@ -416,6 +465,7 @@ function StatsBlockInteractive() {
       ),
       title: "Bias Delays the Diagnosis",
       figure: "Delays cost lives",
+      accentColor: "#21273F",
       highlight:
         "Unseen bias means symptoms are missed until it is too late. Listening early can prevent harm.",
       humanInsight: null,
@@ -449,6 +499,7 @@ function StatsBlockInteractive() {
       ),
       title: "The Cost of Delay",
       figure: "£2 billion each year",
+      accentColor: "#21273F",
       highlight:
         "Late action costs the NHS billions and families their peace. Fair, faster care protects everyone.",
       humanInsight: null,
@@ -473,18 +524,15 @@ function StatsBlockInteractive() {
       }}
     >
       {stats.map((stat, idx) => {
-        const accentColors = ["#D1A38A", "#C78E1D", "#A7B093", "#21273F"];
-        const accentColor = accentColors[idx];
-
         return (
           <motion.div
             key={stat.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{
-              y: -6,
-              scale: 1.02,
-              boxShadow: "0 6px 20px rgba(33, 39, 63, 0.1)",
+              y: -4,
+              scale: 1.01,
+              boxShadow: "0 12px 32px rgba(33, 39, 63, 0.12)",
             }}
             whileTap={{ scale: 0.98 }}
             transition={{
@@ -495,28 +543,29 @@ function StatsBlockInteractive() {
             viewport={{ once: true }}
             style={{
               textAlign: "left",
-              background: "#fff",
+              background: "rgba(167, 176, 147, 0.08)",
               borderRadius: "16px",
-              border: "none",
-              borderTop: `4px solid ${accentColor}`,
-              boxShadow: "0 2px 8px rgba(33, 39, 63, 0.06)",
+              border: `2px solid ${stat.accentColor}`,
+              borderLeft: `4px solid ${stat.accentColor}`,
+              backdropFilter: "blur(4px)",
+              boxShadow: "0 4px 12px rgba(33, 39, 63, 0.08)",
               padding: "36px 32px",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
               cursor: "pointer",
-              transform: `perspective(700px) rotateX(${tilt[idx].x}deg) rotateY(${tilt[idx].y}deg) scale(${tilt[idx].scale})`,
+              transition: "all 0.3s ease",
             }}
             onMouseMove={(e) => handleMouseMove(idx, e)}
             onMouseLeave={() => handleMouseLeave(idx)}
           >
-            <div style={{ marginBottom: "16px", color: accentColor }}>
+            <div style={{ marginBottom: "16px", color: stat.accentColor }}>
               {stat.icon}
             </div>
             <div
               style={{
                 fontSize: "clamp(2rem, 3.5vw, 2.5rem)",
-                color: accentColor,
+                color: stat.accentColor,
                 fontWeight: 800,
                 marginBottom: "16px",
                 letterSpacing: "-0.8px",
@@ -527,11 +576,12 @@ function StatsBlockInteractive() {
             <p
               style={{
                 fontSize: "0.95rem",
-                color: "#555555",
+                color: "#21273F",
                 marginBottom: "16px",
                 lineHeight: 1.7,
                 flex: 1,
                 fontWeight: 400,
+                opacity: 0.9,
               }}
             >
               {stat.highlight}
@@ -552,6 +602,7 @@ function StatsBlockInteractive() {
                     fontStyle: "italic",
                     lineHeight: 1.5,
                     margin: 0,
+                    opacity: 0.85,
                   }}
                 >
                   {stat.humanInsight}
@@ -561,9 +612,10 @@ function StatsBlockInteractive() {
             <span
               style={{
                 fontSize: "0.8rem",
-                color: "#7D7D7D",
+                color: "#21273F",
                 fontStyle: "italic",
                 marginTop: "auto",
+                opacity: 0.7,
               }}
             >
               {stat.source}
