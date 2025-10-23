@@ -312,29 +312,6 @@ export default function WhyThisWorkMattersInfographic() {
             </motion.a>
           </div>
         </div>
-        {/* Sources */}
-        <div className="row">
-          <div className="col-12 text-center">
-            <div
-              style={{
-                maxWidth: "700px",
-                margin: "20px auto 0",
-                padding: "15px 20px",
-                borderTop: "1px solid rgba(199, 142, 29, 0.15)",
-                borderBottom: "1px solid rgba(199, 142, 29, 0.15)",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "13px",
-                  fontStyle: "italic",
-                  color: "#7D7D7D",
-                  margin: "0",
-                }}
-              ></p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

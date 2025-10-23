@@ -16,7 +16,7 @@ export default function Donation() {
             <div
               className="donation-one__left-bg"
               style={{
-                backgroundImage: " url(assets/images/resources/960x575.png)",
+                backgroundImage: " url(assets/images/resources/mission.svg)",
               }}
             ></div>
           </div>
@@ -45,19 +45,11 @@ export default function Donation() {
               </div>
               <div className="donation-one__donate-box">
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-3 sm:gap-y-0">
-                  <Link
-                    href="#"
-                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white w-full sm:w-auto"
-                    style={{ backgroundColor: "#D1A38A", color: "#fff" }}
-                  >
-                    Get your team trained
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-sm font-semibold text-white hover:text-gray-100 w-full sm:w-auto text-center py-2.5"
-                    style={{ color: "#fdf3e4" }}
-                  >
-                    Introduce your patients
+                  <Link href="/contact" className="thm-btn">
+                    Get in Touch
+                    <span>
+                      <i className="icon-arrow-right"></i>
+                    </span>
                   </Link>
                 </div>
               </div>
