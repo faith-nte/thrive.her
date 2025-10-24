@@ -47,18 +47,20 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                     </Link>
                   </div>
                   <div className="main-menu__main-menu-box">
-                    <Link
-                      href="#"
+                    <button
                       className="mobile-nav__toggler"
                       onClick={handleMobileMenu}
                       style={{
                         color: "#c78e1d",
                         fontSize: "28px",
                         padding: "8px",
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer",
                       }}
                     >
                       <i className="fa fa-bars"></i>
-                    </Link>
+                    </button>
                     <div
                       style={{
                         "& a": {
@@ -137,13 +139,19 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
                       </Link>
                     </div>
                     <div className="main-menu__main-menu-box">
-                      <Link
-                        href="#"
+                      <button
                         className="mobile-nav__toggler"
                         onClick={handleMobileMenu}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          color: "white",
+                          fontSize: "20px",
+                        }}
                       >
                         <i className="fa fa-bars"></i>
-                      </Link>
+                      </button>
                       <Menu />
                     </div>
                   </div>

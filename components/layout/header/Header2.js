@@ -16,7 +16,7 @@ export default function Header2({ scroll, handlePopup, handleSidebar, handleMobi
                                 <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt="ThriveHer Logo"/></Link>
                             </div>
                             <div className="main-menu-two__main-menu-box">
-                                <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                                <button className="mobile-nav__toggler" onClick={handleMobileMenu} style={{background: "none", border: "none", cursor: "pointer", color: "white", fontSize: "20px"}}><i className="fa fa-bars"></i></button>
                                 <Menu/>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ export default function Header2({ scroll, handlePopup, handleSidebar, handleMobi
                                     <Link href="/"><img src="assets/images/resources/logo (256 x 80 px)-gold.svg" alt=""/></Link>
                                 </div>
                                 <div className="main-menu-two__main-menu-box">
-                                    <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                                    <button className="mobile-nav__toggler" onClick={handleMobileMenu} style={{background: "none", border: "none", cursor: "pointer", color: "white", fontSize: "20px"}}><i className="fa fa-bars"></i></button>
                                     <Menu/>
                                 </div>
                             </div>

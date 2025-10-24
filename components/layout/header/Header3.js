@@ -17,7 +17,7 @@ export default function Header3({ scroll, handlePopup, handleMobileMenu  }) {
                                 </div>
                             </div>
                             <div className="main-menu-three__main-menu-box">
-                                <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                                <button className="mobile-nav__toggler" onClick={handleMobileMenu} style={{background: "none", border: "none", cursor: "pointer", color: "white", fontSize: "20px"}}><i className="fa fa-bars"></i></button>
                                 <Menu />
                             </div>
                             <div className="main-menu-three__right">
@@ -50,7 +50,7 @@ export default function Header3({ scroll, handlePopup, handleMobileMenu  }) {
                                     </div>
                                 </div>
                                 <div className="main-menu-three__main-menu-box">
-                                    <Link href="#" className="mobile-nav__toggler" onClick={handleMobileMenu}><i className="fa fa-bars"></i></Link>
+                                    <button className="mobile-nav__toggler" onClick={handleMobileMenu} style={{background: "none", border: "none", cursor: "pointer", color: "white", fontSize: "20px"}}><i className="fa fa-bars"></i></button>
                                     <Menu />
                                 </div>
                                 <div className="main-menu-three__right">
