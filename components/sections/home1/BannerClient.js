@@ -57,6 +57,7 @@ export default function BannerClient() {
                   height: "100%",
                   display: "flex",
                   alignItems: "center",
+                  padding: "clamp(2rem, 5vh, 4rem) 0",
                 }}
               >
                 <div
@@ -66,7 +67,13 @@ export default function BannerClient() {
                 <div className="container">
                   <div className="content-box" style={{ position: "relative" }}>
                     <div className="big-title">
-                      <h2>
+                      <h2
+                        style={{
+                          fontSize: "clamp(2rem, 6vw, 3.5rem)",
+                          lineHeight: "1.2",
+                          marginBottom: "1rem",
+                        }}
+                      >
                         Helping{" "}
                         <span style={{ fontStyle: "italic" }}>
                           NHS & Community Partners
@@ -74,7 +81,13 @@ export default function BannerClient() {
                       </h2>
                     </div>
                     <div className="text-box">
-                      <p>
+                      <p
+                        style={{
+                          fontSize: "clamp(0.95rem, 2vw, 1.1rem)",
+                          lineHeight: "1.6",
+                          maxWidth: "600px",
+                        }}
+                      >
                         Deliver Care That Improves Health Outcomes For Muslim
                         And Minority Women.
                       </p>
@@ -111,7 +124,7 @@ export default function BannerClient() {
                     <p
                       style={{
                         marginTop: "2rem",
-                        fontSize: "clamp(0.875rem, 1.5vw, 1rem)",
+                        fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
                         color: "#F9E8CF",
                         fontStyle: "italic",
                         fontWeight: 500,
@@ -134,7 +147,7 @@ export default function BannerClient() {
                     >
                       <span
                         style={{
-                          fontSize: "clamp(0.75rem, 1.2vw, 0.875rem)",
+                          fontSize: "clamp(0.7rem, 1.2vw, 0.875rem)",
                           color: "#FFFFFF",
                           fontStyle: "italic",
                           fontWeight: 500,
@@ -148,7 +161,7 @@ export default function BannerClient() {
                         src="/assets/images/credibility/east.png"
                         alt="Health Innovation East Midlands"
                         style={{
-                          height: "96px",
+                          height: "clamp(60px, 10vw, 96px)",
                           width: "auto",
                         }}
                       />
@@ -156,7 +169,7 @@ export default function BannerClient() {
                         src="/assets/images/credibility/health-innovation-east.png"
                         alt="Health Innovation East"
                         style={{
-                          height: "96px",
+                          height: "clamp(60px, 10vw, 96px)",
                           width: "auto",
                         }}
                       />
@@ -252,18 +265,75 @@ export default function BannerClient() {
           color: #d1a38a;
         }
 
-        @media (max-width: 768px) {
+        /* iPad/Tablet responsiveness (768px to 1024px) */
+        @media (max-width: 1024px) and (min-width: 768px) {
+          .content-box {
+            padding-right: 2rem !important;
+          }
+          
+          .big-title h2 {
+            font-size: 2.5rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 1rem !important;
+          }
+          
+          .text-box p {
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+          }
+          
           .scroll-arrow {
             bottom: 32px;
           }
+          
           .scroll-text {
             font-size: 14px;
           }
-          .big-title {
-            padding-top: 4rem !important;
-          }
+          
           .hero-image {
-            background-position: center top 35% !important;
+            background-position: center 30% !important;
+          }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 767px) {
+          .scroll-arrow {
+            bottom: 40px;
+            top: auto;
+            left: auto;
+            right: 1.5rem;
+            transform: none;
+            margin: 0;
+          }
+          
+          .scroll-text {
+            font-size: 12px;
+          }
+          
+          .big-title {
+            padding-top: 2rem !important;
+          }
+          
+          .hero-image {
+            background-position: center 35% !important;
+          }
+          
+          .content-box {
+            padding-right: 1rem !important;
+            padding-left: 1rem !important;
+          }
+        }
+
+        /* Extra small screens (phones) */
+        @media (max-width: 480px) {
+          .scroll-arrow {
+            right: 1rem;
+            bottom: 40px;
+          }
+          
+          .scroll-text {
+            font-size: 11px;
+            display: none;
           }
         }
       `}</style>

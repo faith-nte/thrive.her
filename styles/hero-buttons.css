@@ -1,4 +1,12 @@
 /* Banner hero button overrides for bulletproof styling */
+.hero-buttons {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+  align-items: center !important;
+  margin-top: 2.5rem !important;
+}
+
 .hero-buttons .primary-btn {
   background: #D1A38A !important;
   color: #21273F !important;
@@ -10,6 +18,7 @@
   box-shadow: 0 1px 2px rgba(33,39,63,0.04) !important;
   transition: all 0.2s !important;
   display: inline-block !important;
+  white-space: nowrap !important;
 }
 .hero-buttons .primary-btn:hover,
 .hero-buttons .primary-btn:focus {
@@ -33,6 +42,7 @@
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  white-space: nowrap !important;
 }
 .hero-buttons .secondary-btn:hover,
 .hero-buttons .secondary-btn:focus {
@@ -41,4 +51,37 @@
 }
 .hero-buttons .secondary-btn:active {
   transform: scale(0.98) !important;
+}
+
+/* Tablet responsiveness (iPad) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-buttons {
+    gap: 0.75rem !important;
+  }
+  
+  .hero-buttons .primary-btn {
+    font-size: 0.95rem !important;
+    padding: 0.65rem 1.25rem !important;
+  }
+  
+  .hero-buttons .secondary-btn {
+    font-size: 0.95rem !important;
+    padding: 0.55rem 1rem !important;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+  
+  .hero-buttons .primary-btn,
+  .hero-buttons .secondary-btn {
+    width: 100% !important;
+    font-size: 0.9rem !important;
+    padding: 0.65rem 1rem !important;
+  }
 }
