@@ -12,21 +12,65 @@ export default function Error({ error, reset }) {
   return (
     <html>
       <body>
-        <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "#f5f5f5" }}>
-          <div style={{ textAlign: "center", padding: "40px 20px", maxWidth: "600px" }}>
+        <div
+          style={{
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#f5f5f5",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              padding: "40px 20px",
+              maxWidth: "600px",
+            }}
+          >
             <div style={{ marginBottom: "30px" }}>
-              <h1 style={{ fontSize: "72px", fontWeight: "bold", color: "#21273F", margin: "0 0 20px 0" }}>
+              <h1
+                style={{
+                  fontSize: "72px",
+                  fontWeight: "bold",
+                  color: "#21273F",
+                  margin: "0 0 20px 0",
+                }}
+              >
                 500
               </h1>
-              <h2 style={{ fontSize: "32px", fontWeight: "600", color: "#21273F", margin: "0 0 15px 0" }}>
+              <h2
+                style={{
+                  fontSize: "32px",
+                  fontWeight: "600",
+                  color: "#21273F",
+                  margin: "0 0 15px 0",
+                }}
+              >
                 Internal Server Error
               </h2>
-              <p style={{ fontSize: "16px", color: "#666", lineHeight: "1.6", margin: "0 0 30px 0" }}>
-                We're sorry for the inconvenience. An unexpected error has occurred while processing your request.
+              <p
+                style={{
+                  fontSize: "16px",
+                  color: "#666",
+                  lineHeight: "1.6",
+                  margin: "0 0 30px 0",
+                }}
+              >
+                We're sorry for the inconvenience. An unexpected error has
+                occurred while processing your request.
               </p>
             </div>
 
-            <div style={{ display: "flex", gap: "15px", justifyContent: "center", flexWrap: "wrap", marginBottom: "30px" }}>
+            <div
+              style={{
+                display: "flex",
+                gap: "15px",
+                justifyContent: "center",
+                flexWrap: "wrap",
+                marginBottom: "30px",
+              }}
+            >
               <button
                 onClick={() => reset()}
                 style={{
@@ -38,10 +82,14 @@ export default function Error({ error, reset }) {
                   fontSize: "16px",
                   fontWeight: "600",
                   cursor: "pointer",
-                  transition: "background-color 0.3s ease"
+                  transition: "background-color 0.3s ease",
                 }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = "#c49279"}
-                onMouseLeave={(e) => e.target.style.backgroundColor = "#D1A38A"}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#c49279")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#D1A38A")
+                }
               >
                 Try Again
               </button>
@@ -57,10 +105,14 @@ export default function Error({ error, reset }) {
                   fontWeight: "600",
                   textDecoration: "none",
                   display: "inline-block",
-                  transition: "background-color 0.3s ease"
+                  transition: "background-color 0.3s ease",
                 }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = "#1a1f2e"}
-                onMouseLeave={(e) => e.target.style.backgroundColor = "#21273F"}
+                onMouseEnter={(e) =>
+                  (e.target.style.backgroundColor = "#1a1f2e")
+                }
+                onMouseLeave={(e) =>
+                  (e.target.style.backgroundColor = "#21273F")
+                }
               >
                 Back to Home
               </Link>
@@ -70,7 +122,11 @@ export default function Error({ error, reset }) {
               If this problem persists, please{" "}
               <Link
                 href="/contact"
-                style={{ color: "#D1A38A", textDecoration: "none", fontWeight: "600" }}
+                style={{
+                  color: "#D1A38A",
+                  textDecoration: "none",
+                  fontWeight: "600",
+                }}
               >
                 contact us
               </Link>
