@@ -55,7 +55,7 @@ const resources = [
 export default function Resources() {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Resources">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Resources">
         {/* Resources Section */}
         <section
           className="py-24 sm:py-32 lg:py-40"

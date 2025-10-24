@@ -10,7 +10,7 @@ export default function Home() {
   };
   return (
     <>
-      <Layout headerStyle={2} footerStyle={2} breadcrumbTitle="About Us">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="About Us">
         {/*About One Start */}
         <section className="about-One">
           <div className="container">
