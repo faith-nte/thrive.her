@@ -8,11 +8,11 @@ export default function Blog() {
         <div className="container">
           <div className="section-title text-center sec-title-animation animation-style1">
             <div className="section-title__tagline-box">
-              <span className="section-title__tagline">News And Blogs</span>
+              <span className="section-title__tagline">Insights & Resources</span>
             </div>
             <h2 className="section-title__title title-animation">
-              Lending a Hand
-              <br /> Spreading Hope
+              Building Trust in
+              <br /> Maternal Healthcare
             </h2>
           </div>
           <div className="row">
@@ -39,12 +39,12 @@ export default function Blog() {
                 <div className="blog-one__content">
                   <h4 className="blog-one__title">
                     <Link href="blog-details">
-                      Caring for the Elderly and Vulnerable Strategy{" "}
+                      Faith-Aware Care: Why Cultural Competency Matters in Maternal Health
                     </Link>
                   </h4>
                   <div className="blog-one__btn-box">
                     <Link href="blog-details" className="blog-one__btn thm-btn">
-                      rEAD mORe
+                      Read More
                     </Link>
                   </div>
                 </div>
@@ -74,12 +74,12 @@ export default function Blog() {
                 <div className="blog-one__content">
                   <h4 className="blog-one__title">
                     <Link href="blog-details">
-                      Our Goal Is Help The Poor Child Around The World
+                      Bridging Health Inequalities: Supporting Black and Muslim Women in Maternal Care
                     </Link>
                   </h4>
                   <div className="blog-one__btn-box">
                     <Link href="blog-details" className="blog-one__btn thm-btn">
-                      rEAD mORe
+                      Read More
                       <span>
                         <i className="icon-arrow-right"></i>
                       </span>
@@ -112,12 +112,12 @@ export default function Blog() {
                 <div className="blog-one__content">
                   <h4 className="blog-one__title">
                     <Link href="blog-details">
-                      Education For Poor Children Is A Must Now
+                      Training Healthcare Providers: Building Inclusive Services for Diverse Communities
                     </Link>
                   </h4>
                   <div className="blog-one__btn-box">
                     <Link href="blog-details" className="blog-one__btn thm-btn">
-                      rEAD mORe
+                      Read More
                       <span>
                         <i className="icon-arrow-right"></i>
                       </span>
