@@ -27,10 +27,7 @@ export default function Layout({
   // Mobile Menu
   const [isMobileMenu, setMobileMenu] = useState(false);
   const handleMobileMenu = () => {
-    setMobileMenu(!isMobileMenu);
-    !isMobileMenu
-      ? document.body.classList.add("mobile-menu-visible")
-      : document.body.classList.remove("mobile-menu-visible");
+    setMobileMenu((prev) => !prev);
   };
 
   // Popup
@@ -40,6 +37,21 @@ export default function Layout({
   // Sidebar
   const [isSidebar, setSidebar] = useState(false);
   const handleSidebar = () => setSidebar(!isSidebar);
+
+  useEffect(() => {
+    let mounted = true;
+    // Handle mobile menu body class
+    if (typeof window !== "undefined") {
+      if (isMobileMenu) {
+        document.body.classList.add("mobile-menu-visible");
+      } else {
+        document.body.classList.remove("mobile-menu-visible");
+      }
+    }
+    return () => {
+      mounted = false;
+    };
+  }, [isMobileMenu]);
 
   useEffect(() => {
     let mounted = true;
