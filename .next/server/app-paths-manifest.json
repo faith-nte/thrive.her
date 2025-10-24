@@ -1,8 +1,6 @@
 {
   "/not-found": "app/not-found.js",
-  "/page": "app/page.js",
-  "/healthcare-professionals/page": "app/healthcare-professionals/page.js",
   "/about-us/page": "app/about-us/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/community-organisations/page": "app/community-organisations/page.js",
+  "/healthcare-professionals/page": "app/healthcare-professionals/page.js"
 }
