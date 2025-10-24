@@ -31,7 +31,7 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Caring for the Elderly and Vulnerable Strategy{" "}
+                        Faith-Aware Care: Why Cultural Competency Matters in Maternal Health
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -72,7 +72,7 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Our Goal Is Help The Poor Child Around The World
+                        Bridging Health Inequalities: Supporting Black and Muslim Women in Maternal Care
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -113,7 +113,7 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Education For Poor Children Is A Must Now
+                        Training Healthcare Providers: Building Inclusive Services for Diverse Communities
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -143,10 +143,10 @@ export default function Home() {
                     </div>
                     <div className="blog-one__date">
                       <p>
-                        25
+                        20
                         <span>
                           <br />
-                          Jun
+                          Feb
                         </span>
                       </p>
                     </div>
@@ -154,7 +154,7 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Education For Poor Children Is A Must Now
+                        Maternal Mental Health: Recognising and Supporting Women's Wellbeing
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -184,10 +184,10 @@ export default function Home() {
                     </div>
                     <div className="blog-one__date">
                       <p>
-                        25
+                        10
                         <span>
                           <br />
-                          Jun
+                          Mar
                         </span>
                       </p>
                     </div>
@@ -195,7 +195,7 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Our Goal Is Help The Poor Child Around The World
+                        Breaking Barriers: How Community Partnerships Improve Maternal Health Access
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -225,10 +225,10 @@ export default function Home() {
                     </div>
                     <div className="blog-one__date">
                       <p>
-                        25
+                        05
                         <span>
                           <br />
-                          Jun
+                          May
                         </span>
                       </p>
                     </div>
@@ -236,7 +236,7 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Caring for the Elderly and Vulnerable Strategy
+                        The Role of Faith in Healthcare: Supporting Spiritual Wellbeing During Pregnancy
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
