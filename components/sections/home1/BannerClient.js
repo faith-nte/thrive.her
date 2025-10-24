@@ -270,26 +270,26 @@ export default function BannerClient() {
           .content-box {
             padding-right: 2rem !important;
           }
-          
+
           .big-title h2 {
             font-size: 2.5rem !important;
             line-height: 1.2 !important;
             margin-bottom: 1rem !important;
           }
-          
+
           .text-box p {
             font-size: 1rem !important;
             line-height: 1.6 !important;
           }
-          
+
           .scroll-arrow {
             bottom: 32px;
           }
-          
+
           .scroll-text {
             font-size: 14px;
           }
-          
+
           .hero-image {
             background-position: center 30% !important;
           }
@@ -305,19 +305,19 @@ export default function BannerClient() {
             transform: none;
             margin: 0;
           }
-          
+
           .scroll-text {
             font-size: 12px;
           }
-          
+
           .big-title {
             padding-top: 2rem !important;
           }
-          
+
           .hero-image {
             background-position: center 35% !important;
           }
-          
+
           .content-box {
             padding-right: 1rem !important;
             padding-left: 1rem !important;
@@ -330,7 +330,7 @@ export default function BannerClient() {
             right: 1rem;
             bottom: 40px;
           }
-          
+
           .scroll-text {
             font-size: 11px;
             display: none;
