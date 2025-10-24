@@ -97,9 +97,9 @@ export default function CommunityOrganisations() {
                       color: "#21273F",
                     }}
                   >
-                    Together, we create pathways to equitable maternal healthcare
-                    that reflect the values, beliefs, and needs of the women you
-                    serve.
+                    Together, we create pathways to equitable maternal
+                    healthcare that reflect the values, beliefs, and needs of
+                    the women you serve.
                   </p>
                   <div className="about-One__vission-mission">
                     <div className="about-One__tab-box tabs-box">
@@ -146,8 +146,8 @@ export default function CommunityOrganisations() {
                                 tailored to your community's needs.
                               </p>
                               <p style={{ marginTop: "12px" }}>
-                                <strong>Collaborative Programmes</strong> – Joint
-                                initiatives with NHS and local partners to
+                                <strong>Collaborative Programmes</strong> –
+                                Joint initiatives with NHS and local partners to
                                 strengthen health systems.
                               </p>
                               <p style={{ marginTop: "12px" }}>
@@ -174,21 +174,22 @@ export default function CommunityOrganisations() {
                           <div className="tabs-content__inner">
                             <div>
                               <p>
-                                <strong>Community-Led Solutions</strong> – Develop
-                                health initiatives that truly reflect your
-                                community's values, beliefs, and lived
+                                <strong>Community-Led Solutions</strong> –
+                                Develop health initiatives that truly reflect
+                                your community's values, beliefs, and lived
                                 experiences.
                               </p>
                               <p style={{ marginTop: "12px" }}>
-                                <strong>Trust and Access</strong> – Strengthen the
-                                bridge between your community and healthcare
+                                <strong>Trust and Access</strong> – Strengthen
+                                the bridge between your community and healthcare
                                 services, increasing engagement and positive
                                 health outcomes.
                               </p>
                               <p style={{ marginTop: "12px" }}>
                                 <strong>Equitable Health Outcomes</strong> –
                                 Contribute to reducing health inequalities and
-                                improving maternal health for women and families.
+                                improving maternal health for women and
+                                families.
                               </p>
                             </div>
                           </div>
@@ -205,11 +206,11 @@ export default function CommunityOrganisations() {
                           <div className="tabs-content__inner">
                             <p>
                               We begin with a consultation to understand your
-                              organisation's priorities and community needs. From
-                              there, we co-design programmes that combine our
-                              expertise in maternal health, faith-awareness, and
-                              cultural competency with your deep knowledge of
-                              your community. Together, we create sustainable
+                              organisation's priorities and community needs.
+                              From there, we co-design programmes that combine
+                              our expertise in maternal health, faith-awareness,
+                              and cultural competency with your deep knowledge
+                              of your community. Together, we create sustainable
                               solutions that strengthen both community trust and
                               health outcomes.
                             </p>
@@ -221,10 +222,7 @@ export default function CommunityOrganisations() {
                   </div>
                   <div className="about-One__btn-and-need-help">
                     <div className="about-One__btn-box">
-                      <Link
-                        href="/contact"
-                        className="about-One__btn thm-btn"
-                      >
+                      <Link href="/contact" className="about-One__btn thm-btn">
                         Partner With Us
                         <span>
                           <i className="icon-arrow-right"></i>
@@ -238,9 +236,7 @@ export default function CommunityOrganisations() {
                       <div className="content">
                         <p>Need help?</p>
                         <h4>
-                          <Link href="tel:+447459110397">
-                            +44 7459 110397
-                          </Link>
+                          <Link href="tel:+447459110397">+44 7459 110397</Link>
                         </h4>
                       </div>
                     </div>

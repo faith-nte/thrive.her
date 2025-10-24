@@ -31,7 +31,8 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Faith-Aware Care: Why Cultural Competency Matters in Maternal Health
+                        Faith-Aware Care: Why Cultural Competency Matters in
+                        Maternal Health
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -72,7 +73,8 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Bridging Health Inequalities: Supporting Black and Muslim Women in Maternal Care
+                        Bridging Health Inequalities: Supporting Black and
+                        Muslim Women in Maternal Care
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -113,7 +115,8 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Training Healthcare Providers: Building Inclusive Services for Diverse Communities
+                        Training Healthcare Providers: Building Inclusive
+                        Services for Diverse Communities
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -154,7 +157,8 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Maternal Mental Health: Recognising and Supporting Women's Wellbeing
+                        Maternal Mental Health: Recognising and Supporting
+                        Women's Wellbeing
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -195,7 +199,8 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        Breaking Barriers: How Community Partnerships Improve Maternal Health Access
+                        Breaking Barriers: How Community Partnerships Improve
+                        Maternal Health Access
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">
@@ -236,7 +241,8 @@ export default function Home() {
                   <div className="blog-one__content">
                     <h4 className="blog-one__title">
                       <Link href="blog-details">
-                        The Role of Faith in Healthcare: Supporting Spiritual Wellbeing During Pregnancy
+                        The Role of Faith in Healthcare: Supporting Spiritual
+                        Wellbeing During Pregnancy
                       </Link>
                     </h4>
                     <div className="blog-one__btn-box">

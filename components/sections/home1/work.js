@@ -117,18 +117,37 @@ export default function About() {
                         }
                       >
                         <div className="tabs-content__inner">
-                          <div className="about-One__tab-box tabs-box" style={{ marginTop: "0" }}>
-                            <ul className="tab-buttons clearfix list-unstyled" style={{ marginBottom: "16px", display: "flex", gap: "30px", borderBottom: "1px solid #E8D4C4", paddingBottom: "12px" }}>
+                          <div
+                            className="about-One__tab-box tabs-box"
+                            style={{ marginTop: "0" }}
+                          >
+                            <ul
+                              className="tab-buttons clearfix list-unstyled"
+                              style={{
+                                marginBottom: "16px",
+                                display: "flex",
+                                gap: "30px",
+                                borderBottom: "1px solid #E8D4C4",
+                                paddingBottom: "12px",
+                              }}
+                            >
                               <li
                                 onClick={() => handleTrainerClick(1)}
                                 style={{
                                   cursor: "pointer",
                                   padding: "0 0 12px 0",
-                                  borderBottom: activeTrainerIndex == 1 ? "3px solid #D1A38A" : "none",
-                                  color: activeTrainerIndex == 1 ? "#21273F" : "#666",
-                                  fontWeight: activeTrainerIndex == 1 ? "600" : "500",
+                                  borderBottom:
+                                    activeTrainerIndex == 1
+                                      ? "3px solid #D1A38A"
+                                      : "none",
+                                  color:
+                                    activeTrainerIndex == 1
+                                      ? "#21273F"
+                                      : "#666",
+                                  fontWeight:
+                                    activeTrainerIndex == 1 ? "600" : "500",
                                   fontSize: "15px",
-                                  transition: "all 0.3s ease"
+                                  transition: "all 0.3s ease",
                                 }}
                               >
                                 <span>Community Champions</span>
@@ -138,11 +157,18 @@ export default function About() {
                                 style={{
                                   cursor: "pointer",
                                   padding: "0 0 12px 0",
-                                  borderBottom: activeTrainerIndex == 2 ? "3px solid #D1A38A" : "none",
-                                  color: activeTrainerIndex == 2 ? "#21273F" : "#666",
-                                  fontWeight: activeTrainerIndex == 2 ? "600" : "500",
+                                  borderBottom:
+                                    activeTrainerIndex == 2
+                                      ? "3px solid #D1A38A"
+                                      : "none",
+                                  color:
+                                    activeTrainerIndex == 2
+                                      ? "#21273F"
+                                      : "#666",
+                                  fontWeight:
+                                    activeTrainerIndex == 2 ? "600" : "500",
                                   fontSize: "15px",
-                                  transition: "all 0.3s ease"
+                                  transition: "all 0.3s ease",
                                 }}
                               >
                                 <span>Clinical Leaders</span>
@@ -159,7 +185,12 @@ export default function About() {
                               >
                                 <div className="tabs-content__inner">
                                   <p>
-                                    Empower community leaders and peer educators to become champions of maternal health awareness. We provide training that equips community members with the knowledge and skills to advocate for culturally sensitive, faith-aware care within their networks.
+                                    Empower community leaders and peer educators
+                                    to become champions of maternal health
+                                    awareness. We provide training that equips
+                                    community members with the knowledge and
+                                    skills to advocate for culturally sensitive,
+                                    faith-aware care within their networks.
                                   </p>
                                 </div>
                               </div>
@@ -174,7 +205,12 @@ export default function About() {
                               >
                                 <div className="tabs-content__inner">
                                   <p>
-                                    Train healthcare professionals and clinical leaders in your organisation to deliver evidence-based, culturally competent care. Our training helps clinical teams build the knowledge and confidence to support Muslim and Black women effectively.
+                                    Train healthcare professionals and clinical
+                                    leaders in your organisation to deliver
+                                    evidence-based, culturally competent care.
+                                    Our training helps clinical teams build the
+                                    knowledge and confidence to support Muslim
+                                    and Black women effectively.
                                   </p>
                                 </div>
                               </div>
