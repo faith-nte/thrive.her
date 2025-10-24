@@ -218,6 +218,7 @@ export default function BannerClient() {
             vectorEffect="non-scaling-stroke"
           />
         </svg>
+        <div className="scroll-text-mobile">See Why This Work Matters</div>
       </button>
 
       <style jsx global>{`
@@ -259,6 +260,18 @@ export default function BannerClient() {
           font-size: 16px;
           font-weight: 500;
           transition: color 0.3s ease;
+        }
+
+        .scroll-text-mobile {
+          display: none;
+          color: #f9e8cf;
+          font-size: 12px;
+          font-weight: 500;
+          position: absolute;
+          bottom: -35px;
+          right: 0;
+          white-space: nowrap;
+          pointer-events: none;
         }
 
         .scroll-arrow:hover .scroll-text {
@@ -304,10 +317,16 @@ export default function BannerClient() {
             right: 1.5rem;
             transform: none;
             margin: 0;
+            position: relative;
           }
 
           .scroll-text {
             font-size: 12px;
+            display: none;
+          }
+
+          .scroll-text-mobile {
+            display: block;
           }
 
           .big-title {
@@ -331,9 +350,8 @@ export default function BannerClient() {
             bottom: 40px;
           }
 
-          .scroll-text {
+          .scroll-text-mobile {
             font-size: 11px;
-            display: none;
           }
         }
       `}</style>
