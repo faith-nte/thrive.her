@@ -56,35 +56,38 @@ export default function Testimonial() {
       {/*Testimonial One Start */}
       <section
         className="testimonial-one"
-        style={{ backgroundColor: "transparent", padding: "80px 0" }}
+        style={{
+          background:
+            "linear-gradient(135deg, #21273F 0%, #2a3456 25%, #1f2438 50%, #252e4a 75%, #21273F 100%)",
+          padding: "80px 0",
+        }}
       >
         <div className="container">
           <div className="section-title text-center sec-title-animation animation-style1">
             <div className="section-title__tagline-box">
               <span
                 className="section-title__tagline"
-                style={{ color: "#D1A38A", fontWeight: "600" }}
+                style={{ color: "#C78E1D", fontWeight: "600" }}
               >
-                Testimonial
+                Testimonials
               </span>
             </div>
             <h2
               className="section-title__title title-animation"
-              style={{ color: "#21273F", fontSize: "42px", fontWeight: "700" }}
+              style={{ color: "#ffffff", fontSize: "42px", fontWeight: "700" }}
             >
-              ThriveHer.Clinic <br />{" "}
-              <span style={{ color: "#D1A38A" }}>Feedback</span>
+              What Women Who took our training are saying
             </h2>
             <p
               style={{
                 marginTop: "20px",
-                color: "#666",
+                color: "#d0d5e5",
                 fontSize: "16px",
                 maxWidth: "700px",
                 margin: "20px auto 0",
               }}
             >
-              Real experiences from women in our community
+              Real experiences
             </p>
           </div>
           <Swiper
@@ -98,66 +101,70 @@ export default function Testimonial() {
                 <div
                   className="testimonial-one__single"
                   style={{
-                    background: "#fff",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(10px)",
+                    borderTop: "3px solid #C78E1D",
                     padding: "40px 30px",
                     borderRadius: "12px",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                    border: "1px solid #f0ede8",
+                    boxShadow:
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(199, 142, 29, 0.25)",
                     transition: "all 0.3s ease",
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "space-between",
                     cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(199, 142, 29, 0.15)";
-                    e.currentTarget.style.transform = "translateY(-4px)";
+                      "0 8px 24px rgba(199, 142, 29, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.transform =
+                      "translateY(-4px) scale(1.02)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.4)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 2px 12px rgba(0,0,0,0.08)";
-                    e.currentTarget.style.transform = "translateY(0)";
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.25)";
                   }}
                 >
-                  <div
-                    className="testimonial-one__rating"
-                    style={{ marginBottom: "20px", fontSize: "16px" }}
-                  >
+                  <div style={{ marginBottom: "20px" }}>
                     <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A" }}
-                    ></span>
+                      style={{
+                        fontSize: "36px",
+                        color: "#C78E1D",
+                        fontWeight: "300",
+                        lineHeight: "1",
+                      }}
+                    >
+                      "
+                    </span>
                   </div>
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#21273F",
-                      fontSize: "16px",
+                      color: "#ffffff",
+                      fontSize: "18px",
                       fontWeight: "500",
-                      lineHeight: "1.6",
-                      margin: "0",
+                      lineHeight: "1.7",
+                      margin: "0 0 20px 0",
                     }}
                   >
                     It's a women's service from a Muslim perspective.
                   </p>
+                  <div
+                    style={{
+                      color: "#d0d5e5",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Happy client
+                  </div>
                 </div>
               </div>
               {/*Testimonial One Single End */}
@@ -168,66 +175,70 @@ export default function Testimonial() {
                 <div
                   className="testimonial-one__single"
                   style={{
-                    background: "#fff",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(10px)",
+                    borderTop: "3px solid #C78E1D",
                     padding: "40px 30px",
                     borderRadius: "12px",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                    border: "1px solid #f0ede8",
+                    boxShadow:
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(199, 142, 29, 0.25)",
                     transition: "all 0.3s ease",
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "space-between",
                     cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(209, 163, 138, 0.15)";
-                    e.currentTarget.style.transform = "translateY(-4px)";
+                      "0 8px 24px rgba(199, 142, 29, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.transform =
+                      "translateY(-4px) scale(1.02)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.4)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 2px 12px rgba(0,0,0,0.08)";
-                    e.currentTarget.style.transform = "translateY(0)";
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.25)";
                   }}
                 >
-                  <div
-                    className="testimonial-one__rating"
-                    style={{ marginBottom: "20px", fontSize: "16px" }}
-                  >
+                  <div style={{ marginBottom: "20px" }}>
                     <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A" }}
-                    ></span>
+                      style={{
+                        fontSize: "36px",
+                        color: "#C78E1D",
+                        fontWeight: "300",
+                        lineHeight: "1",
+                      }}
+                    >
+                      "
+                    </span>
                   </div>
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#21273F",
-                      fontSize: "16px",
+                      color: "#ffffff",
+                      fontSize: "18px",
                       fontWeight: "500",
-                      lineHeight: "1.6",
-                      margin: "0",
+                      lineHeight: "1.7",
+                      margin: "0 0 20px 0",
                     }}
                   >
                     Feel Like Yourself Again.
                   </p>
+                  <div
+                    style={{
+                      color: "#d0d5e5",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Happy client
+                  </div>
                 </div>
               </div>
               {/*Testimonial One Single End */}
@@ -238,66 +249,70 @@ export default function Testimonial() {
                 <div
                   className="testimonial-one__single"
                   style={{
-                    background: "#fff",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(10px)",
+                    borderTop: "3px solid #C78E1D",
                     padding: "40px 30px",
                     borderRadius: "12px",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                    border: "1px solid #f0ede8",
+                    boxShadow:
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(199, 142, 29, 0.25)",
                     transition: "all 0.3s ease",
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "space-between",
                     cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(209, 163, 138, 0.15)";
-                    e.currentTarget.style.transform = "translateY(-4px)";
+                      "0 8px 24px rgba(199, 142, 29, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.transform =
+                      "translateY(-4px) scale(1.02)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.4)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 2px 12px rgba(0,0,0,0.08)";
-                    e.currentTarget.style.transform = "translateY(0)";
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.25)";
                   }}
                 >
-                  <div
-                    className="testimonial-one__rating"
-                    style={{ marginBottom: "20px", fontSize: "16px" }}
-                  >
+                  <div style={{ marginBottom: "20px" }}>
                     <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A" }}
-                    ></span>
+                      style={{
+                        fontSize: "36px",
+                        color: "#C78E1D",
+                        fontWeight: "300",
+                        lineHeight: "1",
+                      }}
+                    >
+                      "
+                    </span>
                   </div>
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#21273F",
-                      fontSize: "16px",
+                      color: "#ffffff",
+                      fontSize: "18px",
                       fontWeight: "500",
-                      lineHeight: "1.6",
-                      margin: "0",
+                      lineHeight: "1.7",
+                      margin: "0 0 20px 0",
                     }}
                   >
                     The guide looks very simple but very informative.
                   </p>
+                  <div
+                    style={{
+                      color: "#d0d5e5",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Happy client
+                  </div>
                 </div>
               </div>
               {/*Testimonial One Single End */}
@@ -308,67 +323,71 @@ export default function Testimonial() {
                 <div
                   className="testimonial-one__single"
                   style={{
-                    background: "#fff",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(10px)",
+                    borderTop: "3px solid #C78E1D",
                     padding: "40px 30px",
                     borderRadius: "12px",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                    border: "1px solid #f0ede8",
+                    boxShadow:
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(199, 142, 29, 0.25)",
                     transition: "all 0.3s ease",
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "space-between",
                     cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(209, 163, 138, 0.15)";
-                    e.currentTarget.style.transform = "translateY(-4px)";
+                      "0 8px 24px rgba(199, 142, 29, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.transform =
+                      "translateY(-4px) scale(1.02)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.4)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 2px 12px rgba(0,0,0,0.08)";
-                    e.currentTarget.style.transform = "translateY(0)";
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.25)";
                   }}
                 >
-                  <div
-                    className="testimonial-one__rating"
-                    style={{ marginBottom: "20px", fontSize: "16px" }}
-                  >
+                  <div style={{ marginBottom: "20px" }}>
                     <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A" }}
-                    ></span>
+                      style={{
+                        fontSize: "36px",
+                        color: "#C78E1D",
+                        fontWeight: "300",
+                        lineHeight: "1",
+                      }}
+                    >
+                      "
+                    </span>
                   </div>
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#21273F",
-                      fontSize: "16px",
+                      color: "#ffffff",
+                      fontSize: "18px",
                       fontWeight: "500",
-                      lineHeight: "1.6",
-                      margin: "0",
+                      lineHeight: "1.7",
+                      margin: "0 0 20px 0",
                     }}
                   >
                     Supportive for Muslim women's needs that cannot be met
                     elsewhere.
                   </p>
+                  <div
+                    style={{
+                      color: "#d0d5e5",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Happy client
+                  </div>
                 </div>
               </div>
               {/*Testimonial One Single End */}
@@ -379,66 +398,70 @@ export default function Testimonial() {
                 <div
                   className="testimonial-one__single"
                   style={{
-                    background: "#fff",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(10px)",
+                    borderTop: "3px solid #C78E1D",
                     padding: "40px 30px",
                     borderRadius: "12px",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-                    border: "1px solid #f0ede8",
+                    boxShadow:
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)",
+                    border: "1px solid rgba(199, 142, 29, 0.25)",
                     transition: "all 0.3s ease",
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center",
+                    justifyContent: "space-between",
                     cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 8px 24px rgba(209, 163, 138, 0.15)";
-                    e.currentTarget.style.transform = "translateY(-4px)";
+                      "0 8px 24px rgba(199, 142, 29, 0.15), inset 1px 1px 0 rgba(255, 255, 255, 0.15)";
+                    e.currentTarget.style.transform =
+                      "translateY(-4px) scale(1.02)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.4)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow =
-                      "0 2px 12px rgba(0,0,0,0.08)";
-                    e.currentTarget.style.transform = "translateY(0)";
+                      "0 2px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 0 rgba(255, 255, 255, 0.1)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.borderColor =
+                      "rgba(199, 142, 29, 0.25)";
                   }}
                 >
-                  <div
-                    className="testimonial-one__rating"
-                    style={{ marginBottom: "20px", fontSize: "16px" }}
-                  >
+                  <div style={{ marginBottom: "20px" }}>
                     <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A", marginRight: "5px" }}
-                    ></span>
-                    <span
-                      className="fas fa-star"
-                      style={{ color: "#D1A38A" }}
-                    ></span>
+                      style={{
+                        fontSize: "36px",
+                        color: "#C78E1D",
+                        fontWeight: "300",
+                        lineHeight: "1",
+                      }}
+                    >
+                      "
+                    </span>
                   </div>
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#21273F",
-                      fontSize: "16px",
+                      color: "#ffffff",
+                      fontSize: "18px",
                       fontWeight: "500",
-                      lineHeight: "1.6",
-                      margin: "0",
+                      lineHeight: "1.7",
+                      margin: "0 0 20px 0",
                     }}
                   >
                     Useful for everything — and the good thing is it's halal.
                   </p>
+                  <div
+                    style={{
+                      color: "#d0d5e5",
+                      fontSize: "13px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Happy client
+                  </div>
                 </div>
               </div>
               {/*Testimonial One Single End */}

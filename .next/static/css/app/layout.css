@@ -8552,7 +8552,6 @@ Copyright (c) 2015 Daniel Eden
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: var(--anity-black);
     background-blend-mode: luminosity;
     z-index: -1;
 }

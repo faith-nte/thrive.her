@@ -9,6 +9,13 @@ export default function About() {
   };
   return (
     <>
+      <style>{`
+        @media (max-width: 768px) {
+          .about-One__img {
+            display: none !important;
+          }
+        }
+      `}</style>
       {/*About One Start */}
       <section className="about-One">
         <div className="container">
@@ -28,12 +35,15 @@ export default function About() {
                 <div className="about-One__img-box">
                   <div className="about-One__img">
                     <img
-                      src="assets/images/backgrounds/partnerships.png"
+                      src="assets/images/work with us/how-to-work-with-us.png"
                       alt=""
                     />
                   </div>
                   <div className="about-One__img-2">
-                    <img src="assets/images/backgrounds/workshop.png" alt="" />
+                    <img
+                      src="assets/images/work with us/collaboration.png"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -44,9 +54,6 @@ export default function About() {
                 data-wow-delay="300ms"
               >
                 <div className="section-title text-left sec-title-animation animation-style2">
-                  <div className="section-title__tagline-box">
-                    <span className="section-title__tagline">How We Work</span>
-                  </div>
                   <h2 className="section-title__title title-animation">
                     Ways to Work
                     <br /> With Us

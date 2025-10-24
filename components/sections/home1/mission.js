@@ -26,21 +26,13 @@ export default function Donation() {
               style={{ backgroundColor: "#21273F" }}
             >
               <div className="section-title-two text-left sec-title-animation animation-style2">
-                <div className="section-title-two__tagline-box">
-                  <span
-                    className="section-title-two__tagline"
-                    style={{ color: "#D1A38A" }}
-                  >
-                    Our Mission
-                  </span>
-                </div>
                 <h2
                   className="section-title-two__title title-animation"
                   style={{ color: "#fdf3e4" }}
                 >
-                  To bridge medicine, faith, and culture through doctor-led,
-                  multilingual programmes — empowering women and improving
-                  outcomes for every community.
+                  Our mission is to bridge medicine, faith, and culture through
+                  doctor-led, multilingual programmes empowering women and
+                  improving outcomes for every community.
                 </h2>
               </div>
               <div className="donation-one__donate-box">
