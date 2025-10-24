@@ -73,15 +73,18 @@
 /* Mobile responsiveness */
 @media (max-width: 767px) {
   .hero-buttons {
-    flex-direction: column !important;
-    width: 100% !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    width: auto !important;
     gap: 0.75rem !important;
+    justify-content: flex-start !important;
   }
   
   .hero-buttons .primary-btn,
   .hero-buttons .secondary-btn {
-    width: 100% !important;
+    width: auto !important;
     font-size: 0.9rem !important;
     padding: 0.65rem 1rem !important;
+    white-space: nowrap !important;
   }
 }
