@@ -54,15 +54,23 @@ function useCardTilt(cardCount) {
 
 // Add responsive styles
 const gridStyles = `
+  @media (max-width: 1024px) {
+    .stats-block {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
   @media (max-width: 768px) {
     .stats-block {
       grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+      padding: 0 16px !important;
     }
   }
   @media (max-width: 480px) {
     .stats-block {
       grid-template-columns: 1fr !important;
       gap: 1rem !important;
+      padding: 0 12px !important;
     }
   }
   @keyframes bounce {
@@ -93,7 +101,9 @@ export default function WhyThisWorkMattersInfographic() {
       {
         label: "Maternal Mortality Rate",
         data: [1, 3.7, 1.8],
-        backgroundColor: ["#A7B093", "#D1A38A", "#C78E1D"],
+        backgroundColor: ["#A7B093", "#21273F", "#3A3F4D"],
+        borderRadius: 8,
+        borderSkipped: false,
       },
     ],
   };
@@ -151,7 +161,7 @@ export default function WhyThisWorkMattersInfographic() {
         {/* Chart display - moved to top */}
         <div
           className="row justify-content-center mb-5"
-          style={{ marginTop: "60px", marginBottom: "7rem" }}
+          style={{ marginTop: "60px", marginBottom: "12rem" }}
         >
           <div className="col-lg-10">
             <motion.div
@@ -173,14 +183,62 @@ export default function WhyThisWorkMattersInfographic() {
                 transition: "all 0.3s ease",
               }}
             >
+              <h3
+                style={{
+                  textAlign: "center",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  color: "#21273F",
+                  marginBottom: "24px",
+                  marginTop: "0px",
+                }}
+              >
+                Maternal Mortality Rate by Ethnicity
+              </h3>
               <div
                 style={{
                   height: "280px",
                   width: "100%",
                   position: "relative",
-                  marginBottom: "16px",
+                  marginBottom: "60px",
                 }}
               >
+                {/* Callout indicator for Black bar */}
+                <div
+                  style={{
+                    position: "absolute",
+                    right: "15%",
+                    top: "90px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "0px",
+                    zIndex: 10,
+                  }}
+                >
+                  <span
+                    style={{
+                      backgroundColor: "#C78E1D",
+                      color: "#FFFFFF",
+                      padding: "4px 10px",
+                      borderRadius: "12px",
+                      fontSize: "12px",
+                      fontWeight: "bold",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    3.7x Higher
+                  </span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ fill: "#C78E1D", marginTop: "-3px" }}
+                  >
+                    <path d="M8 20L0 8H16L8 20Z" />
+                  </svg>
+                </div>
                 <Bar data={data} options={options} />
               </div>
               <p
@@ -201,7 +259,7 @@ export default function WhyThisWorkMattersInfographic() {
         </div>
         <div
           className="section-title text-center mb-5"
-          style={{ marginBottom: "5rem" }}
+          style={{ marginBottom: "12rem", marginTop: "2rem" }}
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -213,7 +271,7 @@ export default function WhyThisWorkMattersInfographic() {
               style={{
                 maxWidth: "800px",
                 margin: "0 auto 24px",
-                fontSize: "clamp(1.5rem, 4vw, 3rem)",
+                fontSize: "clamp(2rem, 5.5vw, 3.5rem)",
                 color: "#21273F",
                 lineHeight: 1.4,
                 fontWeight: 700,
@@ -261,33 +319,7 @@ export default function WhyThisWorkMattersInfographic() {
                 />
               </svg>
             </div>
-            {/* Humanized chart caption */}
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              style={{
-                textAlign: "center",
-                fontSize: "clamp(0.95rem, 1.8vw, 1.2rem)",
-                color: "#21273F",
-                fontWeight: 600,
-                marginBottom: "48px",
-                lineHeight: 1.7,
-                backgroundColor: "rgba(199, 142, 29, 0.08)",
-                padding: "20px 24px",
-                borderRadius: "12px",
-                border: "2px solid #C78E1D",
-                position: "relative",
-              }}
-            >
-              Black women are almost four times more likely to die during
-              pregnancy.
-              <br />
-              Asian women are nearly twice as likely.
-              <br />
-              This gap has barely changed in a decade.
-            </motion.p>
+            {/* Humanized chart caption removed */}
           </div>
         </div>
         {/* Interactive Stats Block */}
@@ -375,38 +407,6 @@ function StatsBlockInteractive() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Heart with pulse */}
-          <path
-            d="M12 2C12 2 5 8 5 13C5 16.3137 7.68629 19 11 19C13.21 19 15.16 17.9 16.2 16.2C17.24 17.9 19.19 19 21.4 19C23.7137 19 26 16.3137 26 13C26 8 19 2 12 2Z"
-            fill="currentColor"
-            fillOpacity="0.2"
-          />
-          <path
-            d="M12 4C12 4 6 9 6 13C6 15.76 8.24 18 11 18C12.6 18 14.07 17.27 15 16.11C15.93 17.27 17.4 18 19 18C20.76 18 22 16.76 22 15C22 13.5 20.5 9 12 4Z"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
-      title: "The Risk That Persists",
-      figure: "3.7× / 1.8×",
-      accentColor: "#21273F",
-      highlight:
-        "Black and Asian women face far greater risk in pregnancy. These are not just numbers but lives cut short.",
-      humanInsight: null,
-      source: "MBRRACE-UK (2023)",
-    },
-    {
-      icon: (
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
           {/* Two people talking */}
           <circle cx="7" cy="6" r="2" fill="currentColor" fillOpacity="0.3" />
           <circle cx="17" cy="6" r="2" fill="currentColor" fillOpacity="0.3" />
@@ -422,13 +422,14 @@ function StatsBlockInteractive() {
           />
         </svg>
       ),
-      title: "When Care Misses Culture",
-      figure: "Language barriers still exist",
+      title: "Language barriers still exist",
+      figure: "When culture is misunderstood, care misses warning signs.",
       accentColor: "#21273F",
-      highlight:
-        "When culture or faith is not understood, warning signs are lost. Understanding saves time, trust and lives.",
+      highlight: "Understanding saves time, trust, and lives.",
       humanInsight: null,
       source: "CORE20PLUS5 (2023)",
+      imagePlaceholder:
+        "/assets/images/infographic-images/misunderstood-culture.png",
     },
     {
       icon: (
@@ -463,13 +464,13 @@ function StatsBlockInteractive() {
           />
         </svg>
       ),
-      title: "Bias Delays the Diagnosis",
-      figure: "Delays cost lives",
+      title: "Delays cost lives",
+      figure: "Unseen bias means symptoms are missed until it's too late.",
       accentColor: "#21273F",
-      highlight:
-        "Unseen bias means symptoms are missed until it is too late. Listening early can prevent harm.",
+      highlight: "Listening early can prevent harm.",
       humanInsight: null,
       source: "Women's Health Strategy (2022)",
+      imagePlaceholder: "/assets/images/infographic-images/unconcious-bias.png",
     },
     {
       icon: (
@@ -497,13 +498,13 @@ function StatsBlockInteractive() {
           />
         </svg>
       ),
-      title: "The Cost of Delay",
-      figure: "£2 billion each year",
+      title: "£2 billion each year",
+      figure: "Late action costs the NHS and families peace of mind.",
       accentColor: "#21273F",
-      highlight:
-        "Late action costs the NHS billions and families their peace. Fair, faster care protects everyone.",
+      highlight: "Faster, fairer care protects everyone.",
       humanInsight: null,
       source: "NHS England (2022)",
+      imagePlaceholder: "/assets/images/infographic-images/cost-nhs.png",
     },
   ];
 
@@ -514,9 +515,9 @@ function StatsBlockInteractive() {
       className="stats-block"
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
+        gridTemplateColumns: "repeat(3, 1fr)",
         gap: "2rem",
-        margin: "80px auto 3rem",
+        margin: "0 auto 3rem",
         maxWidth: "1200px",
         background: "transparent",
         borderRadius: "16px",
@@ -531,7 +532,7 @@ function StatsBlockInteractive() {
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{
               y: -4,
-              scale: 1.01,
+              scale: 1.05,
               boxShadow: "0 12px 32px rgba(33, 39, 63, 0.12)",
             }}
             whileTap={{ scale: 0.98 }}
@@ -542,32 +543,53 @@ function StatsBlockInteractive() {
             }}
             viewport={{ once: true }}
             style={{
-              textAlign: "left",
-              background: "rgba(167, 176, 147, 0.08)",
+              textAlign: "center",
+              background: "transparent",
               borderRadius: "16px",
-              border: `2px solid ${stat.accentColor}`,
-              borderLeft: `4px solid ${stat.accentColor}`,
-              backdropFilter: "blur(4px)",
-              boxShadow: "0 4px 12px rgba(33, 39, 63, 0.08)",
-              padding: "36px 32px",
+              backdropFilter: "none",
+              boxShadow: "none",
+              padding: "32px 28px",
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-start",
+              alignItems: "center",
               cursor: "pointer",
               transition: "all 0.3s ease",
             }}
             onMouseMove={(e) => handleMouseMove(idx, e)}
             onMouseLeave={() => handleMouseLeave(idx)}
           >
-            <div style={{ marginBottom: "16px", color: stat.accentColor }}>
-              {stat.icon}
+            {/* Image placeholder */}
+            <div
+              style={{
+                width: "100%",
+                height: "200px",
+                marginBottom: "20px",
+                borderRadius: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
+                fontSize: "0.9rem",
+                color: "#888888",
+                fontWeight: 500,
+              }}
+            >
+              <img
+                src={stat.imagePlaceholder}
+                alt={stat.title}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                }}
+              />
             </div>
             <div
               style={{
-                fontSize: "clamp(2rem, 3.5vw, 2.5rem)",
+                fontSize: "clamp(1.8rem, 4vw, 2.3rem)",
                 color: stat.accentColor,
                 fontWeight: 800,
-                marginBottom: "16px",
+                marginBottom: "12px",
                 letterSpacing: "-0.8px",
               }}
             >
@@ -576,50 +598,27 @@ function StatsBlockInteractive() {
             <p
               style={{
                 fontSize: "0.95rem",
+                color: "#3B3E52",
+                fontWeight: 600,
+                lineHeight: 1.5,
+                marginBottom: "8px",
+                margin: "0 0 8px 0",
+              }}
+            >
+              {stat.title}
+            </p>
+            <p
+              style={{
+                fontSize: "0.85rem",
                 color: "#21273F",
-                marginBottom: "16px",
-                lineHeight: 1.7,
-                flex: 1,
+                lineHeight: 1.6,
                 fontWeight: 400,
-                opacity: 0.9,
+                opacity: 0.85,
+                margin: 0,
               }}
             >
               {stat.highlight}
             </p>
-            {stat.humanInsight && (
-              <div
-                style={{
-                  paddingTop: "12px",
-                  borderTop: "1px solid rgba(33, 39, 63, 0.08)",
-                  marginBottom: "12px",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "0.9rem",
-                    color: "#21273F",
-                    fontWeight: 500,
-                    fontStyle: "italic",
-                    lineHeight: 1.5,
-                    margin: 0,
-                    opacity: 0.85,
-                  }}
-                >
-                  {stat.humanInsight}
-                </p>
-              </div>
-            )}
-            <span
-              style={{
-                fontSize: "0.8rem",
-                color: "#21273F",
-                fontStyle: "italic",
-                marginTop: "auto",
-                opacity: 0.7,
-              }}
-            >
-              {stat.source}
-            </span>
           </motion.div>
         );
       })}
