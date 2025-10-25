@@ -21,8 +21,19 @@ export default function About() {
         }
       `}</style>
       {/*About One Start */}
-      <section className="about-One" style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}>
-        <div className="container">
+      <section
+        className="about-One"
+        style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}
+      >
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            minHeight: "100%",
+          }}
+        >
           <div className="row">
             <div className="col-xl-6">
               <div
@@ -357,7 +368,15 @@ export default function About() {
           <rect width="200" height="200" fill="url(#geometric2)" />
         </svg>
 
-        <div className="container">
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            minHeight: "100%",
+          }}
+        >
           <div
             className="cta-one__inner"
             style={{

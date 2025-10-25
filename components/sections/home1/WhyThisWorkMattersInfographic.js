@@ -158,7 +158,14 @@ export default function WhyThisWorkMattersInfographic() {
       ></div>
       <div
         className="container"
-        style={{ maxWidth: "1100px", margin: "0 auto" }}
+        style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          minHeight: "100%",
+        }}
       >
         {/* Chart display - moved to top */}
         <div

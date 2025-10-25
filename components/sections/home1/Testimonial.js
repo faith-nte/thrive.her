@@ -64,7 +64,7 @@ export default function Testimonial() {
           paddingBottom: "80px",
         }}
       >
-        <div className="container">
+        <div className="container" style={{ display: "flex", flexDirection: "column", justifyContent: "center", minHeight: "100%" }}>
           <div className="section-title text-center sec-title-animation animation-style1">
             <div className="section-title__tagline-box">
               <span

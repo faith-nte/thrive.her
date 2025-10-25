@@ -122,7 +122,15 @@ export default function Donation() {
         className="donation-one"
         style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}
       >
-        <div className="donation-one__wrapper">
+        <div
+          className="donation-one__wrapper"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            minHeight: "100%",
+          }}
+        >
           <div className="donation-one__left">
             <div
               className="donation-one__left-bg"
