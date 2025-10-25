@@ -138,10 +138,12 @@ export default function WhyThisWorkMattersInfographic() {
       style={{
         background: "var(--thriveher-cream)",
         minHeight: "80vh",
-        paddingTop: "80px",
-        paddingBottom: "80px",
+        padding: "0",
         position: "relative",
         overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
       {/* Subtle texture overlay */}
@@ -161,10 +163,6 @@ export default function WhyThisWorkMattersInfographic() {
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          minHeight: "100%",
         }}
       >
         {/* Chart display - moved to top */}

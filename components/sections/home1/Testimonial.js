@@ -60,11 +60,15 @@ export default function Testimonial() {
           background:
             "linear-gradient(135deg, #21273F 0%, #2a3456 25%, #1f2438 50%, #252e4a 75%, #21273F 100%)",
           minHeight: "80vh",
-          paddingTop: "80px",
-          paddingBottom: "80px",
+          padding: "0",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
-        <div className="container" style={{ display: "flex", flexDirection: "column", justifyContent: "center", minHeight: "100%" }}>
+        <div
+          className="container"
+        >
           <div className="section-title text-center sec-title-animation animation-style1">
             <div className="section-title__tagline-box">
               <span

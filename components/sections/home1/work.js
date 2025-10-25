@@ -23,16 +23,10 @@ export default function About() {
       {/*About One Start */}
       <section
         className="about-One"
-        style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}
+        style={{ minHeight: "80vh", padding: "0", display: "flex", flexDirection: "column", justifyContent: "center" }}
       >
         <div
           className="container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            minHeight: "100%",
-          }}
         >
           <div className="row">
             <div className="col-xl-6">
@@ -276,8 +270,10 @@ export default function About() {
           position: "relative",
           overflow: "hidden",
           minHeight: "80vh",
-          paddingTop: "80px",
-          paddingBottom: "80px",
+          padding: "0",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
         {/* Islamic Geometric Decoration - Top Right */}
@@ -371,10 +367,8 @@ export default function About() {
         <div
           className="container"
           style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            minHeight: "100%",
+            position: "relative",
+            zIndex: 2,
           }}
         >
           <div

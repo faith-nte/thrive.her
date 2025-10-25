@@ -120,16 +120,10 @@ export default function Donation() {
       {/*Donation One Start */}
       <section
         className="donation-one"
-        style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}
+        style={{ minHeight: "80vh", padding: "0", display: "flex", flexDirection: "column", justifyContent: "center" }}
       >
         <div
           className="donation-one__wrapper"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            minHeight: "100%",
-          }}
         >
           <div className="donation-one__left">
             <div
