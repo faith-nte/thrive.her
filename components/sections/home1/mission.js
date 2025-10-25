@@ -145,7 +145,6 @@ export default function Donation() {
             <div
               style={{
                 position: "relative",
-
                 background:
                   "linear-gradient(135deg, rgba(33, 39, 63, 0.95) 0%, rgba(33, 39, 63, 0.85) 100%)",
                 borderRadius: "40px 60px 50px 45px / 45px 50px 60px 40px",
