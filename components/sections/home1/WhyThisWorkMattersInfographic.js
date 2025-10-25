@@ -355,14 +355,13 @@ export default function WhyThisWorkMattersInfographic() {
                 One conversation, one lesson, one act of care at a time.
               </p>
             </motion.div>
-            <motion.a
-              href="/training"
+            <motion.button
+              onClick={() => (window.location.href = "/training")}
+              className="thm-btn"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{
-                backgroundColor: "#C78E1D",
-                color: "#fff",
-                boxShadow: "0 8px 24px rgba(199, 142, 29, 0.25)",
+                boxShadow: "0 8px 24px rgba(33, 39, 63, 0.25)",
               }}
               whileTap={{ scale: 0.96 }}
               transition={{
@@ -371,24 +370,11 @@ export default function WhyThisWorkMattersInfographic() {
               }}
               viewport={{ once: true }}
               style={{
-                display: "inline-block",
-                paddingTop: "16px",
-                paddingBottom: "16px",
-                paddingLeft: "40px",
-                paddingRight: "40px",
-                backgroundColor: "#21273F",
-                color: "#fff",
-                textDecoration: "none",
-                borderRadius: "50px",
-                fontWeight: 700,
-                fontSize: "1.125rem",
-                cursor: "pointer",
-                border: "none",
                 marginTop: "24px",
               }}
             >
               Explore Our Training
-            </motion.a>
+            </motion.button>
           </div>
         </div>
       </div>

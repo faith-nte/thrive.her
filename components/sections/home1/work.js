@@ -124,18 +124,19 @@ export default function About() {
                             <ul
                               className="tab-buttons clearfix list-unstyled"
                               style={{
-                                marginBottom: "16px",
+                                marginBottom: "20px",
                                 display: "flex",
                                 gap: "30px",
-                                borderBottom: "1px solid #E8D4C4",
-                                paddingBottom: "12px",
+                                borderBottom: "none",
+                                paddingBottom: "0",
+                                flexWrap: "wrap",
                               }}
                             >
                               <li
                                 onClick={() => handleTrainerClick(1)}
                                 style={{
                                   cursor: "pointer",
-                                  padding: "0 0 12px 0",
+                                  padding: "0",
                                   borderBottom:
                                     activeTrainerIndex == 1
                                       ? "3px solid #D1A38A"
@@ -143,11 +144,12 @@ export default function About() {
                                   color:
                                     activeTrainerIndex == 1
                                       ? "#21273F"
-                                      : "#666",
+                                      : "#888",
                                   fontWeight:
                                     activeTrainerIndex == 1 ? "600" : "500",
                                   fontSize: "15px",
                                   transition: "all 0.3s ease",
+                                  whiteSpace: "nowrap",
                                 }}
                               >
                                 <span>Community Champions</span>
@@ -156,7 +158,7 @@ export default function About() {
                                 onClick={() => handleTrainerClick(2)}
                                 style={{
                                   cursor: "pointer",
-                                  padding: "0 0 12px 0",
+                                  padding: "0",
                                   borderBottom:
                                     activeTrainerIndex == 2
                                       ? "3px solid #D1A38A"
@@ -164,11 +166,12 @@ export default function About() {
                                   color:
                                     activeTrainerIndex == 2
                                       ? "#21273F"
-                                      : "#666",
+                                      : "#888",
                                   fontWeight:
                                     activeTrainerIndex == 2 ? "600" : "500",
                                   fontSize: "15px",
                                   transition: "all 0.3s ease",
+                                  whiteSpace: "nowrap",
                                 }}
                               >
                                 <span>Clinical Leaders</span>
@@ -241,87 +244,291 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="about-One__btn-and-need-help">
-                  <div
-                    style={{
-                      backgroundColor: "rgba(253, 243, 228, 0.7)",
-                      borderRadius: "12px",
-                      padding: "20px",
-                      marginTop: "20px",
-                      boxShadow: "0 4px 12px rgba(33, 39, 63, 0.08)",
-                      border: "1px solid rgba(199, 142, 29, 0.15)",
-                    }}
-                  >
-                    <h4
-                      style={{
-                        color: "#21273F",
-                        fontWeight: 700,
-                        fontSize: "16px",
-                        margin: "0 0 12px 0",
-                      }}
-                    >
-                      For women who want to master their hormones
-                    </h4>
-                    <p
-                      style={{
-                        color: "#21273F",
-                        fontSize: "14px",
-                        lineHeight: "1.6",
-                        margin: "0 0 16px 0",
-                      }}
-                    >
-                      Sign up to receive our Hormonal Reset Guide – A free
-                      digital guide combining evidence and Islamic principles.
-                    </p>
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      style={{
-                        width: "100%",
-                        padding: "10px 12px",
-                        borderRadius: "6px",
-                        border: "1px solid rgba(33, 39, 63, 0.2)",
-                        fontSize: "14px",
-                        color: "#21273F",
-                        boxSizing: "border-box",
-                        marginBottom: "12px",
-                      }}
-                    />
-                    <button
-                      style={{
-                        width: "100%",
-                        backgroundColor: "#D1A38A",
-                        color: "#fff",
-                        border: "none",
-                        padding: "10px 12px",
-                        borderRadius: "6px",
-                        fontSize: "14px",
-                        fontWeight: 600,
-                        cursor: "pointer",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#c49279";
-                        e.currentTarget.style.transform = "translateY(-2px)";
-                        e.currentTarget.style.boxShadow =
-                          "0 4px 12px rgba(209, 163, 138, 0.3)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#D1A38A";
-                        e.currentTarget.style.transform = "translateY(0)";
-                        e.currentTarget.style.boxShadow = "none";
-                      }}
-                    >
-                      Get Guide
-                    </button>
-                  </div>
-                </div>
+                <div className="about-One__btn-and-need-help"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
       {/*About One End */}
+
+      {/* Hormonal Reset Guide CTA Section - Premium Design */}
+      <section
+        className="cta-one"
+        style={{
+          background: "#1a1f2e",
+          backgroundImage: `
+            repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(199, 142, 29, 0.03) 35px, rgba(199, 142, 29, 0.03) 70px),
+            repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(199, 142, 29, 0.02) 35px, rgba(199, 142, 29, 0.02) 70px),
+            repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(199, 142, 29, 0.02) 50px, rgba(199, 142, 29, 0.02) 100px)
+          `,
+          position: "relative",
+          overflow: "hidden",
+          paddingTop: "80px",
+          paddingBottom: "80px",
+        }}
+      >
+        {/* Islamic Geometric Decoration - Top Right */}
+        <svg
+          style={{
+            position: "absolute",
+            top: "-50px",
+            right: "-50px",
+            width: "300px",
+            height: "300px",
+            opacity: "0.05",
+            pointerEvents: "none",
+          }}
+          viewBox="0 0 200 200"
+        >
+          <defs>
+            <pattern
+              id="geometric"
+              x="0"
+              y="0"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="20" cy="20" r="2" fill="#C78E1D" />
+              <path
+                d="M 20 10 L 30 20 L 20 30 L 10 20 Z"
+                fill="none"
+                stroke="#C78E1D"
+                strokeWidth="0.5"
+              />
+            </pattern>
+          </defs>
+          <rect width="200" height="200" fill="url(#geometric)" />
+        </svg>
+
+        {/* Islamic Geometric Decoration - Bottom Left */}
+        <svg
+          style={{
+            position: "absolute",
+            bottom: "-80px",
+            left: "-80px",
+            width: "400px",
+            height: "400px",
+            opacity: "0.04",
+            pointerEvents: "none",
+          }}
+          viewBox="0 0 200 200"
+        >
+          <defs>
+            <pattern
+              id="geometric2"
+              x="0"
+              y="0"
+              width="50"
+              height="50"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="25" cy="25" r="1.5" fill="#C78E1D" />
+              <circle
+                cx="25"
+                cy="25"
+                r="3"
+                fill="none"
+                stroke="#C78E1D"
+                strokeWidth="0.3"
+              />
+              <line
+                x1="25"
+                y1="5"
+                x2="25"
+                y2="45"
+                stroke="#C78E1D"
+                strokeWidth="0.2"
+                opacity="0.5"
+              />
+              <line
+                x1="5"
+                y1="25"
+                x2="45"
+                y2="25"
+                stroke="#C78E1D"
+                strokeWidth="0.2"
+                opacity="0.5"
+              />
+            </pattern>
+          </defs>
+          <rect width="200" height="200" fill="url(#geometric2)" />
+        </svg>
+
+        <div className="container">
+          <div
+            className="cta-one__inner"
+            style={{
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
+            {/* Content Wrapper - Compact Rounded Box */}
+            <div
+              style={{
+                background: "#A7B093",
+                borderRadius: "20px 28px 24px 22px / 22px 24px 28px 20px",
+                padding: "40px 45px",
+                maxWidth: "700px",
+                margin: "0 auto",
+                boxShadow:
+                  "0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(253, 243, 228, 0.15)",
+                backdropFilter: "blur(10px)",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              {/* Subtle shine effect */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: "1px",
+                  background:
+                    "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)",
+                  pointerEvents: "none",
+                }}
+              />
+
+              {/* Content */}
+              <div style={{ position: "relative", zIndex: 1 }}>
+                <div
+                  className="cta-one__title-box sec-title-animation animation-style1"
+                  style={{
+                    marginBottom: "16px",
+                  }}
+                >
+                  <h2
+                    className="cta-one__title title-animation"
+                    style={{
+                      color: "#21273F",
+                      fontSize: "clamp(1.5rem, 5vw, 2rem)",
+                      lineHeight: "1.3",
+                      fontWeight: "700",
+                      textShadow: "none",
+                    }}
+                  >
+                    For women who want to master their hormones
+                  </h2>
+                </div>
+
+                <p
+                  style={{
+                    color: "#444444",
+                    fontSize: "clamp(0.95rem, 2.5vw, 1.05rem)",
+                    lineHeight: "1.7",
+                    marginBottom: "30px",
+                    opacity: "1",
+                    textShadow: "none",
+                  }}
+                >
+                  Sign up to receive our{" "}
+                  <span style={{ fontWeight: "600" }}>
+                    Hormonal Reset Guide
+                  </span>{" "}
+                  – A free digital guide combining evidence and Islamic
+                  principles.
+                </p>
+
+                {/* Email Input & Button Container */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "14px",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    style={{
+                      width: "100%",
+                      maxWidth: "450px",
+                      padding: "14px 18px",
+                      border: "2px solid rgba(255, 255, 255, 0.3)",
+                      borderRadius: "8px",
+                      fontSize: "1rem",
+                      color: "#21273F",
+                      backgroundColor: "#fff",
+                      transition: "all 0.3s ease",
+                      boxSizing: "border-box",
+                      minHeight: "50px",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#fff";
+                      e.target.style.boxShadow =
+                        "0 0 0 3px rgba(255, 255, 255, 0.2)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "rgba(255, 255, 255, 0.3)";
+                      e.target.style.boxShadow = "none";
+                    }}
+                  />
+
+                  <button
+                    className="thm-btn"
+                    style={{
+                      width: "100%",
+                      maxWidth: "450px",
+                      minHeight: "50px",
+                      padding: "14px 24px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "10px",
+                      fontSize: "1rem",
+                      background: "#21273F",
+                      color: "#fff",
+                      border: "2px solid transparent",
+                      backgroundImage:
+                        "linear-gradient(#21273F, #21273F), linear-gradient(135deg, #C78E1D 0%, #A7B093 50%, #C78E1D 100%)",
+                      backgroundOrigin: "border-box",
+                      backgroundClip: "padding-box, border-box",
+                      transition: "all 0.3s ease",
+                      cursor: "pointer",
+                      position: "relative",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background =
+                        "linear-gradient(#1a1f2e, #1a1f2e), linear-gradient(135deg, #C78E1D 0%, #A7B093 50%, #C78E1D 100%)";
+                      e.currentTarget.style.boxShadow =
+                        "0 0 20px rgba(199, 142, 29, 0.3)";
+                      e.currentTarget.style.transform = "translateY(-2px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background =
+                        "linear-gradient(#21273F, #21273F), linear-gradient(135deg, #C78E1D 0%, #A7B093 50%, #C78E1D 100%)";
+                      e.currentTarget.style.boxShadow = "none";
+                      e.currentTarget.style.transform = "translateY(0)";
+                    }}
+                  >
+                    Download Guide Free
+                  </button>
+                </div>
+
+                {/* Trust Note */}
+                <p
+                  style={{
+                    fontSize: "0.85rem",
+                    color: "#444444",
+                    marginTop: "18px",
+                    opacity: "0.9",
+                    textAlign: "center",
+                  }}
+                >
+                  ✓ We respect your privacy. Unsubscribe at any time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

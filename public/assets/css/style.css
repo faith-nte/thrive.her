@@ -440,7 +440,7 @@ ul {
   border: 2px solid var(--color-bg-accent);
   padding: 7px 25px 7px;
   padding-right: 9px;
-  border-radius: 30px;
+  border-radius: 8px;
   transition: 0.5s ease-in-out;
   text-transform: uppercase;
   overflow: hidden;
@@ -514,6 +514,76 @@ ul {
 .thm-btn:disabled:hover {
   background-color: var(--color-bg-section);
   box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+/* Apply thm-btn styling to all other button types */
+.btn.btn-default,
+.bootstrap-touchspin-up,
+.bootstrap-touchspin-down,
+.amount-btn,
+.owl-prev,
+.owl-next {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none !important;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text-on-accent);
+  background-color: var(--color-bg-accent);
+  border: 2px solid var(--color-bg-accent);
+  padding: 7px 25px 7px;
+  padding-right: 9px;
+  border-radius: 8px;
+  transition: 0.5s ease-in-out;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 1.4px;
+  gap: 10px;
+  z-index: 2;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.btn.btn-default:hover,
+.bootstrap-touchspin-up:hover,
+.bootstrap-touchspin-down:hover,
+.amount-btn:hover,
+.owl-prev:hover,
+.owl-next:hover {
+  color: var(--color-text-on-accent);
+  background-color: var(--color-link-hover);
+  border: 2px solid var(--color-link-hover);
+  box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.btn.btn-default:active,
+.bootstrap-touchspin-up:active,
+.bootstrap-touchspin-down:active,
+.amount-btn.active,
+.owl-prev.active,
+.owl-next.active {
+  color: var(--color-text-on-accent);
+  background-color: var(--color-link-hover);
+  border: 2px solid var(--color-link-hover);
+  box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.btn.btn-default:disabled,
+.bootstrap-touchspin-up:disabled,
+.bootstrap-touchspin-down:disabled,
+.amount-btn:disabled,
+.owl-prev:disabled,
+.owl-next:disabled {
+  background-color: var(--color-bg-section);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-bg-section);
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 
