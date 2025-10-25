@@ -57,8 +57,7 @@ export default function Testimonial() {
       <section
         className="testimonial-one"
         style={{
-          background:
-            "linear-gradient(135deg, #21273F 0%, #2a3456 25%, #1f2438 50%, #252e4a 75%, #21273F 100%)",
+          background: "#21273F",
           minHeight: "80vh",
           paddingTop: "10rem",
           paddingBottom: "10rem",
