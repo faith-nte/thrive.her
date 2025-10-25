@@ -21,7 +21,7 @@ export default function About() {
         }
       `}</style>
       {/*About One Start */}
-      <section className="about-One">
+      <section className="about-One" style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-6">
@@ -264,8 +264,9 @@ export default function About() {
           `,
           position: "relative",
           overflow: "hidden",
-          paddingTop: "100px",
-          paddingBottom: "100px",
+          minHeight: "80vh",
+          paddingTop: "80px",
+          paddingBottom: "80px",
         }}
       >
         {/* Islamic Geometric Decoration - Top Right */}

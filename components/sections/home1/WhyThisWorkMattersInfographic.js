@@ -137,7 +137,9 @@ export default function WhyThisWorkMattersInfographic() {
       className="why-this-work-matters-infographic"
       style={{
         background: "var(--thriveher-cream)",
-        padding: "160px 20px 180px",
+        minHeight: "80vh",
+        paddingTop: "80px",
+        paddingBottom: "80px",
         position: "relative",
         overflow: "hidden",
       }}
@@ -270,12 +272,12 @@ export default function WhyThisWorkMattersInfographic() {
             <h2
               style={{
                 maxWidth: "800px",
-                margin: "0 auto 24px",
-                fontSize: "clamp(2rem, 5.5vw, 3.5rem)",
+                margin: "12rem auto 24px",
+                fontSize: "clamp(2rem, 4.5vw, 2.5rem)",
                 color: "#21273F",
                 lineHeight: 1,
-                fontWeight: 700,
-                letterSpacing: "-0.5px",
+                fontWeight: 500,
+                letterSpacing: "-1.5px",
               }}
             >
               Every number represents a woman whose story could have ended
@@ -347,7 +349,7 @@ export default function WhyThisWorkMattersInfographic() {
                   lineHeight: 1.6,
                   marginBottom: "16px",
                   fontWeight: 400,
-                  letterSpacing: "-0.3px",
+                  letterSpacing: "-1px",
                 }}
               >
                 Together, we can close this gap.

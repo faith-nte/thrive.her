@@ -70,8 +70,8 @@ export default function BannerClient() {
                     <div className="big-title">
                       <h2
                         style={{
-                          fontSize: "clamp(2rem, 6vw, 3.5rem)",
-                          lineHeight: "1.2",
+                          fontSize: "clamp(2rem, 6vw, 2.5rem)",
+                          lineHeight: "1",
                           marginBottom: "0.625rem",
                         }}
                       >

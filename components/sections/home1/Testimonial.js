@@ -59,7 +59,9 @@ export default function Testimonial() {
         style={{
           background:
             "linear-gradient(135deg, #21273F 0%, #2a3456 25%, #1f2438 50%, #252e4a 75%, #21273F 100%)",
-          padding: "80px 0 100px 0",
+          minHeight: "80vh",
+          paddingTop: "80px",
+          paddingBottom: "80px",
         }}
       >
         <div className="container">

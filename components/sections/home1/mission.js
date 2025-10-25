@@ -118,7 +118,10 @@ export default function Donation() {
       </div>
 
       {/*Donation One Start */}
-      <section className="donation-one">
+      <section
+        className="donation-one"
+        style={{ minHeight: "80vh", paddingTop: "80px", paddingBottom: "80px" }}
+      >
         <div className="donation-one__wrapper">
           <div className="donation-one__left">
             <div
@@ -142,6 +145,7 @@ export default function Donation() {
             <div
               style={{
                 position: "relative",
+
                 background:
                   "linear-gradient(135deg, rgba(33, 39, 63, 0.95) 0%, rgba(33, 39, 63, 0.85) 100%)",
                 borderRadius: "40px 60px 50px 45px / 45px 50px 60px 40px",
