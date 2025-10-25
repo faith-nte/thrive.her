@@ -264,8 +264,8 @@ export default function About() {
           `,
           position: "relative",
           overflow: "hidden",
-          paddingTop: "80px",
-          paddingBottom: "80px",
+          paddingTop: "100px",
+          paddingBottom: "100px",
         }}
       >
         {/* Islamic Geometric Decoration - Top Right */}

@@ -145,7 +145,7 @@ export default function Donation() {
                 background:
                   "linear-gradient(135deg, rgba(33, 39, 63, 0.95) 0%, rgba(33, 39, 63, 0.85) 100%)",
                 borderRadius: "40px 60px 50px 45px / 45px 50px 60px 40px",
-                padding: "60px 48px",
+                padding: "155px 48px",
                 boxShadow:
                   "0 12px 40px rgba(33, 39, 63, 0.25), inset 0 1px 0 rgba(253, 243, 228, 0.1), inset 0 -1px 20px rgba(199, 142, 29, 0.08)",
                 border: "1px solid rgba(199, 142, 29, 0.12)",

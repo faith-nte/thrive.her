@@ -137,7 +137,7 @@ export default function WhyThisWorkMattersInfographic() {
       className="why-this-work-matters-infographic"
       style={{
         background: "var(--thriveher-cream)",
-        padding: "120px 20px 140px",
+        padding: "160px 20px 180px",
         position: "relative",
         overflow: "hidden",
       }}
