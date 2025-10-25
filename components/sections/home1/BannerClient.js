@@ -317,7 +317,7 @@ export default function BannerClient() {
             right: 1.5rem;
             transform: none;
             margin: 0;
-            position: relative;
+            position: absolute;
           }
 
           .scroll-text {
