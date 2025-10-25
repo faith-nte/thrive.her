@@ -25,8 +25,7 @@ export default function About() {
         style={{
           width: "100%",
           height: "140px",
-          background:
-            "linear-gradient(180deg, #F9E8CF 0%, #A7B093 100%)",
+          background: "linear-gradient(180deg, #F9E8CF 0%, #A7B093 100%)",
           position: "relative",
           overflow: "hidden",
         }}
@@ -117,11 +116,6 @@ export default function About() {
           flexDirection: "column",
           justifyContent: "center",
           background: "#F9E8CF",
-          backgroundImage: `
-            repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(199, 142, 29, 0.03) 35px, rgba(199, 142, 29, 0.03) 70px),
-            repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(199, 142, 29, 0.02) 35px, rgba(199, 142, 29, 0.02) 70px),
-            repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(199, 142, 29, 0.02) 50px, rgba(199, 142, 29, 0.02) 100px)
-          `,
           position: "relative",
           overflow: "hidden",
         }}
@@ -135,7 +129,8 @@ export default function About() {
             width: "80px",
             height: "80px",
             borderRadius: "50%",
-            background: "radial-gradient(circle at 30% 30%, rgba(199, 142, 29, 0.12), rgba(199, 142, 29, 0.04))",
+            background:
+              "radial-gradient(circle at 30% 30%, rgba(199, 142, 29, 0.12), rgba(199, 142, 29, 0.04))",
             border: "1.5px solid rgba(199, 142, 29, 0.15)",
             opacity: 0.6,
             pointerEvents: "none",
@@ -162,7 +157,13 @@ export default function About() {
               </radialGradient>
             </defs>
             {/* Crescent moon */}
-            <circle cx="30" cy="30" r="28" fill="url(#moonGradient)" opacity="0.5" />
+            <circle
+              cx="30"
+              cy="30"
+              r="28"
+              fill="url(#moonGradient)"
+              opacity="0.5"
+            />
             <circle cx="34" cy="28" r="26" fill="#F9E8CF" opacity="0.9" />
           </svg>
         </div>
@@ -176,7 +177,8 @@ export default function About() {
             width: "50px",
             height: "50px",
             borderRadius: "50%",
-            background: "radial-gradient(circle at 35% 35%, rgba(199, 142, 29, 0.08), rgba(199, 142, 29, 0.02))",
+            background:
+              "radial-gradient(circle at 35% 35%, rgba(199, 142, 29, 0.08), rgba(199, 142, 29, 0.02))",
             border: "1px solid rgba(199, 142, 29, 0.1)",
             opacity: 0.7,
             pointerEvents: "none",
@@ -196,7 +198,13 @@ export default function About() {
           }}
         >
           <svg viewBox="0 0 45 45" width="100%" height="100%">
-            <circle cx="22.5" cy="22.5" r="20" fill="rgba(199, 142, 29, 0.2)" opacity="0.4" />
+            <circle
+              cx="22.5"
+              cy="22.5"
+              r="20"
+              fill="rgba(199, 142, 29, 0.2)"
+              opacity="0.4"
+            />
             <circle cx="26" cy="20" r="18.5" fill="#F9E8CF" opacity="0.85" />
           </svg>
         </div>
@@ -210,7 +218,8 @@ export default function About() {
             width: "35px",
             height: "35px",
             borderRadius: "50%",
-            background: "radial-gradient(circle at 40% 40%, rgba(199, 142, 29, 0.1), rgba(199, 142, 29, 0.03))",
+            background:
+              "radial-gradient(circle at 40% 40%, rgba(199, 142, 29, 0.1), rgba(199, 142, 29, 0.03))",
             border: "0.8px solid rgba(199, 142, 29, 0.08)",
             opacity: 0.6,
             pointerEvents: "none",
