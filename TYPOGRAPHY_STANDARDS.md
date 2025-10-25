@@ -23,11 +23,11 @@ h2 {
 
 ### Key Specifications
 
-| Property          | Value       | Purpose                                       |
-| ----------------- | ----------- | --------------------------------------------- |
-| **line-height**   | `1`         | Tight, controlled spacing; premium feel       |
-| **font-weight**   | `500`       | Medium weight; professional, not heavy        |
-| **letter-spacing** | `-1.5px`    | Negative spacing; creates cohesion            |
+| Property           | Value    | Purpose                                 |
+| ------------------ | -------- | --------------------------------------- |
+| **line-height**    | `1`      | Tight, controlled spacing; premium feel |
+| **font-weight**    | `500`    | Medium weight; professional, not heavy  |
+| **letter-spacing** | `-1.5px` | Negative spacing; creates cohesion      |
 
 ---
 
@@ -36,6 +36,7 @@ h2 {
 ### Section Titles (H2)
 
 **Classes Affected**:
+
 - `.section-title__title`
 - `.section-title-two__title`
 - Any custom `<h2>` element
@@ -51,7 +52,7 @@ h2 {
   line-height: 1;
   font-weight: 500;
   letter-spacing: -1.5px;
-  margin: 0;  /* Adjust as needed per component */
+  margin: 0; /* Adjust as needed per component */
 }
 ```
 
@@ -62,12 +63,14 @@ h2 {
 ### Why These Settings?
 
 1. **line-height: 1**
+
    - Creates tight, intentional spacing
    - Prevents text from feeling loose or scattered
    - Premium, high-end typography feel
    - Better visual grouping of multi-line headlines
 
 2. **font-weight: 500**
+
    - Medium weight (not heavy 700)
    - More refined and modern
    - Better readability than 700
@@ -92,12 +95,14 @@ h2 {
 ### 🎯 Key Sections Using This
 
 1. **Homepage Sections**
+
    - Mission section
    - Why This Work Matters
    - Work/Collaboration section
    - Testimonials section
 
 2. **All Inner Pages**
+
    - About pages
    - Services pages
    - Blog pages
@@ -117,6 +122,7 @@ h2 {
 **File**: `/public/assets/css/style.css`
 
 **Global Rule** (Line ~45):
+
 ```css
 h2 {
   line-height: 1;
@@ -126,6 +132,7 @@ h2 {
 ```
 
 **Section Title Rules** (Lines ~380-415):
+
 ```css
 .section-title__title {
   line-height: 1;
@@ -173,6 +180,7 @@ style={{
 ```
 
 **Breakdown**:
+
 - **Minimum**: 2rem (32px) on small screens
 - **Preferred**: 6vw (scales with viewport width)
 - **Maximum**: 3.5rem (56px) on large screens
@@ -184,11 +192,13 @@ style={{
 ### Premium Typography Approach
 
 1. **Tightness**
+
    - `line-height: 1` creates visual intensity
    - Premium magazine aesthetic
    - Headlines feel purposeful
 
 2. **Refinement**
+
    - `font-weight: 500` avoids heaviness
    - Modern, elegant appearance
    - Better balance with body text
@@ -231,9 +241,9 @@ Only override in special cases:
 <h2
   style={{
     // Override with reason
-    lineHeight: 1.4,  // EXCEPTION: Better readability for accessibility
-    fontWeight: 500,  // Keep standard
-    letterSpacing: "-1.5px"  // Keep standard
+    lineHeight: 1.4, // EXCEPTION: Better readability for accessibility
+    fontWeight: 500, // Keep standard
+    letterSpacing: "-1.5px", // Keep standard
   }}
 >
   Headline
@@ -286,17 +296,16 @@ When working with H2 elements:
 ```jsx
 <section>
   <div className="section-title">
-    <h2 className="section-title__title">
-      Our Comprehensive Approach
-    </h2>
+    <h2 className="section-title__title">Our Comprehensive Approach</h2>
     <p>Supporting paragraph text here...</p>
   </div>
 </section>
 ```
 
-**Result**: 
+**Result**:
+
 - ✅ Applies global h2 styles
-- ✅ Also applies .section-title__title class styles
+- ✅ Also applies .section-title\_\_title class styles
 - ✅ Tight, professional appearance
 
 ### Example 2: Page Header
@@ -309,6 +318,7 @@ When working with H2 elements:
 ```
 
 **Result**:
+
 - ✅ Applies global h2 styles
 - ✅ No additional classes needed
 - ✅ Consistent with site standards
@@ -317,14 +327,13 @@ When working with H2 elements:
 
 ```jsx
 <div className="custom-section">
-  <h2 style={{ marginBottom: "2rem" }}>
-    Breaking Barriers
-  </h2>
+  <h2 style={{ marginBottom: "2rem" }}>Breaking Barriers</h2>
   <p>Content here...</p>
 </div>
 ```
 
 **Result**:
+
 - ✅ Inherits typography standards
 - ✅ Only adds margin override
 - ✅ Maintains design consistency
@@ -394,7 +403,7 @@ These typography standards create:
 ✨ **Premium Appearance** - Professional, intentional design  
 ✨ **Consistency** - Same styling across entire website  
 ✨ **Scalability** - Easy to maintain and update  
-✨ **Professional Impact** - Modern, refined aesthetics  
+✨ **Professional Impact** - Modern, refined aesthetics
 
 **All H2 elements on thrive.her now have a unified, premium appearance that reinforces the brand's high-quality design.**
 

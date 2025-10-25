@@ -20,6 +20,61 @@ export default function About() {
           }
         }
       `}</style>
+      {/* Wave Divider with Geometric Accents */}
+      <div
+        style={{
+          width: "100%",
+          height: "120px",
+          background:
+            "linear-gradient(180deg, #F9E8CF 0%, #A7B093 100%)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "block",
+          }}
+        >
+          {/* Primary wave with curve */}
+          <path
+            d="M 0,60 Q 150,30 300,60 T 600,60 T 900,60 T 1200,60 L 1200,0 L 0,0 Z"
+            fill="#F9E8CF"
+            opacity="0.9"
+          />
+          {/* Secondary wave with geometric pattern */}
+          <path
+            d="M 0,80 Q 100,60 200,75 T 400,80 T 600,75 T 800,80 T 1000,75 T 1200,80 L 1200,120 L 0,120 Z"
+            fill="#A7B093"
+            opacity="0.95"
+          />
+
+          {/* Geometric overlay - gold circles and lines */}
+          <g opacity="0.2" fill="none" stroke="#C78E1D" strokeWidth="0.8">
+            {/* Star pattern 1 */}
+            <circle cx="100" cy="50" r="3" fill="#C78E1D" />
+            <circle cx="100" cy="50" r="6" fill="none" />
+            {/* Star pattern 2 */}
+            <circle cx="350" cy="70" r="3" fill="#C78E1D" />
+            <circle cx="350" cy="70" r="6" fill="none" />
+            {/* Star pattern 3 */}
+            <circle cx="650" cy="50" r="3" fill="#C78E1D" />
+            <circle cx="650" cy="50" r="6" fill="none" />
+            {/* Star pattern 4 */}
+            <circle cx="950" cy="70" r="3" fill="#C78E1D" />
+            <circle cx="950" cy="70" r="6" fill="none" />
+            {/* Connecting geometric lines */}
+            <line x1="100" y1="50" x2="350" y2="70" />
+            <line x1="350" y1="70" x2="650" y2="50" />
+            <line x1="650" y1="50" x2="950" y2="70" />
+          </g>
+        </svg>
+      </div>
+
       {/*About One Start */}
       <section
         className="about-One"
@@ -30,6 +85,13 @@ export default function About() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          background: "#F9E8CF",
+          backgroundImage: `
+            repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(199, 142, 29, 0.03) 35px, rgba(199, 142, 29, 0.03) 70px),
+            repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(199, 142, 29, 0.02) 35px, rgba(199, 142, 29, 0.02) 70px),
+            repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(199, 142, 29, 0.02) 50px, rgba(199, 142, 29, 0.02) 100px)
+          `,
+          position: "relative",
         }}
       >
         <div className="container">
