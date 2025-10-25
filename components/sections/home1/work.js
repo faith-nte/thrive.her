@@ -20,11 +20,11 @@ export default function About() {
           }
         }
       `}</style>
-      {/* Wave Divider with Geometric Accents */}
+      {/* Islamic Geometric Divider with Stars and Crescents */}
       <div
         style={{
           width: "100%",
-          height: "120px",
+          height: "140px",
           background:
             "linear-gradient(180deg, #F9E8CF 0%, #A7B093 100%)",
           position: "relative",
@@ -32,7 +32,7 @@ export default function About() {
         }}
       >
         <svg
-          viewBox="0 0 1200 120"
+          viewBox="0 0 1200 140"
           preserveAspectRatio="none"
           style={{
             width: "100%",
@@ -40,38 +40,69 @@ export default function About() {
             display: "block",
           }}
         >
-          {/* Primary wave with curve */}
-          <path
-            d="M 0,60 Q 150,30 300,60 T 600,60 T 900,60 T 1200,60 L 1200,0 L 0,0 Z"
-            fill="#F9E8CF"
-            opacity="0.9"
-          />
-          {/* Secondary wave with geometric pattern */}
-          <path
-            d="M 0,80 Q 100,60 200,75 T 400,80 T 600,75 T 800,80 T 1000,75 T 1200,80 L 1200,120 L 0,120 Z"
-            fill="#A7B093"
-            opacity="0.95"
-          />
+          {/* Background gradient shapes */}
+          <defs>
+            <linearGradient id="dividerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#F9E8CF" />
+              <stop offset="100%" stopColor="#A7B093" />
+            </linearGradient>
+          </defs>
 
-          {/* Geometric overlay - gold circles and lines */}
-          <g opacity="0.2" fill="none" stroke="#C78E1D" strokeWidth="0.8">
-            {/* Star pattern 1 */}
-            <circle cx="100" cy="50" r="3" fill="#C78E1D" />
-            <circle cx="100" cy="50" r="6" fill="none" />
-            {/* Star pattern 2 */}
-            <circle cx="350" cy="70" r="3" fill="#C78E1D" />
-            <circle cx="350" cy="70" r="6" fill="none" />
-            {/* Star pattern 3 */}
-            <circle cx="650" cy="50" r="3" fill="#C78E1D" />
-            <circle cx="650" cy="50" r="6" fill="none" />
-            {/* Star pattern 4 */}
-            <circle cx="950" cy="70" r="3" fill="#C78E1D" />
-            <circle cx="950" cy="70" r="6" fill="none" />
-            {/* Connecting geometric lines */}
-            <line x1="100" y1="50" x2="350" y2="70" />
-            <line x1="350" y1="70" x2="650" y2="50" />
-            <line x1="650" y1="50" x2="950" y2="70" />
+          {/* Main divider rectangle */}
+          <rect width="1200" height="140" fill="url(#dividerGrad)" />
+
+          {/* Islamic Star Pattern (8-pointed stars) */}
+          {/* Star 1 - Top Left */}
+          <g opacity="0.3" transform="translate(120, 50)">
+            {/* 8-pointed star */}
+            <path
+              d="M 0,-8 L 2,-2 L 8,-1 L 4,3 L 5,9 L 0,6 L -5,9 L -4,3 L -8,-1 L -2,-2 Z"
+              fill="#C78E1D"
+            />
           </g>
+
+          {/* Crescent Moon 1 */}
+          <g opacity="0.25" transform="translate(300, 40)">
+            <circle cx="0" cy="0" r="6" fill="#C78E1D" />
+            <circle cx="2" cy="0" r="5.5" fill="#F9E8CF" />
+          </g>
+
+          {/* Star 2 - Center Top */}
+          <g opacity="0.35" transform="translate(600, 35)">
+            <path
+              d="M 0,-10 L 2,-3 L 10,-2 L 5,3 L 7,11 L 0,8 L -7,11 L -5,3 L -10,-2 L -2,-3 Z"
+              fill="#C78E1D"
+            />
+          </g>
+
+          {/* Crescent Moon 2 */}
+          <g opacity="0.28" transform="translate(850, 55)">
+            <circle cx="0" cy="0" r="7" fill="#C78E1D" />
+            <circle cx="2.5" cy="0" r="6.5" fill="#F9E8CF" />
+          </g>
+
+          {/* Star 3 - Top Right */}
+          <g opacity="0.32" transform="translate(1050, 45)">
+            <path
+              d="M 0,-8 L 2,-2 L 8,-1 L 4,3 L 5,9 L 0,6 L -5,9 L -4,3 L -8,-1 L -2,-2 Z"
+              fill="#C78E1D"
+            />
+          </g>
+
+          {/* Connecting Islamic geometric lines */}
+          <g stroke="#C78E1D" strokeWidth="1" opacity="0.2" fill="none">
+            <path d="M 120,50 Q 300,60 600,35 T 1050,45" />
+            <line x1="150" y1="70" x2="200" y2="95" />
+            <line x1="600" y1="65" x2="600" y2="100" />
+            <line x1="1000" y1="70" x2="1050" y2="95" />
+          </g>
+
+          {/* Decorative circles at base */}
+          <circle cx="200" cy="110" r="3" fill="#C78E1D" opacity="0.25" />
+          <circle cx="400" cy="120" r="2.5" fill="#C78E1D" opacity="0.2" />
+          <circle cx="600" cy="115" r="3.5" fill="#C78E1D" opacity="0.25" />
+          <circle cx="800" cy="125" r="2.5" fill="#C78E1D" opacity="0.2" />
+          <circle cx="1000" cy="110" r="3" fill="#C78E1D" opacity="0.25" />
         </svg>
       </div>
 
@@ -92,9 +123,101 @@ export default function About() {
             repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(199, 142, 29, 0.02) 50px, rgba(199, 142, 29, 0.02) 100px)
           `,
           position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div className="container">
+        {/* Decorative Bubble - Top Right */}
+        <div
+          style={{
+            position: "absolute",
+            top: "8%",
+            right: "5%",
+            width: "80px",
+            height: "80px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle at 30% 30%, rgba(199, 142, 29, 0.12), rgba(199, 142, 29, 0.04))",
+            border: "1.5px solid rgba(199, 142, 29, 0.15)",
+            opacity: 0.6,
+            pointerEvents: "none",
+            boxShadow: "inset 0 1px 10px rgba(199, 142, 29, 0.08)",
+          }}
+        />
+
+        {/* Decorative Moon (Crescent) - Bottom Left */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "10%",
+            left: "3%",
+            width: "60px",
+            height: "60px",
+            pointerEvents: "none",
+          }}
+        >
+          <svg viewBox="0 0 60 60" width="100%" height="100%">
+            <defs>
+              <radialGradient id="moonGradient" cx="40%" cy="40%">
+                <stop offset="0%" stopColor="rgba(199, 142, 29, 0.25)" />
+                <stop offset="100%" stopColor="rgba(199, 142, 29, 0.1)" />
+              </radialGradient>
+            </defs>
+            {/* Crescent moon */}
+            <circle cx="30" cy="30" r="28" fill="url(#moonGradient)" opacity="0.5" />
+            <circle cx="34" cy="28" r="26" fill="#F9E8CF" opacity="0.9" />
+          </svg>
+        </div>
+
+        {/* Small Bubble - Center Right */}
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: "8%",
+            width: "50px",
+            height: "50px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle at 35% 35%, rgba(199, 142, 29, 0.08), rgba(199, 142, 29, 0.02))",
+            border: "1px solid rgba(199, 142, 29, 0.1)",
+            opacity: 0.7,
+            pointerEvents: "none",
+            transform: "translateY(-25px)",
+          }}
+        />
+
+        {/* Small Moon (Crescent) - Top Left */}
+        <div
+          style={{
+            position: "absolute",
+            top: "15%",
+            left: "2%",
+            width: "45px",
+            height: "45px",
+            pointerEvents: "none",
+          }}
+        >
+          <svg viewBox="0 0 45 45" width="100%" height="100%">
+            <circle cx="22.5" cy="22.5" r="20" fill="rgba(199, 142, 29, 0.2)" opacity="0.4" />
+            <circle cx="26" cy="20" r="18.5" fill="#F9E8CF" opacity="0.85" />
+          </svg>
+        </div>
+
+        {/* Tiny Bubble - Bottom Right */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "15%",
+            right: "12%",
+            width: "35px",
+            height: "35px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle at 40% 40%, rgba(199, 142, 29, 0.1), rgba(199, 142, 29, 0.03))",
+            border: "0.8px solid rgba(199, 142, 29, 0.08)",
+            opacity: 0.6,
+            pointerEvents: "none",
+          }}
+        />
+
+        <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="row">
             <div className="col-xl-6">
               <div
@@ -106,6 +229,8 @@ export default function About() {
                   alignItems: "center",
                   justifyContent: "center",
                   minHeight: "100%",
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
                 <div className="about-One__img-box">
