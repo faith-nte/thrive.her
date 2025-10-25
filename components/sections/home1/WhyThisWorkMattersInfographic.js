@@ -273,7 +273,7 @@ export default function WhyThisWorkMattersInfographic() {
                 margin: "0 auto 24px",
                 fontSize: "clamp(2rem, 5.5vw, 3.5rem)",
                 color: "#21273F",
-                lineHeight: 1.4,
+                lineHeight: 1,
                 fontWeight: 700,
                 letterSpacing: "-0.5px",
               }}
@@ -344,9 +344,9 @@ export default function WhyThisWorkMattersInfographic() {
                 style={{
                   fontSize: "clamp(1.1rem, 2vw, 1.3rem)",
                   color: "#21273F",
-                  lineHeight: 1.8,
+                  lineHeight: 1.6,
                   marginBottom: "16px",
-                  fontWeight: 700,
+                  fontWeight: 400,
                   letterSpacing: "-0.3px",
                 }}
               >
@@ -572,11 +572,11 @@ function StatsBlockInteractive() {
             </div>
             <div
               style={{
-                fontSize: "clamp(1.8rem, 4vw, 2.3rem)",
+                fontSize: "clamp(1.8rem, 4vw, 1.3rem)",
                 color: stat.accentColor,
-                fontWeight: 800,
+                fontWeight: 400,
                 marginBottom: "12px",
-                letterSpacing: "-0.8px",
+                letterSpacing: "-1.9px",
               }}
             >
               {stat.figure}
