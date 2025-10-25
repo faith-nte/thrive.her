@@ -462,12 +462,7 @@ export default function About() {
       <section
         className="cta-one"
         style={{
-          background: "#1a1f2e",
-          backgroundImage: `
-            repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(199, 142, 29, 0.03) 35px, rgba(199, 142, 29, 0.03) 70px),
-            repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(199, 142, 29, 0.02) 35px, rgba(199, 142, 29, 0.02) 70px),
-            repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(199, 142, 29, 0.02) 50px, rgba(199, 142, 29, 0.02) 100px)
-          `,
+          background: "#F9E8CF",
           position: "relative",
           overflow: "hidden",
           minHeight: "80vh",
