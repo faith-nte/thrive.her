@@ -23,11 +23,15 @@ export default function About() {
       {/*About One Start */}
       <section
         className="about-One"
-        style={{ minHeight: "80vh", padding: "0", display: "flex", flexDirection: "column", justifyContent: "center" }}
+        style={{
+          minHeight: "80vh",
+          padding: "0",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
       >
-        <div
-          className="container"
-        >
+        <div className="container">
           <div className="row">
             <div className="col-xl-6">
               <div
