@@ -60,7 +60,8 @@ export default function Testimonial() {
           background:
             "linear-gradient(135deg, #21273F 0%, #2a3456 25%, #1f2438 50%, #252e4a 75%, #21273F 100%)",
           minHeight: "80vh",
-          padding: "0",
+          paddingTop: "10rem",
+          paddingBottom: "10rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

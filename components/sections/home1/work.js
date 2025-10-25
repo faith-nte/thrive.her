@@ -25,7 +25,8 @@ export default function About() {
         className="about-One"
         style={{
           minHeight: "80vh",
-          padding: "0",
+          paddingTop: "10rem",
+          paddingBottom: "10rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -274,7 +275,8 @@ export default function About() {
           position: "relative",
           overflow: "hidden",
           minHeight: "80vh",
-          padding: "0",
+          paddingTop: "10rem",
+          paddingBottom: "10rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

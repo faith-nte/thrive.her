@@ -138,7 +138,8 @@ export default function WhyThisWorkMattersInfographic() {
       style={{
         background: "var(--thriveher-cream)",
         minHeight: "80vh",
-        padding: "0",
+        paddingTop: "10rem",
+        paddingBottom: "10rem",
         position: "relative",
         overflow: "hidden",
         display: "flex",
