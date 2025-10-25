@@ -78,13 +78,17 @@
     width: auto !important;
     gap: 0.75rem !important;
     justify-content: flex-start !important;
+    margin-top: 1.5rem !important;
   }
   
-  .hero-buttons .primary-btn,
-  .hero-buttons .secondary-btn {
+  .hero-buttons .primary-btn {
     width: auto !important;
     font-size: 0.9rem !important;
     padding: 0.65rem 1rem !important;
     white-space: nowrap !important;
+  }
+
+  .hero-buttons .secondary-btn {
+    display: none !important;
   }
 }

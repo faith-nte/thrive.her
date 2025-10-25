@@ -57,7 +57,8 @@ export default function BannerClient() {
                   height: "100%",
                   display: "flex",
                   alignItems: "center",
-                  padding: "clamp(2rem, 5vh, 4rem) 0",
+                  padding: "clamp(1.5rem, 3vh, 4rem) 0",
+                  justifyContent: "center",
                 }}
               >
                 <div
@@ -95,7 +96,7 @@ export default function BannerClient() {
                     {/* Button group */}
                     <div
                       className="hero-buttons flex gap-4 mt-10 flex-wrap items-center"
-                      style={{ marginTop: "2.5rem" }}
+                      style={{ marginTop: "1.5rem" }}
                     >
                       <button
                         type="button"
@@ -123,14 +124,14 @@ export default function BannerClient() {
                     {/* Founder line */}
                     <p
                       style={{
-                        marginTop: "2rem",
+                        marginTop: "1rem",
                         fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
                         color: "#F9E8CF",
                         fontStyle: "italic",
                         fontWeight: 500,
                         textShadow: "0 2px 8px rgba(0,0,0,0.3)",
                         lineHeight: 1.5,
-                        marginBottom: "1.5rem",
+                        marginBottom: "1rem",
                       }}
                     >
                       Led by Dr Syeda Hussaini MBBS MRCPsych
@@ -142,7 +143,7 @@ export default function BannerClient() {
                         alignItems: "center",
                         gap: "1rem",
                         flexWrap: "wrap",
-                        marginTop: "1.5rem",
+                        marginTop: "0.75rem",
                       }}
                     >
                       <span
