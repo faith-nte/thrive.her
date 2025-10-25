@@ -14,6 +14,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
           position: "fixed",
           width: "100%",
           zIndex: 1000,
+          display: scroll > 100 ? "none" : "block",
         }}
       >
         <nav
@@ -26,6 +27,7 @@ export default function Header1({ scroll, handlePopup, handleMobileMenu }) {
             @media (max-width: 768px) {
               .main-header {
                 background-color: #21273f !important;
+                display: block !important;
               }
             }
           `}</style>

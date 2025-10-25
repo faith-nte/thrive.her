@@ -27,7 +27,11 @@ export default function About() {
           height: "140px",
           background: "linear-gradient(180deg, #F9E8CF 0%, #A7B093 100%)",
           position: "relative",
-          overflow: "hidden",
+          overflow: "visible",
+          WebkitMaskImage:
+            "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%)",
+          maskImage:
+            "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%)",
         }}
       >
         <svg

@@ -17,7 +17,11 @@ export default function Donation() {
           background:
             "linear-gradient(180deg, var(--thriveher-cream) 0%, #21273F 100%)",
           position: "relative",
-          overflow: "hidden",
+          overflow: "visible",
+          WebkitMaskImage:
+            "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%)",
+          maskImage:
+            "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%)",
         }}
       >
         {/* Animated Wave SVG */}

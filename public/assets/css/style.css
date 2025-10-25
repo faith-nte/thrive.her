@@ -53,7 +53,7 @@ h2 {
   line-height: 1;
   font-weight: 500;
   letter-spacing: -1.5px;
-  font-size: clamp(1rem, 5vw, 42px);
+  font-size: clamp(1rem, 5vw, 40px);
 }
 
 :root {
@@ -382,7 +382,7 @@ ul {
 
 .section-title__title {
   color: var(--color-text-primary);
-  font-size: clamp(1rem, 5vw, 42px);
+  font-size: clamp(1rem, 5vw, 40px);
   line-height: 1;
   font-weight: 600;
   letter-spacing: -1.5px;
@@ -413,7 +413,7 @@ ul {
 
 .section-title-two__title {
   color: var(--color-text-primary);
-  font-size: clamp(1rem, 5vw, 42px);
+  font-size: clamp(1rem, 5vw, 40px);
   line-height: 1;
   font-weight: 500;
   letter-spacing: -1.5px;
@@ -1040,9 +1040,13 @@ ul {
   position: relative;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
-  font-weight: 700;
   text-transform: capitalize;
   line-height: 20px;
+}
+
+.main-header .main-menu .main-menu__list>li>a,
+.main-header .stricky-header .main-menu__list>li>a {
+  font-weight: inherit;
 }
 
 .main-menu .main-menu__list>li.current>a,

@@ -585,14 +585,7 @@
     position: relative;
 }
 
-.donation-one__right--style2 .donation-one__content-box {
-    background-image: -ms-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
-    background-image: -moz-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
-    background-image: -o-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, var(--thriveher-gold)), color-stop(100, var(--thriveher-gold)));
-    background-image: -webkit-linear-gradient(left, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
-    background-image: linear-gradient(to right, var(--thriveher-gold) 0%, var(--thriveher-gold) 100%);
-}
+
 
 .donation-one__right--style2 .donation-one__donate-box .donate-amount .amount-btn {
     color: rgba(255, 255, 255, 0.8);

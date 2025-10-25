@@ -10,6 +10,7 @@ import Event from "@/components/sections/home1/Event";
 import Found from "@/components/sections/home1/Found";
 import Team from "@/components/sections/home1/Team";
 import Testimonial from "@/components/sections/home1/Testimonial";
+import ImageCarousel from "@/components/sections/home1/ImageCarousel";
 import Welcome from "@/components/sections/home1/Welcome";
 import Who from "@/components/sections/home1/Who";
 import WhyThisWorkMattersHero from "@/components/sections/home1/WhyThisWorkMattersHero";
@@ -26,6 +27,7 @@ export default function Home() {
         <Mission />
         <Work />
         <Testimonial />
+        <ImageCarousel />
       </Layout>
     </>
   );
