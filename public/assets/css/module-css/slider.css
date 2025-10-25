@@ -896,7 +896,7 @@
 .main-slider-four .content-box .big-title {
     position: relative;
     display: block;
-    padding-bottom: 22px;
+    padding-bottom: 10px;
     opacity: 0;
     -webkit-transform: perspective(400px) rotateY(0deg) translateY(-120px);
     -ms-transform: perspective(400px) rotateY(0deg) translateY(-120px);
