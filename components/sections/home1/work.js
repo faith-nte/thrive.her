@@ -426,12 +426,12 @@ export default function About() {
                     textShadow: "none",
                   }}
                 >
-                  Sign up to receive our{" "}
+                  We invite you to join our{" "}
                   <span style={{ fontWeight: "600" }}>
-                    Hormonal Reset Guide
+                    Hormonal Reset Guide.
                   </span>{" "}
-                  – A free digital guide combining evidence and Islamic
-                  principles.
+                  A free doctor-led digital guide that combines evidence and
+                  Islamic principles.
                 </p>
 
                 {/* Email Input & Button Container */}
@@ -508,7 +508,7 @@ export default function About() {
                       e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
-                    Download Guide Free
+                    Accept Our Invitation
                   </button>
                 </div>
 
@@ -522,7 +522,8 @@ export default function About() {
                     textAlign: "center",
                   }}
                 >
-                  ✓ We respect your privacy. Unsubscribe at any time.
+                  By entering your email, you accept to receive emails from us.
+                  <br />✓ We respect your privacy. Unsubscribe at any time.
                 </p>
               </div>
             </div>

@@ -74,14 +74,14 @@ export default function Testimonial() {
             </div>
             <h2
               className="section-title__title title-animation"
-              style={{ color: "#ffffff", fontSize: "42px", fontWeight: "700" }}
+              style={{ color: "#F9E8CF", fontSize: "42px", fontWeight: "700" }}
             >
               What Women Who took our training are saying
             </h2>
             <p
               style={{
                 marginTop: "20px",
-                color: "#d0d5e5",
+                color: "#F9E8CF",
                 fontSize: "16px",
                 maxWidth: "700px",
                 margin: "20px auto 0",
@@ -147,7 +147,7 @@ export default function Testimonial() {
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#ffffff",
+                      color: "#F9E8CF",
                       fontSize: "18px",
                       fontWeight: "500",
                       lineHeight: "1.7",
@@ -158,7 +158,7 @@ export default function Testimonial() {
                   </p>
                   <div
                     style={{
-                      color: "#d0d5e5",
+                      color: "#F9E8CF",
                       fontSize: "13px",
                       fontWeight: "500",
                     }}
@@ -221,7 +221,7 @@ export default function Testimonial() {
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#ffffff",
+                      color: "#F9E8CF",
                       fontSize: "18px",
                       fontWeight: "500",
                       lineHeight: "1.7",
@@ -232,7 +232,7 @@ export default function Testimonial() {
                   </p>
                   <div
                     style={{
-                      color: "#d0d5e5",
+                      color: "#F9E8CF",
                       fontSize: "13px",
                       fontWeight: "500",
                     }}
@@ -295,7 +295,7 @@ export default function Testimonial() {
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#ffffff",
+                      color: "#F9E8CF",
                       fontSize: "18px",
                       fontWeight: "500",
                       lineHeight: "1.7",
@@ -306,7 +306,7 @@ export default function Testimonial() {
                   </p>
                   <div
                     style={{
-                      color: "#d0d5e5",
+                      color: "#F9E8CF",
                       fontSize: "13px",
                       fontWeight: "500",
                     }}
@@ -369,7 +369,7 @@ export default function Testimonial() {
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#ffffff",
+                      color: "#F9E8CF",
                       fontSize: "18px",
                       fontWeight: "500",
                       lineHeight: "1.7",
@@ -381,7 +381,7 @@ export default function Testimonial() {
                   </p>
                   <div
                     style={{
-                      color: "#d0d5e5",
+                      color: "#F9E8CF",
                       fontSize: "13px",
                       fontWeight: "500",
                     }}
@@ -444,7 +444,7 @@ export default function Testimonial() {
                   <p
                     className="testimonial-one__text"
                     style={{
-                      color: "#ffffff",
+                      color: "#F9E8CF",
                       fontSize: "18px",
                       fontWeight: "500",
                       lineHeight: "1.7",
@@ -455,7 +455,7 @@ export default function Testimonial() {
                   </p>
                   <div
                     style={{
-                      color: "#d0d5e5",
+                      color: "#F9E8CF",
                       fontSize: "13px",
                       fontWeight: "500",
                     }}
