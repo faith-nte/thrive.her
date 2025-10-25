@@ -637,7 +637,7 @@ export default function About() {
                     textShadow: "none",
                   }}
                 >
-                  We invite you to join our{" "}
+                  Signup to our{" "}
                   <span style={{ fontWeight: "600" }}>
                     Hormonal Reset Guide.
                   </span>{" "}
@@ -693,7 +693,7 @@ export default function About() {
                       alignItems: "center",
                       justifyContent: "center",
                       gap: "10px",
-                      fontSize: "1rem",
+
                       background: "#21273F",
                       color: "#fff",
                       border: "2px solid transparent",
@@ -719,7 +719,7 @@ export default function About() {
                       e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
-                    Accept Our Invitation
+                    Submit
                   </button>
                 </div>
 
