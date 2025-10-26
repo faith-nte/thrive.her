@@ -10,11 +10,16 @@ export default function ImageCarousel({ images = [] }) {
     images.length > 0
       ? images
       : [
-          "/assets/images/carousel/carousel-1.svg",
-          "/assets/images/carousel/carousel-2.svg",
-          "/assets/images/carousel/carousel-3.svg",
-          "/assets/images/carousel/carousel-4.svg",
-          "/assets/images/carousel/carousel-5.svg",
+          "/assets/images/resource-slider/1.jpg",
+          "/assets/images/resource-slider/2.jpg",
+          "/assets/images/resource-slider/3.jpg",
+          "/assets/images/resource-slider/4.jpg",
+          "/assets/images/resource-slider/5.jpg",
+          "/assets/images/resource-slider/6.jpg",
+          "/assets/images/resource-slider/7.jpg",
+          "/assets/images/resource-slider/8.jpg",
+          "/assets/images/resource-slider/9.jpg",
+          "/assets/images/resource-slider/10.jpg",
         ];
 
   // Auto-play carousel
