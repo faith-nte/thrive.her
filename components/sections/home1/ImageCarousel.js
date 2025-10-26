@@ -154,6 +154,8 @@ export default function ImageCarousel({ images = [] }) {
           style={{
             position: "relative",
             width: "100%",
+            maxWidth: "1130px",
+            margin: "0 auto",
             borderRadius: "24px",
             overflow: "hidden",
             background: "#F9E8CF",
@@ -166,7 +168,10 @@ export default function ImageCarousel({ images = [] }) {
           <div
             style={{
               position: "relative",
-              height: "clamp(300px, 60vw, 500px)",
+              width: "1130px",
+              height: "1049px",
+              maxWidth: "100%",
+              margin: "0 auto",
               overflow: "hidden",
               backgroundColor: "#F9E8CF",
             }}
