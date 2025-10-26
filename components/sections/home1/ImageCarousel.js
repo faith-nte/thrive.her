@@ -57,9 +57,10 @@ export default function ImageCarousel({ images = [] }) {
         background:
           "linear-gradient(135deg, #21273F 0%, #2a304d 50%, #1a1f2e 100%)",
         position: "relative",
-        paddingTop: "80px",
-        paddingBottom: "80px",
+        paddingTop: "30px",
+        paddingBottom: "30px",
         overflow: "hidden",
+        minHeight: "auto",
       }}
     >
       {/* Islamic Geometric Decoration - Top Right */}
@@ -159,11 +160,13 @@ export default function ImageCarousel({ images = [] }) {
           style={{
             position: "relative",
             width: "100%",
-            maxWidth: "1130px",
+            maxWidth: "70%",
+            aspectRatio: "1130 / 1049",
+            maxHeight: "600px",
             margin: "0 auto",
             borderRadius: "24px",
             overflow: "hidden",
-            background: "#F9E8CF",
+            background: "#21273F",
             boxShadow:
               "0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(253, 243, 228, 0.1)",
             border: "2px solid rgba(199, 142, 29, 0.15)",
@@ -173,12 +176,10 @@ export default function ImageCarousel({ images = [] }) {
           <div
             style={{
               position: "relative",
-              width: "1130px",
-              height: "1049px",
-              maxWidth: "100%",
-              margin: "0 auto",
+              width: "100%",
+              height: "100%",
               overflow: "hidden",
-              backgroundColor: "#F9E8CF",
+              backgroundColor: "#21273F",
             }}
           >
             {/* Carousel Items */}
